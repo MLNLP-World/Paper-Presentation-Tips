@@ -373,9 +373,7 @@
 | 3 | TBD | TBD |
 
 </div>
-
 ---
-
 ## 👥 组织者列表
 
 <p align="left">
@@ -391,14 +389,6 @@
   &nbsp;&nbsp;
   <a href="https://github.com/Tenkachaya">
     <img src="https://images.weserv.nl/?url=github.com/Tenkachaya.png?v=4&mask=circle" width="80"></a>
-</p>
-
-<p align="left">
-  <a href="https://github.com/qinlibo-hit"><b>qinlibo-hit</b></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/lishasha2001"><b>lishasha2001</b></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Tenkachaya"><b>Tenkachaya</b></a>
 </p>
 
 ---
