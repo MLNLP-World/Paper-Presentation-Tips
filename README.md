@@ -381,18 +381,18 @@
 ## 👥 组织者列表
 
 <p align="left">
-  <b>感谢以下成员对本项目进行组织、维护与内容整理</b>
+  <b>感谢以下成员对本项目进行组织与指导</b>
 </p>
 
 <p align="left">
   <a href="https://github.com/qinlibo-hit">
-    <img src="https://github.com/qinlibo-hit.png" width="80"></a>
+    <img src="https://images.weserv.nl/?url=github.com/qinlibo-hit.png?v=4&mask=circle" width="80"></a>
   &nbsp;&nbsp;
   <a href="https://github.com/lishasha2001">
-    <img src="https://github.com/lishasha2001.png" width="80"></a>
+    <img src="https://images.weserv.nl/?url=github.com/lishasha2001.png?v=4&mask=circle" width="80"></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/Tenkachaya">
-    <img src="https://github.com/Tenkachaya.png" width="80"></a>
+  <a href="https://github.com/chenyuanTKCY">
+    <img src="https://images.weserv.nl/?url=github.com/chenyuanTKCY.png?v=4&mask=circle" width="80"></a>
 </p>
 
 ---
