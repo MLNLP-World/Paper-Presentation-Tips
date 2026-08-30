@@ -386,13 +386,13 @@
 
 <p align="left">
   <a href="https://github.com/qinlibo-hit">
-    <img src="https://images.weserv.nl/?url=github.com/qinlibo-hit.png?v=4&mask=circle" width="80"></a>
+    <img src="https://github.com/qinlibo-hit.png" width="80"></a>
   &nbsp;&nbsp;
   <a href="https://github.com/lishasha2001">
-    <img src="https://images.weserv.nl/?url=github.com/lishasha2001.png?v=4&mask=circle" width="80"></a>
+    <img src="https://github.com/lishasha2001.png" width="80"></a>
   &nbsp;&nbsp;
   <a href="https://github.com/Tenkachaya">
-    <img src="https://images.weserv.nl/?url=github.com/Tenkachaya.png?v=4&mask=circle" width="80"></a>
+    <img src="https://github.com/Tenkachaya.png" width="80"></a>
 </p>
 
 ---
