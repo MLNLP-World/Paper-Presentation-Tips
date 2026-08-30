@@ -74,58 +74,57 @@
 
 <div align="center">
 <table>
+
 <tr>
-
-<td width="33%" align="center">
-
-### 🎨 整体设计与表达
-**Tips 1–5**
-
-<sub>聚焦科研 PPT 的信息组织、单页表达、标题、颜色与排版等基础问题</sub>
-
-</td>
-
-<td width="33%" align="center">
-
-### 💡 背景与动机
-**Tip 6**
-
-<sub>聚焦如何帮助听众快速建立问题直觉，并理解“为什么值得研究”</sub>
-
-</td>
-
-<td width="33%" align="center">
-
-### 🧩 方法介绍
-**Tips 7–8**
-
-<sub>聚焦如何降低复杂方法的理解门槛，并清晰表达工作的核心创新</sub>
-
-</td>
-
+  <th width="28%">Part</th>
+  <th width="72%">Tips · 描述</th>
 </tr>
 
 <tr>
-
-<td width="50%" align="center" colspan="1">
-
-### 📊 实验分析
-**Tips 9–10**
-
-<sub>聚焦如何突出关键实验结果，并让听众快速理解实验结论</sub>
-
-</td>
-
-<td width="50%" align="center" colspan="2">
-
-### 🎯 总结收尾
-**Tip 11**
-
-<sub>聚焦如何在报告结束时回顾核心内容，并强化听众的最后印象</sub>
-
-</td>
-
+  <td align="center">
+    🎨 <b>Part A · 整体设计与表达</b>
+  </td>
+  <td>
+    <b>Tips 1–5</b> · 聚焦科研 PPT 的信息组织、单页表达、标题、颜色与排版等基础问题
+  </td>
 </tr>
+
+<tr>
+  <td align="center">
+    💡 <b>Part B · 背景与动机</b>
+  </td>
+  <td>
+    <b>Tip 6</b> · 聚焦如何帮助听众快速建立问题直觉，并理解“为什么值得研究”
+  </td>
+</tr>
+
+<tr>
+  <td align="center">
+    🧩 <b>Part C · 方法介绍</b>
+  </td>
+  <td>
+    <b>Tips 7–8</b> · 聚焦如何降低复杂方法的理解门槛，并清晰表达工作的核心创新
+  </td>
+</tr>
+
+<tr>
+  <td align="center">
+    📊 <b>Part D · 实验分析</b>
+  </td>
+  <td>
+    <b>Tips 9–10</b> · 聚焦如何突出关键实验结果，并让听众快速理解实验结论
+  </td>
+</tr>
+
+<tr>
+  <td align="center">
+    🎯 <b>Part E · 总结收尾</b>
+  </td>
+  <td>
+    <b>Tip 11</b> · 聚焦如何在报告结束时回顾核心内容，并强化听众的最后印象
+  </td>
+</tr>
+
 </table>
 </div>
 
@@ -133,7 +132,7 @@
 
 <a id="general-design"></a>
 
-### 🎨 整体设计与表达
+### 🎨 Part A · 整体设计与表达
 
 <blockquote>
 聚焦科研汇报中最基础的信息组织与视觉表达问题，让每一页 PPT 都更清晰、更容易理解。
@@ -202,7 +201,7 @@
 
 <a id="background-motivation"></a>
 
-### 💡 背景与动机
+### 💡 Part B · 背景与动机
 
 <blockquote>
 聚焦如何从具体问题出发建立研究动机，让听众先理解“为什么”，再进入抽象概念与任务定义。
@@ -227,7 +226,7 @@
 
 <a id="method-presentation"></a>
 
-### 🧩 方法介绍
+### 🧩 Part C · 方法介绍
 
 <blockquote>
 聚焦如何解释复杂的方法与技术细节，在保持严谨性的同时降低听众的理解门槛。
@@ -263,7 +262,7 @@
 
 <a id="experimental-analysis"></a>
 
-### 📊 实验分析
+### 📊 Part D · 实验分析
 
 <blockquote>
 聚焦如何展示实验结果、突出关键发现，并让听众快速理解“实验说明了什么”。
@@ -299,7 +298,7 @@
 
 <a id="summary-closing"></a>
 
-### 🎯 总结收尾
+### 🎯 Part E · 总结收尾
 
 <blockquote>
 聚焦如何在汇报结束时重新强化任务、方法、实验结果与核心结论，让听众带着最重要的信息离场。
@@ -374,9 +373,7 @@
 
 </div>
 
-
 ---
-
 
 ## 👥 组织者列表
 
