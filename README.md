@@ -147,7 +147,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_01.png" alt="Tip 1: 每页字数不要太多" width="900" />
+  <img src="./figures/tips-01.png" alt="Tip 1: 每页字数不要太多" width="900" />
 </p>
 
 </details>
@@ -158,7 +158,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_02.png" alt="Tip 2: 一页只承担一个核心任务" width="900" />
+  <img src="./figures/tips-02.png" alt="Tip 2: 一页只承担一个核心任务" width="900" />
 </p>
 
 </details>
@@ -169,7 +169,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_03.png" alt="Tip 3: 标题要有意义" width="900" />
+  <img src="./figures/tips-03.png" alt="Tip 3: 标题要有意义" width="900" />
 </p>
 
 </details>
@@ -180,7 +180,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_04.png" alt="Tip 4: 颜色不要太多太乱" width="900" />
+  <img src="./figures/tips-04.png" alt="Tip 4: 颜色不要太多太乱" width="900" />
 </p>
 
 </details>
@@ -191,7 +191,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_05.png" alt="Tip 5: 注意排版细节" width="900" />
+  <img src="./figures/tips-05.png" alt="Tip 5: 注意排版细节" width="900" />
 </p>
 
 </details>
@@ -216,7 +216,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_06.png" alt="Tip 6: 用案例引出问题，而不是先讲抽象定义" width="900" />
+  <img src="./figures/tips-06.png" alt="Tip 6: 用案例引出问题，而不是先讲抽象定义" width="900" />
 </p>
 
 </details>
@@ -241,7 +241,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_07.png" alt="Tip 7: 先讲例子，再讲公式" width="900" />
+  <img src="./figures/tips-07.png" alt="Tip 7: 先讲例子，再讲公式" width="900" />
 </p>
 
 </details>
@@ -252,7 +252,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_08.png" alt="Tip 8: 用精炼的语言阐述创新点" width="900" />
+  <img src="./figures/tips-08.png" alt="Tip 8: 用精炼的语言阐述创新点" width="900" />
 </p>
 
 </details>
@@ -277,7 +277,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_09.png" alt="Tip 9: 让听众一眼看到重点" width="900" />
+  <img src="./figures/tips-09.png" alt="Tip 9: 让听众一眼看到重点" width="900" />
 </p>
 
 </details>
@@ -288,7 +288,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_10.png" alt="Tip 10: 实验部分多用图，少用表格" width="900" />
+  <img src="./figures/tips-10.png" alt="Tip 10: 实验部分多用图，少用表格" width="900" />
 </p>
 
 </details>
@@ -313,7 +313,7 @@
 <br/>
 
 <p align="center">
-  <img src="./assets/tips/tip_11.png" alt="Tip 11: 在总结页回顾核心内容，强化最后印象" width="900" />
+  <img src="./figures/tips-11.png" alt="Tip 11: 在总结页回顾核心内容，强化最后印象" width="900" />
 </p>
 
 </details>
