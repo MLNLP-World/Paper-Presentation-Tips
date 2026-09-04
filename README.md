@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./figures/teaser.png" alt="Paper Presentation Tips teaser" width="100%" />
-</p>
+
 
 <h1 align="center">🎤 Paper Presentation Tips</h1>
 
@@ -41,6 +39,10 @@
 <br/>
 
 ---
+
+<p align="center">
+  <img src="./figures/teaser.png" alt="Paper Presentation Tips teaser" width="100%" />
+</p>
 
 <p align="center">
   <b>Good Presentation = Clear Message + Clear Visuals + Clear Story</b><br/>
