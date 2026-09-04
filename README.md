@@ -418,6 +418,8 @@
 | 3 | [Dos and Don'ts for Research Presentations](https://maartensap.com/notes/03-presenting-your-research.html) — Maarten Sap | 研究型 Presentation 中常见的问题与改进方式 |
 | 4 | [Creating Effective Presentation Slides](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 高效 Presentation Slides 的基本设计原则 |
 | 5 | [Presentation Accessibility Checklist](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 从字体、颜色、对比度、图像和结构等方面检查 Slides |
+| 6 | [如何做一个精彩的学术报告](https://chewanxiang.com/talks/how_to_give_a_great_talk.pdf) · [源 PDF](./source/source.pdf) — 车万翔，哈尔滨工业大学 / CCL 2019 | 从报告目标、内容取舍、幻灯片设计到现场表达，系统讲解如何提升学术报告的吸引力与影响力 |
+
 
 </div>
 
