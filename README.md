@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <b>面向论文汇报与学术展示的 Slides 设计与表达指南</b>
+  <b>面向论文汇报与学术展示的 Slides 设计与表达建议</b>
 </p>
 
 <p align="center">
