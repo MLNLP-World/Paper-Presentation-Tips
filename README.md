@@ -1,22 +1,37 @@
-<h1 align="center">Research Presentation Tips</h1>
+<h1 align="center">Paper Presentation Tips</h1>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-v0.1.0-blue?style=for-the-badge&color=2563EB" />
-  <img alt="status" src="https://img.shields.io/badge/status-building-success?style=for-the-badge&color=16A34A" />
-  <img alt="PRs" src="https://img.shields.io/badge/PRs-welcome-orange?style=for-the-badge&color=F97316" />
-  <img alt="stars" src="https://img.shields.io/github/stars/lishasha2001/Research-Presentation-Tips?style=for-the-badge&color=FBBF24" />
+  <a href="https://github.com/lishasha2001/Paper-Presentation-Tips">
+    <img alt="version" src="https://img.shields.io/badge/version-v0.1.0-blue" />
+  </a>
+  <a>
+    <img alt="Status-building" src="https://img.shields.io/badge/Status-building-blue" />
+  </a>
+  <a>
+    <img alt="PRs-Welcome" src="https://img.shields.io/badge/PRs-Welcome-red" />
+  </a>
+  <a href="https://github.com/lishasha2001/Paper-Presentation-Tips/stargazers">
+    <img alt="stars" src="https://img.shields.io/github/stars/lishasha2001/Paper-Presentation-Tips" />
+  </a>
+  <a href="https://github.com/lishasha2001/Paper-Presentation-Tips/network/members">
+    <img alt="forks" src="https://img.shields.io/github/forks/lishasha2001/Paper-Presentation-Tips?color=FF8000" />
+  </a>
+  <a href="https://github.com/lishasha2001/Paper-Presentation-Tips/issues">
+    <img alt="issues" src="https://img.shields.io/github/issues/lishasha2001/Paper-Presentation-Tips?color=0088ff" />
+  </a>
 </p>
 
 <p align="center">
-  <b>面向科研汇报、学术展示与论文分享的 PPT 设计与表达指南</b>
+  <b>面向论文汇报与学术展示的 Slides 设计与表达指南</b>
 </p>
 
 <p align="center">
-  <a href="#-项目动机">项目动机</a> •
-  <a href="#-presentation-tips">Presentation Tips</a> •
-  <a href="#-资源合集">资源合集</a> •
-  <a href="#-组织者列表">组织者列表</a> •
-  <a href="#-欢迎贡献">欢迎贡献</a>
+  <a href="#-项目动机">💡 项目动机</a> •
+  <a href="#-presentation-tips">🎯 Presentation Tips</a> •
+  <a href="#-资源合集">📖 资源合集</a> •
+  <a href="#-组织者列表">👥 组织者列表</a> •
+  <a href="#-欢迎贡献">🤝 欢迎贡献</a> •
+  <a href="#acknowledgements">🙏 Acknowledgements</a>
 </p>
 
 <br/>
@@ -30,26 +45,62 @@
 
 ---
 
+<br/>
+
 ## 💡 项目动机
 
-> **科研汇报不是把论文“搬到 PPT 上”**，而是重新组织信息，让听众在有限时间内理解问题、方法、结果与核心贡献。
+> **论文汇报不是把论文内容直接“搬到 PPT 上”，而是面向听众重新组织信息。**
 
-在实际的学术汇报中，我们经常会遇到一些常见问题：单页信息过载、主线不清、标题缺乏重点、方法介绍过于抽象、实验结果难以快速理解，以及总结页没有留下清晰的核心结论。
+论文阅读和论文汇报对应着两种不同的信息接收方式。
 
-本项目希望整理一套实用、直观的 **Research Presentation Tips**，覆盖从整体设计与表达、背景与动机、方法介绍，到实验分析与总结收尾的完整科研汇报流程。
+论文允许读者停下来、回看公式、反复理解细节；而在 Presentation 中，听众只能跟随讲者的节奏，在有限时间内持续接收信息。因此，一份好的 Presentation Slides 不应该只是论文内容的压缩版，而应该围绕听众的理解过程重新组织。
 
-与单纯罗列 PPT 设计原则不同，我们希望尽可能通过 **Bad Slide → Good Slide** 的方式展示科研汇报中的常见问题以及更推荐的表达方式，让每一条建议都能够直接应用到真实的 Presentation 中。
+在论文汇报中，我们经常遇到这些问题：
 
-每个 Tip 主要由以下几个部分组成：
+- 页面信息过载或重点不突出，听众难以快速抓住核心内容；
+- 方法和实验展示过于复杂，听众难以建立直觉、理解结论；
+- 汇报结束后，听众仍然说不清这项工作的核心贡献；
+- ……
+
+这个项目希望从真实的 Paper Presentation 场景出发，总结一组简单、可操作、可复用的经验，并通过 Bad Slide / Good Slide 的对比方式展示这些原则如何真正落到一页 Slides 上。
 
 <div align="center">
 
-| 组成部分 | 说明 |
-| --- | --- |
-| **常见问题** | 科研汇报中常见的 PPT 展示问题 |
-| **❌ Bad Slide** | 容易增加理解成本的展示方式 |
-| **✅ Good Slide** | 更清晰、更有效的展示方式 |
-| **💡 Core Principle** | 对该 Tip 的核心原则总结 |
+<table>
+
+<tr>
+  <th width="22%">组成</th>
+  <th width="78%">说明</th>
+</tr>
+
+<tr>
+  <td align="center"><b>常见问题</b></td>
+  <td>Paper Presentation 中经常出现、但容易被忽略的表达问题 </td>
+</tr>
+
+<tr>
+  <td align="center"><b>❌ Bad Slide</b></td>
+  <td>
+    展示一种常见但不够理想的 Slides 设计方式，用于帮助理解问题所在 <br/>
+    <b>（这些示例仅基于我们的粗浅理解与有限实践，并非唯一标准）</b>
+  </td>
+</tr>
+
+<tr>
+  <td align="center"><b>✅ Good Slide</b></td>
+  <td>
+    在保持原始信息和研究内容的基础上，展示一种更清晰的组织与表达方式
+  </td>
+</tr>
+
+<tr>
+  <td align="center"><b>💡 Core Principle</b></td>
+  <td>
+    提炼出的可迁移的 Paper Presentation 设计原则
+  </td>
+</tr>
+
+</table>
 
 </div>
 
@@ -58,22 +109,29 @@
 
 <br/>
 
-本项目中的所有 Tips 主要来源于科研汇报实践经验，**仅供参考**，并非适用于所有场景的绝对规则。
+本项目中的 Bad Slide / Good Slide 对比主要用于帮助说明具体的 Presentation 设计原则。
+这些示例来自我们有限的论文汇报实践与个人经验，并不意味着存在唯一正确的 Slides 设计方式。
 
-不同研究领域、报告类型、汇报时间和听众背景可能需要不同的呈现方式。例如，Conference Talk、Group Meeting、Thesis Defense 和 Tutorial 对信息密度、技术细节以及讲述节奏的要求并不完全相同。
 
-请根据具体的汇报场景灵活调整。
+不同研究方向、汇报场景、听众背景与时间限制，都可能对应不同的最佳表达方式。
 
-本项目仍在持续完善中。如果你有不同的经验、优秀的 Presentation 示例，或者对现有 Tips 有任何建议，欢迎提交 Issue 或 PR。
+因此，这些 Tips 是作为设计和思考时的参考，而不是必须遵守的规则。
+
+最后，如果你有不同的经验、案例或观点，也非常欢迎通过 Issue 或 Pull Request 参与讨论与补充。
 
 </details>
 
+<br/>
+
 ---
 
-## 📚 Presentation Tips
+<a id="-presentation-tips"></a>
+
+## 🎯 Presentation Tips
 
 <div align="center">
-<table>
+
+<table width="100%">
 
 <tr>
   <th width="28%">Part</th>
@@ -81,51 +139,52 @@
 </tr>
 
 <tr>
-  <td align="center">
+  <td align="center" valign="middle" nowrap>
     🎨 <b>Part A · 整体设计与表达</b>
   </td>
-  <td>
-    <b>Tips 1–5</b> · 聚焦科研 PPT 的信息组织、单页表达、标题、颜色与排版等基础问题
+  <td align="center" valign="middle" nowrap>
+    <b>Tips 1–5</b> · 聚焦 Slides 的信息组织、单页表达、标题、颜色与排版等基础问题
   </td>
 </tr>
 
 <tr>
-  <td align="center">
+  <td align="center" valign="middle" nowrap>
     💡 <b>Part B · 背景与动机</b>
   </td>
-  <td>
-    <b>Tip 6</b> · 聚焦如何帮助听众快速建立问题直觉，并理解“为什么值得研究”
+  <td align="center" valign="middle" nowrap>
+    <b>Tip 6</b> · 如何帮助听众快速建立问题直觉，并理解“为什么值得研究”
   </td>
 </tr>
 
 <tr>
-  <td align="center">
+  <td align="center" valign="middle" nowrap>
     🧩 <b>Part C · 方法介绍</b>
   </td>
-  <td>
-    <b>Tips 7–8</b> · 聚焦如何降低复杂方法的理解门槛，并清晰表达工作的核心创新
+  <td align="center" valign="middle" nowrap>
+    <b>Tips 7–8</b> · 如何降低复杂方法的理解门槛，清晰表达工作的核心创新
   </td>
 </tr>
 
 <tr>
-  <td align="center">
+  <td align="center" valign="middle" nowrap>
     📊 <b>Part D · 实验分析</b>
   </td>
-  <td>
-    <b>Tips 9–10</b> · 聚焦如何突出关键实验结果，并让听众快速理解实验结论
+  <td align="center" valign="middle" nowrap>
+    <b>Tips 9–10</b> · 如何突出关键实验结果，让听众快速理解实验结论
   </td>
 </tr>
 
 <tr>
-  <td align="center">
+  <td align="center" valign="middle" nowrap>
     🎯 <b>Part E · 总结收尾</b>
   </td>
-  <td>
-    <b>Tip 11</b> · 聚焦如何在报告结束时回顾核心内容，并强化听众的最后印象
+  <td align="center" valign="middle" nowrap>
+    <b>Tip 11</b> · 如何在报告结束时回顾核心内容，强化听众的最后印象
   </td>
 </tr>
 
 </table>
+
 </div>
 
 ---
@@ -135,7 +194,7 @@
 ### 🎨 Part A · 整体设计与表达
 
 <blockquote>
-聚焦科研汇报中最基础的信息组织与视觉表达问题，让每一页 PPT 都更清晰、更容易理解。
+聚焦论文汇报中最基础的信息组织与视觉表达问题，让每一页 Slides 都更清晰、更容易理解。
 </blockquote>
 
 <br/>
@@ -199,7 +258,7 @@
 
 ---
 
-<a id="background-motivation"></a>
+<a id="motivation"></a>
 
 ### 💡 Part B · 背景与动机
 
@@ -224,7 +283,7 @@
 
 ---
 
-<a id="method-presentation"></a>
+<a id="method"></a>
 
 ### 🧩 Part C · 方法介绍
 
@@ -260,7 +319,7 @@
 
 ---
 
-<a id="experimental-analysis"></a>
+<a id="experiments"></a>
 
 ### 📊 Part D · 实验分析
 
@@ -296,12 +355,12 @@
 
 ---
 
-<a id="summary-closing"></a>
+<a id="summary"></a>
 
 ### 🎯 Part E · 总结收尾
 
 <blockquote>
-聚焦如何在汇报结束时重新强化任务、方法、实验结果与核心结论，让听众带着最重要的信息离场。
+聚焦如何在论文汇报结束时重新强化任务、方法、实验结果与核心结论，让听众带着最重要的信息离场。
 </blockquote>
 
 <br/>
@@ -319,59 +378,60 @@
 
 <p align="right"><a href="#-presentation-tips">⬆️ 返回 Tips 目录</a></p>
 
+<br/>
+
 ---
 
 ## 📖 资源合集
 
-> 持续整理与 Research Presentation、Academic Talk 和科研 PPT 设计相关的优秀资料。
-
-### 🇨🇳 中文经验
-
-<div align="center">
-
-| # | 资源 | 来源 |
-|:---:|:---|:---:|
-| 1 | TBD | TBD |
-| 2 | TBD | TBD |
-| 3 | TBD | TBD |
-
-</div>
+> 持续整理与 Paper Presentation、Academic Talk 和 Slides 设计相关的优秀资料。
 
 ### 🎬 视频 / 课程资源
 
 <div align="center">
 
-| # | 资源 | 说明 |
-|:---:|:---|:---|
-| 1 | TBD | TBD |
-| 2 | TBD | TBD |
-| 3 | TBD | TBD |
+| # | 资源 | 简介 |
+|:---:|---|---|
+| 1 | [Designing Effective Scientific Presentations](https://www.ibiology.org/professional-development/scientific-presentations/) — Susan McConnell, Stanford / iBiology | 科研 Slides 的字体、颜色、布局、数据展示与整体结构 |
+| 2 | [Oral Presentations: Using Slides Effectively](https://www.ibiology.org/nrmn-resources/oral-presentations-using-slides-effectively/) — Boyd Branch | 如何基于视觉层级与信息简化，制作清晰易懂的 Slides |
+| 3 | [Share Your Research: How to Give a Good Talk](https://www.ibiology.org/educators-resources/online-course/share-your-research/) — iBiology | 一套系统的科研汇报课程，涵盖 Slides 设计 |
+| 4 | [Rethinking Scientific Presentations: Slide Design and Delivery](https://www.ibiology.org/professional-development/power-point-slide-design/) — Michael Alley | 如何用结论式标题和视觉证据组织 Slides |
 
 </div>
 
-### 🌍 英文经验
+### 🌍 经验分享
 
 <div align="center">
 
-| # | 资源 | 作者 / 来源 |
-|:---:|:---|:---:|
-| 1 | TBD | TBD |
-| 2 | TBD | TBD |
-| 3 | TBD | TBD |
+| # | 资源 | 简介 |
+|:---:|---|---|
+| 1 | [Ten Simple Rules for Effective Presentation Slides](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009554) — PLOS Computational Biology | 科研 Slides 设计的十条核心原则 |
+| 2 | [Some Rules for Making a Presentation](https://www.cs.cmu.edu/~mihaib/presentation-rules.html) — Mihai Budiu | 科研 Presentation 的实用经验 |
+| 3 | [Dos and Don'ts for Research Presentations](https://maartensap.com/notes/03-presenting-your-research.html) — Maarten Sap | 研究型 Presentation 中常见的问题与改进方式 |
+| 4 | [Creating Effective Presentation Slides](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 高效 Presentation Slides 的基本设计原则 |
+| 5 | [Presentation Accessibility Checklist](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 从字体、颜色、对比度、图像和结构等方面检查 Slides |
 
 </div>
 
-### 🛠️ 工具、工作流与相关项目
+### 🛠️ 工作流与 Skills
 
 <div align="center">
 
-| # | 项目 | 简介 |
-|:---:|:---|:---|
-| 1 | TBD | TBD |
-| 2 | TBD | TBD |
-| 3 | TBD | TBD |
+| # | 项目 | 功能 / 亮点 |
+|:---:|---|---|
+| 1 | [PPT Master](https://github.com/hugohe3/ppt-master) | 从主题、文档或已有模板生成原生可编辑 PPTX |
+| 2 | [powerpoint-skills](https://github.com/wdempsey/powerpoint-skills) | 学术 Slides 综合 Skill Suite |
+| 3 | [Paper2Slides](https://github.com/HKUDS/Paper2Slides) | 将论文或长文档自动转化为结构化 Slides |
+| 4 | [Scholar Slides](https://github.com/luwill/research-skills/blob/main/scholar-slides/SKILL.md) | 强调学术内容保真与证据可追溯的 Slides 生成工作流 |
+| 5 | [Beamer Academic](https://github.com/Faust-Donf/beamer-academic/blob/main/SKILL.md) | 从论文内容自动生成并迭代 Beamer Slides |
+| 6 | [Extract PPTX Template](https://github.com/jiandong01/pptx-skills/blob/main/extract-template/SKILL.md) | 从已有 PPT 中提取并复用模板样式 |
+| 7 | [PPT Speech Writer](https://github.com/AI272/speaker/blob/main/ppt-speech-writer/SKILL.md) | 为 PPT 逐页生成讲稿，并进行汇报时间规划 |
+| 8 | [Markdown Slide Decks](https://github.com/borghei/Claude-Skills/blob/main/markdown-html/md-slides/SKILL.md) | 将 Markdown 转换为可直接浏览的 HTML Slides |
+| 9 | [HTML Presentation Skill](https://github.com/wbohanw/html-presentation/blob/main/SKILL.md) | 制作可直接浏览与分享的 HTML Presentation 页面 |
 
 </div>
+
+<br/>
 
 ---
 
@@ -382,31 +442,37 @@
 </p>
 
 <p align="left">
-  <a href="https://github.com/qinlibo-hit">
-    <img src="https://images.weserv.nl/?url=github.com/qinlibo-hit.png?v=4&mask=circle" width="80"></a>
-  &nbsp;&nbsp;
   <a href="https://github.com/lishasha2001">
     <img src="https://images.weserv.nl/?url=github.com/lishasha2001.png?v=4&mask=circle" width="80"></a>
   &nbsp;&nbsp;
   <a href="https://github.com/chenyuanTKCY">
     <img src="https://images.weserv.nl/?url=github.com/chenyuanTKCY.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/YanyuYao1">
+    <img src="https://images.weserv.nl/?url=github.com/YanyuYao1.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/hiki1op">
+    <img src="https://images.weserv.nl/?url=github.com/hiki1op.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/xcGH-stu">
+    <img src="https://images.weserv.nl/?url=github.com/xcGH-stu.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/zhengzhi-1997">
+    <img src="https://images.weserv.nl/?url=github.com/zhengzhi-1997.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/qinlibo-hit">
+    <img src="https://images.weserv.nl/?url=github.com/qinlibo-hit.png?v=4&mask=circle" width="80"></a>
 </p>
+
+<br/>
 
 ---
 
 ## 🤝 欢迎贡献
 
-欢迎通过 **Issue** 或 **PR** 补充更多 Research Presentation Tips、真实的 Bad / Good Slide 示例以及相关资源。
+欢迎通过 **Issue** 或 **PR** 补充更多 Paper Presentation Tips、真实的 Bad / Good Slide 示例以及相关资源。
 
-我们尤其欢迎以下类型的贡献：
-
-- 💡 新的 Research Presentation Tips
-- 🖼️ Bad Slide / Good Slide 对比案例
-- 📊 更清晰的实验结果展示方式
-- 🧩 方法、公式与模型结构的讲解案例
-- 🎤 优秀的 Academic Talk / Conference Presentation
-- 📚 与科研汇报相关的文章、课程和学习资源
-- ✏️ 对现有 Tips 的修改与补充
+论文汇报本身没有唯一正确的模板。我们希望这个项目能够不断汇集不同研究者的实践经验，帮助大家用更清晰、更有效的方式表达自己的研究。
 
 <details>
 <summary><b>📝 建议新增内容时保持以下结构</b></summary>
@@ -427,14 +493,17 @@
 
 </details>
 
-科研汇报本身没有唯一正确的模板。我们希望这个项目能够不断汇集不同研究者的实践经验，帮助大家用更清晰、更有效的方式表达自己的研究。
+<br/>
 
 ---
 
+<a id="acknowledgements"></a>
+
 ## 🙏 Acknowledgements
 
-本项目在组织形式与内容呈现上参考了：
+本项目在组织形式、内容呈现与 README 设计上参考了以下优秀开源项目：
 
 - [Paper-Rebuttal-Tips](https://github.com/MLNLP-World/Paper-Rebuttal-Tips) — 面向学术论文 Rebuttal 的经验总结与实践指南
+- [Academic-Poster-Template](https://github.com/MLNLP-World/Academic-Poster-Template) — 面向科研展示的开源学术海报模板与 README 设计参考
 
-感谢所有为科研写作、学术交流与 Research Presentation 分享经验的研究者和社区贡献者。
+感谢所有为科研写作、学术交流与 Paper Presentation 分享经验的研究者和社区贡献者。
