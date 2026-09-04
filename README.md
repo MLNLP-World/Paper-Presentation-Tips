@@ -343,7 +343,8 @@
 <br/>
 
 <p align="center">
-  <img src="./figures/tips-09.png" alt="Tip 9: 让听众一眼看到重点" width="900" />
+  <img src="./figures/tips-09.png" alt="Tip 9: 让听众一眼看到重点" 
+  width="900" />
 </p>
 
 </details>
