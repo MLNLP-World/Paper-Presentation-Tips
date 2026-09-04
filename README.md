@@ -1,4 +1,8 @@
-<h1 align="center">Paper Presentation Tips</h1>
+<p align="center">
+  <img src="./figures/teaser.png" alt="Paper Presentation Tips teaser" width="100%" />
+</p>
+
+<h1 align="center">🎤 Paper Presentation Tips</h1>
 
 <p align="center">
   <a href="https://github.com/lishasha2001/Paper-Presentation-Tips">
@@ -456,6 +460,12 @@
   &nbsp;&nbsp;
   <a href="https://github.com/xcGH-stu">
     <img src="https://images.weserv.nl/?url=github.com/xcGH-stu.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+    <a href="https://github.com/figureout2024">
+    <img src="https://images.weserv.nl/?url=github.com/figureout2024.png?v=4&mask=circle" width="80"></a>
+  &nbsp;&nbsp;
+    <a href="https://github.com/Xyzjx">
+    <img src="https://images.weserv.nl/?url=github.com/Xyzjx.png?v=4&mask=circle" width="80"></a>
   &nbsp;&nbsp;
   <a href="https://github.com/zhengzhi-1997">
     <img src="https://images.weserv.nl/?url=github.com/zhengzhi-1997.png?v=4&mask=circle" width="80"></a>
