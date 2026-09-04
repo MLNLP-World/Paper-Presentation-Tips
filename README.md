@@ -40,13 +40,15 @@
 
 ---
 
-<p align="center">
-  <img src="./figures/teaser.png" alt="Paper Presentation Tips teaser" width="100%" />
-</p>
+
 
 <p align="center">
   <b>Good Presentation = Clear Message + Clear Visuals + Clear Story</b><br/>
   <b>信息清晰 · 视觉清晰 · 叙事清晰</b>
+</p>
+
+<p align="center">
+  <img src="./figures/teaser.png" alt="Paper Presentation Tips teaser" width="100%" />
 </p>
 
 ---
