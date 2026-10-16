@@ -420,6 +420,7 @@
 | 4 | [Creating Effective Presentation Slides](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 高效 Presentation Slides 的基本设计原则 |
 | 5 | [Presentation Accessibility Checklist](https://academics.umw.edu/swc/resources/) — University of Mary Washington | 从字体、颜色、对比度、图像和结构等方面检查 Slides |
 | 6 | [如何做一个精彩的学术报告](https://chewanxiang.com/talks/how_to_give_a_great_talk.pdf) · [源 PDF](./source/source.pdf) — 车万翔，哈尔滨工业大学 / CCL 2019 | 从报告目标、内容取舍、幻灯片设计到现场表达，系统讲解如何提升学术报告的吸引力与影响力 |
+| 7 | [线上汇报的听众视角预演检查（英文）](https://light-tracer.com/laser-pointer-screen-share-zoom-teams/) — Light Tracer 商家指南，AI 辅助，含店铺链接 | 检查共享标记、切换幻灯片/窗口与允许录制的回放；区分屏幕内标记和实体光点，非科研实测或设备性能验证 |
 
 
 </div>
