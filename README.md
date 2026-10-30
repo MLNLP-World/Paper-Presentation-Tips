@@ -405,7 +405,7 @@
 | 2 | [Oral Presentations: Using Slides Effectively](https://www.ibiology.org/nrmn-resources/oral-presentations-using-slides-effectively/) — Boyd Branch | 如何基于视觉层级与信息简化，制作清晰易懂的 Slides |
 | 3 | [Share Your Research: How to Give a Good Talk](https://www.ibiology.org/educators-resources/online-course/share-your-research/) — iBiology | 一套系统的科研汇报课程，涵盖 Slides 设计 |
 | 4 | [Rethinking Scientific Presentations: Slide Design and Delivery](https://www.ibiology.org/professional-development/power-point-slide-design/) — Michael Alley | 如何用结论式标题和视觉证据组织 Slides |
-
+| 5 | [How to Give Talks That People Can Follow](https://www.pldi21.org/prerecorded_9953.html) — Derek Dreyer，MPI-SWS / PLMW@PLDI 2021 | 结合实际会议报告案例，讲解如何组织科研幻灯片内容、避免结构混乱，并清晰呈现研究贡献与意义 |
 </div>
 
 ### 🌍 经验分享
