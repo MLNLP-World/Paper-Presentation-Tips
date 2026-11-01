@@ -466,13 +466,13 @@
 
 原稿 11 页，润色稿 20 页（含 5 页备份）。下图左侧为原稿，右侧为对应的润色页，均来自这两份 PPTX 的实际渲染；点击图片可放大。
 
-[![原第 1 页与润色后第 1 页：用输入输出案例组织任务定义](docs/images/fanli-01-before-after.jpg)](docs/images/fanli-01-before-after.jpg)
+[![原第 1 页与润色后第 1 页：用输入输出案例组织任务定义](docs/images/fanli-01-before-after.png)](docs/images/fanli-01-before-after.png)
 
-[![原第 4 页与润色后第 7 页：整理多模态学习挑战与配色层级](docs/images/fanli-04-before-after.jpg)](docs/images/fanli-04-before-after.jpg)
+[![原第 4 页与润色后第 7 页：整理多模态学习挑战与配色层级](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
 
-[![原第 5 页与润色后第 6 页：用图文问答案例串起上下文学习](docs/images/fanli-05-before-after.jpg)](docs/images/fanli-05-before-after.jpg)
+[![原第 5 页与润色后第 6 页：用图文问答案例串起上下文学习](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
 
-[![原第 10 页与润色后第 14 页：呈现准确率与相对长度的双指标比较](docs/images/fanli-10-before-after.jpg)](docs/images/fanli-10-before-after.jpg)
+[![原第 10 页与润色后第 14 页：呈现准确率与相对长度的双指标比较](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
 
 | 原稿页 → 润色页 | 主要变化 |
 | --- | --- |
