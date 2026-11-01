@@ -83,6 +83,10 @@ With an active template workspace, append exactly one line after the §I table �
 | Secondary text | <HEX> | <captions, annotations, footnotes> |
 | Divider | <HEX> | <rules, borders, hairlines> |
 
+### Color Usage
+
+Record a compact `component/semantic role → color family or shade → scope` map alongside the palette, following [academic-chat-design.md §1C](../references/academic-chat-design.md#1c-通用视觉约定与配色用途). Cover same-level structural components, table header/body/highlight/grid coherence, intentional category differences and source colors that must be preserved. Use the project's actual roles; this is a semantic plan, not a fixed palette, a required color count, or per-object paint coordinates.
+
 ## IV. Typography System
 
 ### Font Plan

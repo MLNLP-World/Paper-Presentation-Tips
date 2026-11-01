@@ -138,6 +138,8 @@ Record the style and rationale in `design_spec.md`, then project `- visual_style
 
 Palette precedence, proportion, contrast, recall anchors, and the neutral tiers to lock are [`plan-core.md`](./plan-core.md) §6.1; Strategist owns the reusable positive / warning / negative roles and every locked neutral tier.
 
+Alongside the per-slide content/layout outline, summarize the already resolved canvas, style, typography, resource basis and color-use map under [academic-chat-design.md §1C](./academic-chat-design.md#1c-通用视觉约定与配色用途). Reuse existing decisions rather than adding another confirmation round. A palette proposal explains which component/semantic roles use each family, including table-wide coherence and intentional category differences; matching swatches alone do not establish that mapping.
+
 ### f. Icon Usage Confirmation
 
 One single-select base identity (A emoji / B built-in library / C custom / D none), not a material whitelist — the option table, the illustrated-icon and brand-mark boundaries, and the library line are [`plan-core.md`](./plan-core.md) §6.3.

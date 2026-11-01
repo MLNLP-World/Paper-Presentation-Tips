@@ -150,6 +150,8 @@ python3 skills/ppt-master/scripts/visualization_recall.py validate \
 
 ### 6.1 Color
 
+The plan also establishes the recurring component/semantic color-use map under [academic-chat-design.md §1C](./academic-chat-design.md#1c-通用视觉约定与配色用途): same-level structures stay coherent, a table is colored as a whole, and meaningful categories may differ. Executor's page-local color craft works within those confirmed roles; no fixed palette or extra approval round follows from this guidance.
+
 **Reference — not a constraint**: no universal palette — user / brand → active template → project-specific proposal from content and style; 60-30-10 is the starting proportion, body contrast at least 4.5:1 (WCAG AA), hue count follows encoding, style, and natural assets; how color is *used* on a page (fields, gradients, accent placement, mood) is Executor's craft. `scripts/config.py` industry anchors (finance/business navy `#003366`, technology bright blue `#1565C0`, healthcare teal `#00796B`, government red `#C41E3A`) and polarity ramps (positive `#2E7D32 → #4CAF50 → #81C784`, warning `#F57C00 → #FFA726 → #FFD54F`, negative `#C62828 → #EF5350 → #E57373`) are recall aids, never default locks; brand identities come from a Brand/Deck workspace, never a memorized list. The plan owns reusable positive / warning / negative roles; Executor derives tints, shades, alpha, gradients, and effects.
 
 **Anchor recurring semantic roles, not every paint** (Default locks them; Quick keeps them as context anchors): add neutral roles the style and page plan give a stable meaning — `surface`, `grid`, `scrim`, `overlay`, `block-shade` — and leave page-local tints, gradient stops, shadow/glow colors, and one-off tones to execution, promoting one only when it becomes a reusable named role.

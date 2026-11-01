@@ -1,0 +1,790 @@
+{
+  "schema_version": 1,
+  "resource_type": "optional-teaching-examples",
+  "source": {
+    "file": "正例.pptx",
+    "sha256": "71fbcd8ac1f8d7bcc588808a18e7bad31c2789ede441528d111dd2ab658bf31d",
+    "bytes": 1217044,
+    "provenance": "User-provided complete deck; original file copied without alteration.",
+    "external_relationship_count": 0,
+    "canvas_emu": {
+      "cx": "9715500",
+      "cy": "5695950"
+    }
+  },
+  "usage": "Select relevant expression patterns or native components; optional, not a default theme or factual research source.",
+  "verification": {
+    "date": "2026-11-01",
+    "renderer": "WPS Presentation (PowerPoint-compatible COM)",
+    "version": "12.0",
+    "rendered_source_sha256": "71fbcd8ac1f8d7bcc588808a18e7bad31c2789ede441528d111dd2ab658bf31d",
+    "visual_review": "All eleven actual-render previews inspected; known per-page caveats recorded.",
+    "edit_probe": {
+      "renderer": "WPS Presentation",
+      "version": "12.0",
+      "source_sha256": "71fbcd8ac1f8d7bcc588808a18e7bad31c2789ede441528d111dd2ab658bf31d",
+      "text_edit_save_reopen": true,
+      "table_edit_save_reopen": true,
+      "ungrouped_children": 4,
+      "not_verified": [
+        "Interactive chart-data editing",
+        "Interactive Office Math editing",
+        "Microsoft PowerPoint16 editing"
+      ]
+    },
+    "structural_totals": {
+      "native_shapes": 710,
+      "groups": 152,
+      "pictures": 16,
+      "tables": 2,
+      "charts": 3,
+      "office_math": 1
+    }
+  },
+  "pages": [
+    {
+      "page_id": "P01",
+      "slide_number": 1,
+      "slide_part": "ppt/slides/slide1.xml",
+      "purpose": "用具体输入输出说明任务",
+      "cautions": [
+        "照片内部不可编辑；不要求所有定义页采用双行布局。"
+      ],
+      "preview": {
+        "file": "previews/P01.png",
+        "sha256": "eb4fa75c42996bb323286525ba451d4fb87947402c2e16cdb1e675b009a93d9f",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 48,
+        "groups": 10,
+        "pictures": 1,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 47,
+          "name": "translation-example",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 34,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 60,
+          "name": "caption-example",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 10,
+            "pictures": 1,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P02",
+      "slide_number": 2,
+      "slide_part": "ppt/slides/slide2.xml",
+      "purpose": "核心问题、原因与目标建立主线",
+      "cautions": [
+        "曲线是定性示意，不是实测数据。"
+      ],
+      "preview": {
+        "file": "previews/P02.png",
+        "sha256": "bca53e0873f562e5e386f6ff1f7220c2609a16db9a49eb14d3ed11ad241631de",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 33,
+        "groups": 10,
+        "pictures": 0,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 10,
+          "name": "problem",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 2,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 31,
+          "name": "issue-cards",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 16,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 41,
+          "name": "qualitative-trend",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 9,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 43,
+          "name": "goal",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 1,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P03",
+      "slide_number": 3,
+      "slide_part": "ppt/slides/slide3.xml",
+      "purpose": "结论标题、小型精确表格与发现对应",
+      "cautions": [
+        "当前 WPS 预览表头折行且局部拥挤；复用须检查列宽与字体。"
+      ],
+      "preview": {
+        "file": "previews/P03.png",
+        "sha256": "a032dae0007baf14dc625c6cb7799a1c3f2766b639dfadfe62b982e722fe96b0",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 21,
+        "groups": 6,
+        "pictures": 0,
+        "tables": 1,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 21,
+          "name": "experiment-table-region",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 10,
+            "pictures": 0,
+            "tables": 1,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 29,
+          "name": "findings",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 6,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [
+        {
+          "id": 9,
+          "name": "instruction-table",
+          "rows": 12,
+          "columns": 6
+        }
+      ],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P04",
+      "slide_number": 4,
+      "slide_part": "ppt/slides/slide4.xml",
+      "purpose": "有限强调、挑战与机制图对应",
+      "cautions": [
+        "散点图为图片；技术措辞需按当前来源核对。"
+      ],
+      "preview": {
+        "file": "previews/P04.png",
+        "sha256": "00f9fc59f15742dbf5495ccad3089d8bc4fc43050c897eb80f2c696b12c205fa",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 42,
+        "groups": 11,
+        "pictures": 1,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 13,
+          "name": "challenge-one",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 4,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 18,
+          "name": "challenge-two",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 4,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 53,
+          "name": "crossmodal-diagram",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 29,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 55,
+          "name": "complex-scatter-figure",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 0,
+            "pictures": 1,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P05",
+      "slide_number": 5,
+      "slide_part": "ppt/slides/slide5.xml",
+      "purpose": "概念分层与案例输入输出流程",
+      "cautions": [
+        "复杂插画和照片为独立图片；卡片风格可不用。"
+      ],
+      "preview": {
+        "file": "previews/P05.png",
+        "sha256": "2458b8c6a0b8a5fcfa0c242b5dacb6e2140667debf41d13679a7dc0cddfd3e20",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 127,
+        "groups": 14,
+        "pictures": 3,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 76,
+          "name": "lvlm-card",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 67,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 94,
+          "name": "icl-card",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 15,
+            "pictures": 1,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 145,
+          "name": "crossmodal-field",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 41,
+            "pictures": 2,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P06",
+      "slide_number": 6,
+      "slide_part": "ppt/slides/slide6.xml",
+      "purpose": "案例、冲突、追问到方法概念",
+      "cautions": [
+        "不要求每页四列；方法事实来自当前材料。"
+      ],
+      "preview": {
+        "file": "previews/P06.png",
+        "sha256": "4dc6361d60f407b754db925725db0d2c79c5f0ddf83f363a80ee5bbe0006da21",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 168,
+        "groups": 43,
+        "pictures": 1,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 199,
+          "name": "four-stage-explanation",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 153,
+            "pictures": 1,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 213,
+          "name": "bottom-process",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 11,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P07",
+      "slide_number": 7,
+      "slide_part": "ppt/slides/slide7.xml",
+      "purpose": "具体例子承接符号与公式",
+      "cautions": [
+        "公式交互编辑本轮未验证；适配后核对符号和显示。"
+      ],
+      "preview": {
+        "file": "previews/P07.png",
+        "sha256": "40baeaddfc7f9d22dc3884099f219a403617962155fdb79c7264bb5d254e66b6",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 78,
+        "groups": 11,
+        "pictures": 2,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 1
+      },
+      "components": [
+        {
+          "id": 80,
+          "name": "maze-example",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 64,
+            "pictures": 2,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 92,
+          "name": "update-equation-panel",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 10,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 1
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P08",
+      "slide_number": 8,
+      "slide_part": "ppt/slides/slide8.xml",
+      "purpose": "精炼贡献句与对应示意",
+      "cautions": [
+        "不要求三项贡献；图片切片内部不可编辑。"
+      ],
+      "preview": {
+        "file": "previews/P08.png",
+        "sha256": "9f87573d7cf2b73260137d8553d5e79e0999adee6cd2c529774d82d3b57fdc1c",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 65,
+        "groups": 15,
+        "pictures": 7,
+        "tables": 0,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 26,
+          "name": "patch-sequence",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 11,
+            "pictures": 7,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 47,
+          "name": "transformer-global-relations",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 18,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 88,
+          "name": "pretraining-transfer",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 33,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P09",
+      "slide_number": 9,
+      "slide_part": "ppt/slides/slide9.xml",
+      "purpose": "关键数值高亮与注释阅读路径",
+      "cautions": [
+        "不得照搬示例实验数字或结论。"
+      ],
+      "preview": {
+        "file": "previews/P09.png",
+        "sha256": "39fa1df73a471100bf3f221c5c13e6e36d08e8a0205343256aa2837d08e6e7e2",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 24,
+        "groups": 6,
+        "pictures": 0,
+        "tables": 1,
+        "charts": 0,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 26,
+          "name": "experiment-figure",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 16,
+            "pictures": 0,
+            "tables": 1,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 32,
+          "name": "final-conclusion",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 5,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [
+        {
+          "id": 7,
+          "name": "reward-metrics-table",
+          "rows": 7,
+          "columns": 4
+        }
+      ],
+      "chart_objects": []
+    },
+    {
+      "page_id": "P10",
+      "slide_number": 10,
+      "slide_part": "ppt/slides/slide10.xml",
+      "purpose": "双指标比较与变化解释",
+      "cautions": [
+        "部分刻度、数值和变化标签是独立文本；改数据或量程须手动同步。"
+      ],
+      "preview": {
+        "file": "previews/P10.png",
+        "sha256": "0d8b956503ad89aef0aba9d619263311716466f46971aa91d7b1104c2ef0d466",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 55,
+        "groups": 19,
+        "pictures": 1,
+        "tables": 0,
+        "charts": 2,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 9,
+          "name": "headline-callout",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 2,
+            "pictures": 1,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 14,
+          "name": "legend",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 4,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 46,
+          "name": "accuracy-panel",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 23,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 1,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 78,
+          "name": "efficiency-panel",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 23,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 1,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": [
+        {
+          "id": 30,
+          "name": "accuracy-native-chart",
+          "part": "ppt/charts/chart1.xml",
+          "embedded_workbooks": [
+            "ppt/embeddings/Microsoft_Excel_Worksheet.xlsx"
+          ]
+        },
+        {
+          "id": 62,
+          "name": "efficiency-native-chart",
+          "part": "ppt/charts/chart2.xml",
+          "embedded_workbooks": [
+            "ppt/embeddings/Microsoft_Excel_Worksheet1.xlsx"
+          ]
+        }
+      ]
+    },
+    {
+      "page_id": "P11",
+      "slide_number": 11,
+      "slide_part": "ppt/slides/slide11.xml",
+      "purpose": "用动机、方法、证据回扣总结",
+      "cautions": [
+        "红字与旧结论必须按当前材料替换；不要求所有结尾三列。",
+        "chart3 原生值轴隐藏且固定 0–100；手工刻度组 tiny-chart-manual-value-axis (id53)、百分号文本 (id57) 与结论文本 (id55) 是独立对象，换指标/量程/单位须同步。",
+        "chart3 数据标签格式 0\"%\" 仅追加百分号；当前数据为 84/71/96，不能直接填 0.84/0.71/0.96 并期待显示 84%/71%/96%。"
+      ],
+      "preview": {
+        "file": "previews/P11.png",
+        "sha256": "14f165a2b641e8dff8a12ddc47e928646daccc02bf81a1a14ed7af616847d185",
+        "pixels": [
+          1280,
+          750
+        ],
+        "derivation": "Uniform downsampling of the actual native-render PNG; no crop or redesign."
+      },
+      "observed_objects": {
+        "native_shapes": 49,
+        "groups": 7,
+        "pictures": 0,
+        "tables": 0,
+        "charts": 1,
+        "office_math": 0
+      },
+      "components": [
+        {
+          "id": 27,
+          "name": "motivation-column",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 19,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 37,
+          "name": "method-column",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 9,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 0,
+            "office_math": 0
+          }
+        },
+        {
+          "id": 58,
+          "name": "results-column",
+          "kind": "native_group",
+          "contains": {
+            "native_shapes": 18,
+            "pictures": 0,
+            "tables": 0,
+            "charts": 1,
+            "office_math": 0
+          }
+        }
+      ],
+      "table_objects": [],
+      "chart_objects": [
+        {
+          "id": 54,
+          "name": "reward-success-chart",
+          "part": "ppt/charts/chart3.xml",
+          "embedded_workbooks": [
+            "ppt/embeddings/Microsoft_Excel_Worksheet2.xlsx"
+          ]
+        }
+      ]
+    }
+  ]
+}

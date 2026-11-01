@@ -47,6 +47,10 @@ Never use these axes as synonyms or expose them as a mode matrix; a mirror-creat
 
 Page-local Shape-first catalog families, not kinds: Chart — value-driven geometry (33), planning map [`chart-vocabulary.md`](./charts/chart-vocabulary.md), index [`charts_index.json`](./charts/charts_index.json); Table — row × column fact grid (6), [`table-vocabulary.md`](./tables/table-vocabulary.md), [`tables_index.json`](./tables/tables_index.json). [`VISUALIZATION_TEMPLATE_AUTHORING.md`](./VISUALIZATION_TEMPLATE_AUTHORING.md) is the maintainer authoring contract. Qualitative Structure is a Slide-local Executor method, not a catalog; only Layout and Deck own reusable Master/Layout, page types, slots, and placeholders.
 
+## Positive Teaching Examples
+
+[Purpose-based teaching index](../references/positive-examples.md) links an optional complete native PPTX, per-page actual-render previews, and reusable component IDs under `assets/examples/academic-positive/`. Consult only pages relevant to the current communication problem. Examples teach expression and implementation; they are not a template kind, do not impose a palette or layout, and may be left unused. User-provided designs and confirmed references remain authoritative.
+
 ## Icon Library
 
 [`icons/`](./icons/) holds 12,027 vectors across five libraries (`chunk-filled` 641, `tabler-filled` 1,055, `tabler-outline` 5,138, `phosphor-duotone` 1,518, `simple-icons` 3,675 brand logos); usage and style rules in [icons/README.md](./icons/README.md), licenses in [icons/THIRD_PARTY_NOTICES.md](./icons/THIRD_PARTY_NOTICES.md).

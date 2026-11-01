@@ -5,7 +5,9 @@ description: Quick-only Generate profile for reconstructing one or more source i
 # Image to PPTX Profile
 
 
-> Quick-only Generate profile, not a top-level route. Normalize supplied images into the represented page roster, then rebuild each page as native text, identity-faithful source graphics, and independently placeable image layers. The visible result is the reference truth, but the output is not a screenshot skin: image content becomes the smallest useful background / foreground / subject stack, visible text is restored natively, and source graphics stay visually exact. No redesign and no Strategist. Archive the user's explicit reference selection as approval; show any newly proposed reference design in chat before authoring.
+> Quick-only Generate profile, not a top-level route. Normalize supplied images into the represented page roster, then rebuild each page as native text, identity-faithful source graphics, and independently placeable image layers. The visible result is the reference truth, but the output is not a screenshot skin: most non-background content is natively editable, while legitimate image regions remain separate layers. No redesign or Strategist; bounded local coordination follows the shared contract below. Archive the user's explicit reference selection as approval; show any newly proposed reference design in chat before authoring.
+
+**Read before reconstruction**: [Reference reconstruction: fidelity, reuse, editability, and acceptance](../../references/reference-reconstruction.md) owns the four-part contract, including reuse from supplied PPTX and bundled assets, permitted coordination fixes, image exceptions, and actual-PPTX verification. Apply it with this profile and Quick; component reuse does not select Beautify or install a template.
 
 **Trigger**: the user supplies raster visuals (approved mockups, rendered slides, contact sheets, flattened pages) and explicitly asks to restore the represented pages as a PPTX. Photos, illustrations, or moodboards used as resources for a new story do not activate it.
 
@@ -25,6 +27,7 @@ description: Quick-only Generate profile for reconstructing one or more source i
 | One file contains several clearly separated slide frames | Split into the ordered roster first, then reconstruct each frame |
 | Images are ordinary content assets or inspiration for a new deck | Ordinary Generate |
 | Images should define a reusable workspace | [`create-template.md`](../create-template.md) |
+| Reference images own the final appearance; a supplied PPTX is only a component source | This profile + Quick; reuse matching objects under the shared reconstruction contract |
 | A semantic source PPTX exists and only its layout should improve | [`beautify-pptx.md`](./beautify-pptx.md) |
 
 **Hard rule — mutually exclusive fidelity profiles**: Image to PPTX and Beautify never compose — Beautify preserves semantic PPTX content while redesigning layout; this profile preserves a rendered surface while rebuilding object and image-layer boundaries.
@@ -47,7 +50,7 @@ description: Quick-only Generate profile for reconstructing one or more source i
 
 Archive originals under `sources/`; keep normalized pages under `images/source-pages/` or another project-local folder; never overwrite an original.
 
-**Hard rule — one normalized frame, one slide**: frame count, not input-file count, owns slide count; every frame maps to one slide in order with its aspect ratio preserved; mixed aspect ratios block until one explicit whole-deck treatment is resolved.
+**Hard rule — one normalized frame, one slide**: frame count, not input-file count, owns slide count; every frame maps to one slide in order. Preserve aspect ratios under the shared contract's canvas rule: slight crop differences may use minimal equal-color padding; genuinely mixed ratios require a resolved whole-deck treatment. Never stretch to the donor PPTX canvas.
 
 **Mandatory — inspect every canonical page** once (ordinary image-resource inspection limits do not apply) for text, source graphics, scene regions, overlap, region-level source sufficiency, boundary completeness, occlusion, and the minimum useful layer stack; reopen only the current page or an unresolved region afterward.
 
@@ -61,14 +64,14 @@ Classify visible regions by what they are, not by how easy they are to crop.
 |---|---|---|
 | Editable text | `native_text` | Exact visible wording, line grouping, alignment, emphasis, approximate metrics; never bake slide text into generated images |
 | Source graphic | `source_graphic` | Logos, icons, badges, ornaments preserve identity via exact vector, deterministic redraw, sufficient source pixels, or Codex reference reconstruction; never a merely similar graphic |
-| Data graphic | `native_chart`, `native_table`, or exact `source_graphic` | Every value, label, relationship, and geometry preserved; native only when legible enough to verify, otherwise exact crop/vector or `manual_required`; never generatively recreated |
+| Data graphic | Verified `native_chart` / `native_table` preferred; exact `source_graphic` only as a documented complex-image exception | Preserve every value, label, relationship, and geometry; use verified source data, not invented values. An easy readable table or chart is not an image exception; unresolved evidence is `manual_required`, never generatively recreated |
 | Simple exact geometry | `native_shape` | Only when fill, stroke, geometry, and layering match faithfully |
 | Scene image | `image_layer` | Photos, people, characters, products, environments, textures, complex illustrations may be reference-edited or regenerated as registered layers |
 | Unreadable or unsafe region | `manual_required` | Block rather than invent wording, identity, values, or a different replacement |
 
 **Hard rule — separate layer need from realization**: source clarity never decides whether a required editable, movable, or overlapping object becomes a separate layer, only how that layer is prepared. **Mandatory — assess source sufficiency per region** at final display size without a page-wide score: complete, cleanly separable, and sufficient → a source-derived crop or RGBA layer at the recorded geometry; contaminated, occluded, incomplete, or low-resolution with verifiable identity and geometry → reference-edit or reconstruct the layer and exposed background from that evidence; unverifiable identity, wording, values, or geometry → `manual_required`.
 
-**Graphic identity is authoritative; source pixel bytes are not**: use an exact known vector when available; deterministically redraw a simple, fully legible graphic; reuse source pixels only when complete and sufficient at final size; when a complex logo, icon, badge, ornament, or wordmark is identifiable but too low-resolution, use its crop as the Codex reference and reconstruct a higher-resolution asset with the same silhouette, proportions, colors, lettering, bbox, and z-order — never mere interpolation, a brand redesign, a similar library icon, or invented identity. **Visible-surface authority**: preserve every legible string, number, label, relative position, crop, z-order, color relationship, and emphasis; never improve the layout, rewrite copy, correct claims through research, reveal invented semantics, or replace branded graphics.
+**Graphic identity is authoritative; source pixel bytes are not**: prefer matching native source components or exact bundled vectors; deterministically redraw a simple, fully legible graphic; reuse source pixels only when complete and sufficient at final size; when a complex logo, icon, badge, ornament, or wordmark is identifiable but too low-resolution, use its crop as the Codex reference and reconstruct a higher-resolution asset with the same silhouette, proportions, colors, lettering, bbox, and z-order — never mere interpolation, a brand redesign, a similar library icon, or invented identity. **Visible-surface authority**: preserve visible wording, numbers, source-graphic identity, geometry, crop, z-order, color relationships, and emphasis under the shared contract. Only its bounded coordination fixes may adjust layout; never rewrite copy, correct claims through research, invent semantics, or replace branded graphics. Native text requirements exclude inseparable lettering inside documented photo/complex-evidence image exceptions, not independent slide labels.
 
 ---
 
@@ -105,24 +108,28 @@ Follow Quick after normalization and preparation: hand-author pages serially fro
 | Final check | Required evidence |
 |---|---|
 | Page roster | Every normalized frame is one slide in order with the same canvas treatment |
-| Native text | Every legible string/number present verbatim and editable |
+| Native text | Slide text, standalone labels, and verified table/chart text are verbatim and editable; inseparable image-internal text is listed with its image exception |
+| Component reuse | Matching source-PPTX / bundled components inspected and actually reused where suitable; page/object or asset-path mapping and target-native types verified |
 | Source graphics | Identity and geometry preserved at adequate resolution; no substitute or unverified redesign |
 | Data graphics | Every value and relationship native-and-verified or from an exact source asset; none generatively recreated |
 | Layer registration | Generated layers share canvas/placement with no jumps, seams, halos, or crop drift |
-| Visible fidelity | Subject identity, pose, crop, lighting, color relationships, and z-order preserved |
+| Visible fidelity | Actual PPTX renders compared page by page with references; subject identity, geometry, crop, lighting, color relationships, and z-order preserved; permitted local coordination recorded separately |
 | Honest reconstruction | AI-recovered hidden pixels identified as reconstruction |
-| Independent objects | Every layer requested for editing or animation is a distinct picture object (shared plates allowed for disjoint members) |
+| Independent objects | Main non-background text, structure, and reliable data are native and independently editable/ungroupable; permitted image layers are distinct picture objects (shared plates allowed for disjoint members) |
 | Reference exclusion | Canonical full-page source images are not referenced or packaged as slide media |
 | Package quality | Quick's lockless final checker and PPTX postflight pass |
 
-If a layer drifts, retry from the canonical reference with a narrower edit; never compensate by changing native text/graphics or flattening the page. If the Codex path is exhausted, mark the layer `Needs-Manual` and block export.
+Apply the shared contract's separate visual and editability checks, representative editing checks, source/exception/adjustment records, and renderer disclosure. Quick checker success or an SVG preview is not actual-PPTX verification.
+
+If a layer drifts, retry from the canonical reference with a narrower edit; use only the shared contract's bounded coordination fixes, never changed content, altered source-graphic identity, or page flattening to hide drift. If the Codex path is exhausted, mark the layer `Needs-Manual` and block export.
 
 ```markdown
 ## ✅ Image to PPTX Complete
 - [x] Source files normalized into the complete ordered roster
 - [x] Visible text native and verbatim; source graphics identity-faithful and sharp
-- [x] Required background / foreground / subject layers independent and registered; shared plates split into independent objects
-- [x] Recombined pages match the references; canonical source images absent from slide media
+- [x] Most non-background content natively editable; image exceptions and reused components identified
+- [x] Required image layers independent and registered; shared plates split into independent objects
+- [x] Actual PPTX pages compared with references; local adjustments recorded; canonical source images absent from slide media
 - [x] Quick's SVG quality gate and PPTX postflight pass
 - [ ] **Next**: Report the PPTX and identify native, exact-source, and AI-reconstructed objects
 ```

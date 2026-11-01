@@ -454,31 +454,34 @@
 
 面向学术汇报的 PPT 生成与润色 Skill，支持将论文和研究材料组织为汇报演示文稿，也可优化已有 PPTX 的内容结构、页面布局、字体和图表表达。
 
-先规划每页的核心任务与视觉呈现，在聊天中确认逐页参考图，再制作原生可编辑 PPTX 并检查实际显示效果。在保留事实、数据和来源的基础上，提升信息层级、阅读顺序与整体观感。
+先按 12 条汇报建议识别已有 PPT 的理解障碍，在聊天中确认缺陷与调整范围，再规划每页内容、展示参考图并制作原生可编辑 PPTX。保留事实、数据和来源，通过实际渲染检查内容组织、视觉层级与整体观感；已经讲清楚的页面可以保留。
 
 ### 成品展示
 
-#### 已有 PPT 润色：思维链鲁棒性
+#### 学术汇报反例：润色前后对照
 
-**Prompt**
+**调用示例**
 
-> Ppt Master 请修改润色组会1.pptx的页面
+> Ppt Master 请检查并润色反例_v1.pptx。先根据 12 条汇报建议指出缺陷，供确认；再设计参考图，确认后制作组件可编辑的 PPTX。
 
-[![思维链鲁棒性汇报：左侧润色前，右侧润色后](docs/images/meeting1-before-after.jpg)](docs/images/meeting1-before-after.jpg)
+原稿 11 页，润色稿 20 页（含 5 页备份）。下图左侧为原稿，右侧为对应的润色页，均来自这两份 PPTX 的实际渲染；点击图片可放大。
 
-左侧为原稿，右侧为润色版。
+[![原第 1 页与润色后第 1 页：用输入输出案例组织任务定义](docs/images/fanli-01-before-after.jpg)](docs/images/fanli-01-before-after.jpg)
 
-沿用原稿的学术模板，调整内容组织、公式呈现和表格布局。文字、表格和组合图形可以继续编辑。
+[![原第 4 页与润色后第 7 页：整理多模态学习挑战与配色层级](docs/images/fanli-04-before-after.jpg)](docs/images/fanli-04-before-after.jpg)
 
-#### 从论文生成：中国菜品消费与温室气体减排
+[![原第 5 页与润色后第 6 页：用图文问答案例串起上下文学习](docs/images/fanli-05-before-after.jpg)](docs/images/fanli-05-before-after.jpg)
 
-**Prompt**
+[![原第 10 页与润色后第 14 页：呈现准确率与相对长度的双指标比较](docs/images/fanli-10-before-after.jpg)](docs/images/fanli-10-before-after.jpg)
 
-> Ppt Master 请根据GHG mitigation strategies on China’s diverse dish consumption are key to meet the Paris Agreement targets.pptx的内容生成一份PPT
+| 原稿页 → 润色页 | 主要变化 |
+| --- | --- |
+| 1 → 1 | 将长段任务定义组织为两组输入→输出案例，突出任务差异。 |
+| 4 → 7 | 分组呈现两项挑战，统一同类组件的用色，建立文字与示意图的对应关系。 |
+| 5 → 6 | 用已知示例与新查询说明上下文学习，并前置于挑战页。 |
+| 10 → 14 | 按模型分面展示准确率与相对长度的关系，完整结果表保留在第 20 页。 |
 
-[![中国菜品消费与温室气体减排汇报预览](docs/images/ghg-preview.jpg)](docs/images/ghg-preview.jpg)
-
-用图解串起研究问题、核算方法和减排情景，包含可编辑图表、表格及独立的论文图片。
+两份完整 PPTX 位于 [examples/](examples/)。成品包含原生文字、形状、表格和数据图表；照片与复杂原图保留为独立图片。
 
 ### 开始使用
 
@@ -514,7 +517,7 @@ Codex 使用 `$ppt-master`，Claude Code 使用 `/ppt-master`。其他支持 Age
 
 已有 PPT 润色示例：
 
-> 润色这份 PPT，重点检查内容组织、布局与整体观感，保留已经讲清楚的页面；需要调整的页先给参考图，确认后再修改。
+> 润色这份 PPT，重点检查内容组织、布局与整体观感。先给出有证据的缺陷与调整方向供确认，保留已经讲清楚的页面；再展示需要调整页的参考图，确认后制作。
 
 ### 设计重点
 
@@ -524,13 +527,21 @@ Codex 使用 `$ppt-master`，Claude Code 使用 `/ppt-master`。其他支持 Age
 - 实验突出主比较；数据可靠、表达更清楚时，将大表格改成合适的图。
 - 总结回扣问题、做法和已有证据。足够好的页面可以保留。
 
+案例引出问题、例子承接公式、总结收束分别结合相关页段判断，不要求每一页重复案例或总结。图表按数据与表达目的选择：类别比较可用柱图，有序变化可用折线图，构成数据可用饼图或堆叠图，双指标关系可用散点图；清楚的小表、参数表和精确查值表可以保留。
+
 详细的 12 条原则见 [学术设计规则](skills/ppt-master/references/academic-chat-design.md#4-设计规则逐页应用)。原仓库的建议与资源整理在 [Presentation Tips](#-presentation-tips)。
 
 ### 制作方式
 
-**理解材料 → 规划汇报 → 设计参考页 → 聊天确认 → 可编辑制作 → 实际渲染与调整**
+**理解材料 → 缺陷识别与确认 → 内容与视觉规划 → 参考图与聊天确认 → 可编辑制作 → 实际渲染与调整**
 
-规划阶段查看合适的风格、版式、图表和图标。生成参考图前，将每页的文字、主图、数据、阅读顺序和背景整理为视觉简报。
+缺陷识别同时检查整套论述关系与单页表达，说明证据、理解影响和修改方向；疑点与可选建议单列，足够好的页面给出“无需修改”。用户确认调整范围后，再完善每页内容与结构。
+
+规划阶段实际查看合适的风格、版式、图表和图标。随大纲说明主色、辅助色和语义用途，统一同类组件与表格的配色，同时保留原图含义。配色由本次材料和用户选择决定，不固定套用示例颜色。
+
+包内提供 [11 页正面教材及用途索引](skills/ppt-master/references/positive-examples.md)，包含完整原生 PPTX、实际预览和组件定位，可按当前表达问题选取案例、查阅组件实现。它是可选参考，不是固定模板，也不代替本次材料与参考图确认。
+
+生成参考图前，将每页的文字、主图、数据、阅读顺序和背景整理为视觉简报。
 
 默认使用 Agent 自带的绘图工具。Claude 等宿主没有内置生图工具时，可选用已配置的外部 API，或提供已有参考图。配置和具体用法见 [使用说明](docs/usage.md)。
 
@@ -540,6 +551,8 @@ Codex 使用 `$ppt-master`，Claude Code 使用 `/ppt-master`。其他支持 Age
 
 - [安装、材料准备、生图配置与按页反馈](docs/usage.md)
 - [单页设计简报与参考图提示词](skills/ppt-master/references/page-reference-generation.md)
+- [参考图前的缺陷识别与确认](skills/ppt-master/references/pre-reference-diagnosis.md)
+- [参考图精准复刻与组件复用](skills/ppt-master/references/reference-reconstruction.md)
 
 ### 来源
 
