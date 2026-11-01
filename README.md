@@ -464,22 +464,22 @@
 
 > Ppt Master 请检查并润色反例_v1.pptx。先根据 12 条汇报建议指出缺陷，供确认；再设计参考图，确认后制作组件可编辑的 PPTX。
 
-原稿 11 页，润色稿 20 页（含 5 页备份）。下图左侧为原稿，右侧为对应的润色页，均来自这两份 PPTX 的实际渲染；点击图片可放大。
+原稿 11 页，润色稿 20 页。下图左侧为原稿，右侧为对应的润色页。
 
 [![原第 1 页与润色后第 1 页：用输入输出案例组织任务定义](docs/images/fanli-01-before-after.png)](docs/images/fanli-01-before-after.png)
 
-[![原第 4 页与润色后第 7 页：整理多模态学习挑战与配色层级](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
+[![原第 4 页与润色后第 7 页：Tip 4，收敛强调色并统一同类标签](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
 
-[![原第 5 页与润色后第 6 页：用图文问答案例串起上下文学习](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
+[![原第 5 页与润色后第 6 页：Tip 5，对齐双栏图文并统一字号层级](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
 
-[![原第 10 页与润色后第 14 页：呈现准确率与相对长度的双指标比较](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
+[![原第 10 页与润色后第 14 页：Tip 10，用散点图替代密集实验表格](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
 
-| 原稿页 → 润色页 | 主要变化 |
+| 原稿页 → 润色页 | 对应问题与改进 |
 | --- | --- |
-| 1 → 1 | 将长段任务定义组织为两组输入→输出案例，突出任务差异。 |
-| 4 → 7 | 分组呈现两项挑战，统一同类组件的用色，建立文字与示意图的对应关系。 |
-| 5 → 6 | 用已知示例与新查询说明上下文学习，并前置于挑战页。 |
-| 10 → 14 | 按模型分面展示准确率与相对长度的关系，完整结果表保留在第 20 页。 |
+| 1 → 1 | **Tip 1 · 每页字数不要太多**：将长段定义精简为两组输入→输出案例，突出任务差异。 |
+| 4 → 7 | **Tip 4 · 颜色不要太多太乱**：收敛强调色，统一同类标签，避免多种颜色争抢重点。 |
+| 5 → 6 | **Tip 5 · 注意排版细节**：对齐双栏图文，统一标题与正文的字号层级，明确阅读顺序。 |
+| 10 → 14 | **Tip 10 · 实验部分多用图，少用表格**：用分模型的散点图替代密集结果表，直观比较准确率与相对长度。 |
 
 两份完整 PPTX 位于 [examples/](examples/)。成品包含原生文字、形状、表格和数据图表；照片与复杂原图保留为独立图片。
 
