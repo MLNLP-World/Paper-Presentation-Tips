@@ -462,17 +462,17 @@
 
 **调用示例**
 
-> Ppt Master 请检查并润色反例_v1.pptx。先按 12 条汇报建议列出问题和改法，等确认后再生成页面参考图；参考图确认后，制作可编辑的 PPTX。
+> $paper-presentation-skill 请检查并润色反例_v1.pptx。先按 12 条汇报建议列出问题和改法，等确认后再生成页面参考图；参考图确认后，制作可编辑的 PPTX。
 
 原稿 11 页，润色稿 20 页。下图左侧为原稿，右侧为对应的润色页。
 
-[![原第 1 页与润色后第 1 页：用输入输出案例说明任务](figures/ppt-master/fanli-01-before-after.png)](figures/ppt-master/fanli-01-before-after.png)
+[![原第 1 页与润色后第 1 页：用输入输出案例说明任务](figures/paper-presentation-skill/fanli-01-before-after.png)](figures/paper-presentation-skill/fanli-01-before-after.png)
 
-[![原第 4 页与润色后第 7 页：减少颜色种类，统一同类标签](figures/ppt-master/fanli-04-before-after.png)](figures/ppt-master/fanli-04-before-after.png)
+[![原第 4 页与润色后第 7 页：减少颜色种类，统一同类标签](figures/paper-presentation-skill/fanli-04-before-after.png)](figures/paper-presentation-skill/fanli-04-before-after.png)
 
-[![原第 5 页与润色后第 6 页：对齐图文，统一字号](figures/ppt-master/fanli-05-before-after.png)](figures/ppt-master/fanli-05-before-after.png)
+[![原第 5 页与润色后第 6 页：对齐图文，统一字号](figures/paper-presentation-skill/fanli-05-before-after.png)](figures/paper-presentation-skill/fanli-05-before-after.png)
 
-[![原第 10 页与润色后第 14 页：用散点图比较两项实验指标](figures/ppt-master/fanli-10-before-after.png)](figures/ppt-master/fanli-10-before-after.png)
+[![原第 10 页与润色后第 14 页：用散点图比较两项实验指标](figures/paper-presentation-skill/fanli-10-before-after.png)](figures/paper-presentation-skill/fanli-10-before-after.png)
 
 | 原稿页 → 润色页 | 修改内容 |
 | --- | --- |
@@ -481,7 +481,7 @@
 | 5 → 6 | **Tip 5 · 注意排版细节**：对齐两栏图文，统一标题和正文的字号。 |
 | 10 → 14 | **Tip 10 · 实验部分多用图，少用表格**：按模型分别画散点图，比较准确率和相对长度。 |
 
-完整文件在 [examples/](skills/ppt-master/assets/examples)。文字、形状、表格和数据图表可在 PPT 中继续编辑；照片和复杂原图保留为图片。
+完整文件在 [examples/](skills/paper-presentation-skill/assets/examples)。文字、形状、表格和数据图表可在 PPT 中继续编辑；照片和复杂原图保留为图片。
 
 ### 开始使用
 
@@ -494,15 +494,15 @@
 ```powershell
 git clone https://github.com/MLNLP-World/Paper-Presentation-Tips.git
 cd Paper-Presentation-Tips
-python -m pip install -r skills/ppt-master/requirements.txt
+python -m pip install -r skills/paper-presentation-skill/requirements.txt
 ```
 
 #### 2. 在 Agent 中调用
 
 在下载的 `Paper-Presentation-Tips` 文件夹中启动 Agent，然后在聊天框输入：
 
-- **Codex**：`$ppt-master`，后面接制作要求。
-- **Claude Code**：`/ppt-master`，后面接制作要求。
+- **Codex**：`$paper-presentation-skill`，后面接制作要求。
+- **Claude Code**：`/paper-presentation-skill`，后面接制作要求。
 
 例如：
 
@@ -510,7 +510,7 @@ python -m pip install -r skills/ppt-master/requirements.txt
 
 > 请润色这份 PPT。先指出内容安排、布局、字号和图表中的具体问题，并说明怎么改。保留已经清楚的页面；修改方案和参考图确认后再制作。
 
-在其他项目中使用的安装方法见 [使用说明](skills/ppt-master/references/usage.md#安装到其他项目)。
+在其他项目中使用的安装方法见 [使用说明](skills/paper-presentation-skill/references/usage.md#安装到其他项目)。
 
 ### 制作流程
 
@@ -521,29 +521,29 @@ python -m pip install -r skills/ppt-master/requirements.txt
 5. **制作 PPTX**：按确认的图片制作文字、形状、表格、图表和公式。
 6. **检查成品**：用 PPT 软件打开生成文件，导出页面图片，检查错字、小字、遮挡和排版，再修正。
 
-默认使用 Agent 自带的绘图工具。没有绘图工具时，可以使用已配置的在线绘图服务，也可以提供参考图，或选择直接制作可编辑草稿供预览。具体方法见 [生图方式](skills/ppt-master/references/usage.md#生图方式)。
+默认使用 Agent 自带的绘图工具。没有绘图工具时，可以使用已配置的在线绘图服务，也可以提供参考图，或选择直接制作可编辑草稿供预览。具体方法见 [生图方式](skills/paper-presentation-skill/references/usage.md#生图方式)。
 
 ### 📚 文档与资源
 
 | | 文档与资源 | 用途 |
 |:---:|---|---|
-| 📘 | [使用说明](skills/ppt-master/references/usage.md) | **第一次使用从这里开始**：安装、准备材料、调用与按页反馈 |
-| 📖 | [Skill 入口](skills/ppt-master/SKILL.md) | Agent 制作 PPT 时读取的核心步骤和规则 |
-| 🧭 | [制作流程](skills/ppt-master/references/workflows/) | 从论文生成、润色已有 PPT、复刻参考页等流程 |
-| 🎨 | [模板与素材](skills/ppt-master/assets/templates/README.md) | 查看风格、版式、图表、表格和图标 |
-| 🖼️ | [页面参考示例](skills/ppt-master/references/positive-examples.md) | 查看 11 页示例及可复用的组件 |
-| 🛠️ | [脚本工具](skills/ppt-master/scripts/README.md) | 查看读取、制作、渲染和导出工具的用法 |
-| 🧩 | [成品示例](skills/ppt-master/assets/examples) | 查看润色前后的完整 PPTX |
-| ⚙️ | [在线绘图配置](skills/ppt-master/.env.example) | 为没有内置绘图工具的 Agent 配置绘图服务 |
-| ❓ | [常见问题](skills/ppt-master/references/usage.md#常见问题) | 处理找不到 Skill、加载旧版本、字体错位等情况 |
+| 📘 | [使用说明](skills/paper-presentation-skill/references/usage.md) | **第一次使用从这里开始**：安装、准备材料、调用与按页反馈 |
+| 📖 | [Skill 入口](skills/paper-presentation-skill/SKILL.md) | Agent 制作 PPT 时读取的核心步骤和规则 |
+| 🧭 | [制作流程](skills/paper-presentation-skill/references/workflows/) | 从论文生成、润色已有 PPT、复刻参考页等流程 |
+| 🎨 | [模板与素材](skills/paper-presentation-skill/assets/templates/README.md) | 查看风格、版式、图表、表格和图标 |
+| 🖼️ | [页面参考示例](skills/paper-presentation-skill/references/positive-examples.md) | 查看 11 页示例及可复用的组件 |
+| 🛠️ | [脚本工具](skills/paper-presentation-skill/scripts/README.md) | 查看读取、制作、渲染和导出工具的用法 |
+| 🧩 | [成品示例](skills/paper-presentation-skill/assets/examples) | 查看润色前后的完整 PPTX |
+| ⚙️ | [在线绘图配置](skills/paper-presentation-skill/.env.example) | 为没有内置绘图工具的 Agent 配置绘图服务 |
+| ❓ | [常见问题](skills/paper-presentation-skill/references/usage.md#常见问题) | 处理找不到 Skill、加载旧版本、字体错位等情况 |
 
-<sub>完整文件 → <a href="skills/ppt-master/">Skill 目录</a></sub>
+<sub>完整文件 → <a href="skills/paper-presentation-skill/">Skill 目录</a></sub>
 
 ### 来源与许可证
 
 基于 [Hugo He / PPT Master](https://github.com/hugohe3/ppt-master)，保留其模板、素材和可编辑 PPTX 制作工具，并加入学术汇报设计、问题确认和逐页参考图流程。
 
-代码使用 [MIT 许可证](skills/ppt-master/LICENSE)。图标和音效等素材的许可分别见 [图标许可](skills/ppt-master/assets/templates/icons/THIRD_PARTY_NOTICES.md) 和 [音效许可](skills/ppt-master/assets/templates/sounds/THIRD_PARTY_NOTICES.md)。
+代码使用 [MIT 许可证](skills/paper-presentation-skill/LICENSE)。图标和音效等素材的许可分别见 [图标许可](skills/paper-presentation-skill/assets/templates/icons/THIRD_PARTY_NOTICES.md) 和 [音效许可](skills/paper-presentation-skill/assets/templates/sounds/THIRD_PARTY_NOTICES.md)。
 
 ---
 
