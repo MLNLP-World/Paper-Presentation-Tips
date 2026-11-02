@@ -392,6 +392,16 @@
 
 ---
 
+<a id="academic-ppt-skill"></a>
+
+## 🧰 学术 PPT 生成与润色 Skill
+
+从论文和研究材料生成学术汇报，或润色已有 PPT，输出可编辑的 PPTX。
+
+成品对照、安装方法、调用示例和完整流程见 [学术 PPT 生成与润色 Skill 使用指南](skills/paper-presentation-skill/README.md)。
+
+---
+
 ## 📖 资源合集
 
 > 持续整理与 Paper Presentation、Academic Talk 和 Slides 设计相关的优秀资料。
@@ -448,15 +458,7 @@
 
 ---
 
-<a id="academic-ppt-skill"></a>
 
-## 🧰 学术 PPT 生成与润色 Skill
-
-从论文和研究材料生成学术汇报，或润色已有 PPT，输出可编辑的 PPTX。
-
-成品对照、安装方法、调用示例和完整流程见 [学术 PPT 生成与润色 Skill 使用指南](skills/paper-presentation-skill/README.md)。
-
----
 
 <br/>
 
