@@ -1,0 +1,24 @@
+# Local materials and generated work
+.local/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+/Test/
+/runtime_test_*/
+/audit*/
+/exports/
+/validation/
+/tmp*/
+/_*.txt
+/*.last-failure.json
+/*.pptx
+/*.zip
+/README-editable-testdeck.md
+/Paper-Presentation-Tips-C-页码对照.md
+/ppt-polish-step3-research.md
+# Locally installed research tools
+/tools/Paper2Slides/
+/tools/Paper2Slides-local/
+/tools/.paper2slides-runtime/
