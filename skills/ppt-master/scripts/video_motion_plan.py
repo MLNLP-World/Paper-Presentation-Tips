@@ -17,7 +17,7 @@ Examples:
 Dependencies:
     None (standard library only)
 
-See scripts/docs/video-motion-plan.md for the downstream renderer contract.
+See references/commands/video-motion-plan.md for the downstream renderer contract.
 """
 
 from __future__ import annotations

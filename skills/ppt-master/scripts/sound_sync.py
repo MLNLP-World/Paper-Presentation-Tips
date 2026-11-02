@@ -3,7 +3,7 @@
 PPT Master - Sound Sync
 
 Inspect the bundled CC0 sound catalog or copy explicitly selected sounds into a
-project-local `sounds/` directory. Review `templates/sounds/sound-vocabulary.md`
+project-local `sounds/` directory. Review `assets/templates/sounds/sound-vocabulary.md`
 before using list filters for a resolved auditory job. The global library is
 never copied in bulk.
 
@@ -18,7 +18,7 @@ Examples:
 Dependencies:
     None (standard library only).
 
-See templates/sounds/README.md.
+See assets/templates/sounds/README.md.
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ from console_encoding import configure_utf8_stdio
 
 configure_utf8_stdio()
 
-_GLOBAL_SOUNDS_DIR = Path(__file__).resolve().parent.parent / "templates" / "sounds"
+_GLOBAL_SOUNDS_DIR = Path(__file__).resolve().parent.parent / "assets" / "templates" / "sounds"
 _INDEX_NAME = "sounds_index.json"
 
 
@@ -218,7 +218,7 @@ def _build_sync_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
             "Copy explicitly selected library sounds into a project's sounds/ folder. "
-            "Review `templates/sounds/sound-vocabulary.md` first; use "
+            "Review `assets/templates/sounds/sound-vocabulary.md` first; use "
             "`sound_sync.py list [--query TERM]` only for optional exact filtering."
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -269,7 +269,7 @@ def _run_sync(argv: list[str]) -> int:
         for sound_id in missing:
             print(f"     x {sound_id}", file=sys.stderr)
         print(
-            "Review `skills/ppt-master/templates/sounds/sound-vocabulary.md`, then "
+            "Review `skills/ppt-master/assets/templates/sounds/sound-vocabulary.md`, then "
             "optionally run `python3 skills/ppt-master/scripts/sound_sync.py list "
             "--query <term>` to locate an exact ID.",
             file=sys.stderr,

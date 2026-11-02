@@ -452,9 +452,9 @@
 
 ## 🧰 学术 PPT 生成与润色 Skill
 
-面向学术汇报的 PPT 生成与润色 Skill，支持将论文和研究材料组织为汇报演示文稿，也可优化已有 PPTX 的内容结构、页面布局、字体和图表表达。
+用于制作和润色学术汇报 PPT。可以读取论文和研究材料生成 PPT，也可以调整已有 PPT 的内容安排、布局、配色、文字和图表。
 
-先按 12 条汇报建议识别已有 PPT 的理解障碍，在聊天中确认缺陷与调整范围，再规划每页内容、展示参考图并制作原生可编辑 PPTX。保留事实、数据和来源，通过实际渲染检查内容组织、视觉层级与整体观感；已经讲清楚的页面可以保留。
+修改已有 PPT 时，先列出具体问题和改法，供使用者确认；再展示页面参考图，确认后制作可编辑的 PPTX，最后检查实际显示效果。原文件另存保留。
 
 ### 成品展示
 
@@ -462,32 +462,34 @@
 
 **调用示例**
 
-> Ppt Master 请检查并润色反例_v1.pptx。先根据 12 条汇报建议指出缺陷，供确认；再设计参考图，确认后制作组件可编辑的 PPTX。
+> Ppt Master 请检查并润色反例_v1.pptx。先按 12 条汇报建议列出问题和改法，等确认后再生成页面参考图；参考图确认后，制作可编辑的 PPTX。
 
 原稿 11 页，润色稿 20 页。下图左侧为原稿，右侧为对应的润色页。
 
-[![原第 1 页与润色后第 1 页：用输入输出案例组织任务定义](docs/images/fanli-01-before-after.png)](docs/images/fanli-01-before-after.png)
+[![原第 1 页与润色后第 1 页：用输入输出案例说明任务](docs/images/fanli-01-before-after.png)](docs/images/fanli-01-before-after.png)
 
-[![原第 4 页与润色后第 7 页：Tip 4，收敛强调色并统一同类标签](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
+[![原第 4 页与润色后第 7 页：减少颜色种类，统一同类标签](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
 
-[![原第 5 页与润色后第 6 页：Tip 5，对齐双栏图文并统一字号层级](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
+[![原第 5 页与润色后第 6 页：对齐图文，统一字号](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
 
-[![原第 10 页与润色后第 14 页：Tip 10，用散点图替代密集实验表格](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
+[![原第 10 页与润色后第 14 页：用散点图比较两项实验指标](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
 
-| 原稿页 → 润色页 | 对应问题与改进 |
+| 原稿页 → 润色页 | 修改内容 |
 | --- | --- |
-| 1 → 1 | **Tip 1 · 每页字数不要太多**：将长段定义精简为两组输入→输出案例，突出任务差异。 |
-| 4 → 7 | **Tip 4 · 颜色不要太多太乱**：收敛强调色，统一同类标签，避免多种颜色争抢重点。 |
-| 5 → 6 | **Tip 5 · 注意排版细节**：对齐双栏图文，统一标题与正文的字号层级，明确阅读顺序。 |
-| 10 → 14 | **Tip 10 · 实验部分多用图，少用表格**：用分模型的散点图替代密集结果表，直观比较准确率与相对长度。 |
+| 1 → 1 | **Tip 1 · 每页字数不要太多**：把长段定义改为两组输入、输出案例，说明两个任务的区别。 |
+| 4 → 7 | **Tip 4 · 颜色不要太多太乱**：减少强调色，同类标签使用相同颜色。 |
+| 5 → 6 | **Tip 5 · 注意排版细节**：对齐两栏图文，统一标题和正文的字号。 |
+| 10 → 14 | **Tip 10 · 实验部分多用图，少用表格**：按模型分别画散点图，比较准确率和相对长度。 |
 
-两份完整 PPTX 位于 [examples/](examples/)。成品包含原生文字、形状、表格和数据图表；照片与复杂原图保留为独立图片。
+完整文件在 [examples/](examples/)。文字、形状、表格和数据图表可在 PPT 中继续编辑；照片和复杂原图保留为图片。
 
 ### 开始使用
 
-需要 Git、Python 3.10+，以及支持 Agent Skills、具备文件读写和命令执行能力的 Agent。制作时还需要图片查看工具，以及 PowerPoint、WPS 或 LibreOffice 等 PPTX 渲染工具。
+需要 Git、Python 3.10+ 和支持 Skill 的 Agent，例如 Codex 或 Claude Code。Agent 需要能读写文件、运行命令和查看图片。本机还需要 PowerPoint、WPS 或 LibreOffice，用于检查 PPTX 的显示效果。
 
-#### 1. 从 GitHub 获取
+#### 1. 下载并安装依赖
+
+在终端中运行：
 
 ```powershell
 git clone https://github.com/MLNLP-World/Paper-Presentation-Tips.git
@@ -495,70 +497,53 @@ cd Paper-Presentation-Tips
 python -m pip install -r skills/ppt-master/requirements.txt
 ```
 
-#### 2. 安装到 Agent
+#### 2. 在 Agent 中调用
 
-在克隆目录中启动 Codex 或 Claude Code，可直接使用仓库入口。安装到其他项目时，在仓库根目录选择对应命令，将 PROJECT 换成目标项目的绝对路径：
+在下载的 `Paper-Presentation-Tips` 文件夹中启动 Agent，然后在聊天框输入：
 
-```powershell
-# Codex
-python tools/install_skill.py --skill ppt-master --agent codex --project "PROJECT"
+- **Codex**：`$ppt-master`，后面接制作要求。
+- **Claude Code**：`/ppt-master`，后面接制作要求。
 
-# Claude Code
-python tools/install_skill.py --skill ppt-master --agent claude --project "PROJECT"
-```
+例如：
 
-Codex 使用 `$ppt-master`，Claude Code 使用 `/ppt-master`。其他支持 Agent Skills 的工具也可以使用整个 `skills/ppt-master/` 目录。
+> 请根据这篇论文制作一份中文组会 PPT，面向本领域研究生，汇报约 15 分钟。使用提供的背景，先展示每页参考图，确认后再制作可编辑的 PPTX。
 
-#### 3. 开始制作
+> 请润色这份 PPT。先指出内容安排、布局、字号和图表中的具体问题，并说明怎么改。保留已经清楚的页面；修改方案和参考图确认后再制作。
 
-在对话中附上材料或提供准确路径，例如：
+在其他项目中使用的安装方法见 [使用说明](docs/usage.md#安装到其他项目)。
 
-> 用这篇论文制作一份中文组会 PPT，面向本领域研究生，汇报约 15 分钟。沿用提供的背景，先展示逐页参考图，确认后再制作可编辑 PPTX。
+### 制作流程
 
-已有 PPT 润色示例：
+1. **读材料**：读取论文或 PPTX 中的文字、图表和公式，核对来源。
+2. **确认问题和大纲**：润色时先参考本仓库的汇报建议展示具体问题和改法；制作新汇报时先确定讲述顺序和每页内容。说明哪些地方保留、哪些地方调整。
+3. **设计参考图**：查看合适的模板、图表和图标，确定配色，再生成完整页面图片。
+4. **聊天确认**：直接查看参考图，按页提出修改意见或确认。
+5. **制作 PPTX**：按确认的图片制作文字、形状、表格、图表和公式。
+6. **检查成品**：用 PPT 软件打开生成文件，导出页面图片，检查错字、小字、遮挡和排版，再修正。
 
-> 润色这份 PPT，重点检查内容组织、布局与整体观感。先给出有证据的缺陷与调整方向供确认，保留已经讲清楚的页面；再展示需要调整页的参考图，确认后制作。
+默认使用 Agent 自带的绘图工具。没有绘图工具时，可以使用已配置的在线绘图服务，也可以提供参考图，或选择直接制作可编辑草稿供预览。具体方法见 [生图方式](docs/usage.md#生图方式)。
 
-### 设计重点
+### 📚 文档与资源
 
-- 一页有一个清楚的核心任务，标题能说明本页讲什么。
-- 先用案例说明问题，再介绍概念、方法和公式。
-- 文字尽量少而大，用图示表达关系，让听众一眼看到重点。
-- 实验突出主比较；数据可靠、表达更清楚时，将大表格改成合适的图。
-- 总结回扣问题、做法和已有证据。足够好的页面可以保留。
+| | 文档与资源 | 用途 |
+|:---:|---|---|
+| 📘 | [使用说明](docs/usage.md) | **第一次使用从这里开始**：安装、准备材料、调用与按页反馈 |
+| 📖 | [Skill 入口](skills/ppt-master/SKILL.md) | Agent 制作 PPT 时读取的核心步骤和规则 |
+| 🧭 | [制作流程](skills/ppt-master/references/workflows/) | 从论文生成、润色已有 PPT、复刻参考页等流程 |
+| 🎨 | [模板与素材](skills/ppt-master/assets/templates/README.md) | 查看风格、版式、图表、表格和图标 |
+| 🖼️ | [页面参考示例](skills/ppt-master/references/positive-examples.md) | 查看 11 页示例及可复用的组件 |
+| 🛠️ | [脚本工具](skills/ppt-master/scripts/README.md) | 查看读取、制作、渲染和导出工具的用法 |
+| 🧩 | [成品示例](examples/) | 查看润色前后的完整 PPTX |
+| ⚙️ | [在线绘图配置](skills/ppt-master/.env.example) | 为没有内置绘图工具的 Agent 配置绘图服务 |
+| ❓ | [常见问题](docs/usage.md#常见问题) | 处理找不到 Skill、加载旧版本、字体错位等情况 |
 
-案例引出问题、例子承接公式、总结收束分别结合相关页段判断，不要求每一页重复案例或总结。图表按数据与表达目的选择：类别比较可用柱图，有序变化可用折线图，构成数据可用饼图或堆叠图，双指标关系可用散点图；清楚的小表、参数表和精确查值表可以保留。
+<sub>完整文件 → <a href="skills/ppt-master/">Skill 目录</a></sub>
 
-详细的 12 条原则见 [学术设计规则](skills/ppt-master/references/academic-chat-design.md#4-设计规则逐页应用)。原仓库的建议与资源整理在 [Presentation Tips](#-presentation-tips)。
+### 来源与许可证
 
-### 制作方式
+基于 [Hugo He / PPT Master](https://github.com/hugohe3/ppt-master)，保留其模板、素材和可编辑 PPTX 制作工具，并加入学术汇报设计、问题确认和逐页参考图流程。
 
-**理解材料 → 缺陷识别与确认 → 内容与视觉规划 → 参考图与聊天确认 → 可编辑制作 → 实际渲染与调整**
-
-缺陷识别同时检查整套论述关系与单页表达，说明证据、理解影响和修改方向；疑点与可选建议单列，足够好的页面给出“无需修改”。用户确认调整范围后，再完善每页内容与结构。
-
-规划阶段实际查看合适的风格、版式、图表和图标。随大纲说明主色、辅助色和语义用途，统一同类组件与表格的配色，同时保留原图含义。配色由本次材料和用户选择决定，不固定套用示例颜色。
-
-包内提供 [11 页正面教材及用途索引](skills/ppt-master/references/positive-examples.md)，包含完整原生 PPTX、实际预览和组件定位，可按当前表达问题选取案例、查阅组件实现。它是可选参考，不是固定模板，也不代替本次材料与参考图确认。
-
-生成参考图前，将每页的文字、主图、数据、阅读顺序和背景整理为视觉简报。
-
-默认使用 Agent 自带的绘图工具。Claude 等宿主没有内置生图工具时，可选用已配置的外部 API，或提供已有参考图。配置和具体用法见 [使用说明](docs/usage.md)。
-
-确认后按参考页制作原生文字、形状、表格、数据图表和公式，再查看实际 PPTX 的显示效果。照片和复杂论文原图保留为独立图片，其内部内容不会自动变成可编辑组件。
-
-### 更多用法
-
-- [安装、材料准备、生图配置与按页反馈](docs/usage.md)
-- [单页设计简报与参考图提示词](skills/ppt-master/references/page-reference-generation.md)
-- [参考图前的缺陷识别与确认](skills/ppt-master/references/pre-reference-diagnosis.md)
-- [参考图精准复刻与组件复用](skills/ppt-master/references/reference-reconstruction.md)
-
-### 来源
-
-基于 [Hugo He / PPT Master](https://github.com/hugohe3/ppt-master)，保留其模板资源和原生 PPTX 转换后端，在此基础上加入学术汇报的内容组织、参考页设计和聊天确认流程。
-
-原代码遵循 [MIT 许可证](skills/ppt-master/LICENSE)；图标等素材见 [第三方许可说明](skills/ppt-master/templates/icons/THIRD_PARTY_NOTICES.md)。
+代码使用 [MIT 许可证](skills/ppt-master/LICENSE)。图标和音效等素材的许可分别见 [图标许可](skills/ppt-master/assets/templates/icons/THIRD_PARTY_NOTICES.md) 和 [音效许可](skills/ppt-master/assets/templates/sounds/THIRD_PARTY_NOTICES.md)。
 
 ---
 

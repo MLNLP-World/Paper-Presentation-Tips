@@ -39,11 +39,11 @@ python reviewed_export.py PROJECT --native-charts-and-tables
 
 ## 说明
 
-- [材料读取](docs/conversion.md)
-- [SVG 与原生 PPTX](docs/svg-pipeline.md)
-- [图片与生图](docs/image.md)
-- [模板工具](docs/template-tools.md)
-- [原生数据](docs/native-data.md)
-- [常见问题](docs/troubleshooting.md)
+- [材料读取](../references/commands/conversion.md)
+- [SVG 与原生 PPTX](../references/commands/svg-pipeline.md)
+- [图片与生图](../references/commands/image.md)
+- [模板工具](../references/commands/template-tools.md)
+- [原生数据](../references/commands/native-data.md)
+- [常见问题](../references/commands/troubleshooting.md)
 
 项目工具会保留必要的来源、确认与执行记录，便于继续修改。上游版权和许可保留在包内 LICENSE。

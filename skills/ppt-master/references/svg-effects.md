@@ -2,7 +2,7 @@
 
 # SVG Effects and Geometry Specification
 
-Authority for advanced paint, effects, transforms, freeform/radial geometry, and constructed visual styles. Default and Quick Generate load it on the executor-base routing trigger — the first page whose visual job reaches beyond the everyday block — and keep it for the rest of the run; other SVG-authoring routes follow their workflow trigger. It keeps the form the model writes and the design decisions behind each technique; the complete grammar the checker and exporter enforce for §6.2–§6.10 is in [`svg-contract.md`](../scripts/docs/svg-contract.md) Part II under the same section numbers; §6.1 and §6.11–§6.13 are design guidance with no separate contract.
+Authority for advanced paint, effects, transforms, freeform/radial geometry, and constructed visual styles. Default and Quick Generate load it on the executor-base routing trigger — the first page whose visual job reaches beyond the everyday block — and keep it for the rest of the run; other SVG-authoring routes follow their workflow trigger. It keeps the form the model writes and the design decisions behind each technique; the complete grammar the checker and exporter enforce for §6.2–§6.10 is in [`svg-contract.md`](commands/svg-contract.md) Part II under the same section numbers; §6.1 and §6.11–§6.13 are design guidance with no separate contract.
 
 **Cross-reference map**: unqualified §1, §2, and §4 references point to [`shared-standards-core.md`](./shared-standards-core.md); §6 references are local to this file.
 
@@ -258,7 +258,7 @@ never both on the same `<image>`. A nested `<svg>` is only the exact
 single-image crop wrapper the crop parser accepts, not a general viewport;
 its required form (outer `preserveAspectRatio="none"` + `overflow="hidden"`
 + unit-space `viewBox`, child `<image>` at `0 0 1 1`) is in
-[`svg-contract.md`](../scripts/docs/svg-contract.md) under "Nested SVG is
+[`svg-contract.md`](commands/svg-contract.md) under "Nested SVG is
 picture-crop transport".
 
 | Overlay | Construction | Typical stops / alpha |

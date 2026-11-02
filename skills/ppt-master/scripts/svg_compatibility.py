@@ -1,6 +1,6 @@
 """Shared, semantics-preserving SVG compatibility normalizations.
 
-See scripts/docs/svg-pipeline.md for the dangerous compatibility export
+See references/commands/svg-pipeline.md for the dangerous compatibility export
 boundary.
 """
 

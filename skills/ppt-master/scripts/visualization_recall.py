@@ -19,7 +19,7 @@ Examples:
 Dependencies:
     None (only uses the standard library)
 
-See scripts/docs/visualization-recall.md for the planning workflow and output contract.
+See references/commands/visualization-recall.md for the planning workflow and output contract.
 """
 
 from __future__ import annotations

@@ -1,4 +1,4 @@
-> See [`shared-standards-core.md`](./shared-standards-core.md) §1.5 for the authored-preset contract and [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.4–§1.5 for the machine metadata.
+> See [`shared-standards-core.md`](./shared-standards-core.md) §1.5 for the authored-preset contract and [`svg-contract.md`](commands/svg-contract.md) §1.4–§1.5 for the machine metadata.
 
 # Native Shape Authoring Reference
 
@@ -123,7 +123,7 @@ Operand count, preset choice, geometry, paint, rotation, and grouping come from 
 
 ## 4. Atomic Fragment Contract
 
-The logical `<g data-pptx-authoring="preset">` owns id, object kind, preset, frame, adjustments, base paint, and the optional filter reference; its direct `<path>` children are ordered registry layers with only the per-path override a preset requires. No hidden carrier, preview wrapper, `data-pptx-part`, or fingerprint belongs in project-authored SVG. On a structured template the validated group is one semantic atom — Slide-local, the single carrier of an `object` slot, or a direct Master/Layout fixed atom — and the template workflow may add only registered ownership attributes. A canonical template may keep the fragment as an executable exemplar; a page adaptation copies it unchanged only when every field matches, otherwise regenerates it. Full machine contract and validation: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.5.
+The logical `<g data-pptx-authoring="preset">` owns id, object kind, preset, frame, adjustments, base paint, and the optional filter reference; its direct `<path>` children are ordered registry layers with only the per-path override a preset requires. No hidden carrier, preview wrapper, `data-pptx-part`, or fingerprint belongs in project-authored SVG. On a structured template the validated group is one semantic atom — Slide-local, the single carrier of an `object` slot, or a direct Master/Layout fixed atom — and the template workflow may add only registered ownership attributes. A canonical template may keep the fragment as an executable exemplar; a page adaptation copies it unchanged only when every field matches, otherwise regenerates it. Full machine contract and validation: [`svg-contract.md`](commands/svg-contract.md) §1.5.
 
 ---
 

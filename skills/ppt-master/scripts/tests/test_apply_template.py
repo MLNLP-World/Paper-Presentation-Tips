@@ -20,7 +20,7 @@ from apply_template import (  # noqa: E402
     apply_templates,
 )
 
-TEMPLATES = SCRIPTS_DIR.parent / "templates"
+TEMPLATES = SCRIPTS_DIR.parent / "assets" / "templates"
 STYLE_ROOT = TEMPLATES / "styles" / "incident-postmortem"
 BRAND_ROOT = TEMPLATES / "brands" / "中国电信"
 LAYOUT_ROOT = TEMPLATES / "layouts" / "presentation_core"
@@ -48,7 +48,7 @@ class ApplyTemplateTests(unittest.TestCase):
         text = installed.read_text(encoding="utf-8")
         h1 = text.index("# Incident Postmortem")
         self.assertIn(
-            "\n\n> **Installed from**: `skills/ppt-master/templates/styles/"
+            "\n\n> **Installed from**: `skills/ppt-master/assets/templates/styles/"
             "incident-postmortem/` (library)\n",
             text[h1:],
         )

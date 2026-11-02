@@ -12,7 +12,7 @@ Conditional Executor authority for resolving one page-local Chart/Table `family/
 
 | Family | Canonical reference | SVG root | Construction authority |
 |---|---|---|---|
-| `chart` | `chart/<key>` | `templates/charts/<key>.svg` | [`executor-chart.md`](./executor-chart.md) |
+| `chart` | `chart/<key>` | `assets/templates/charts/<key>.svg` | [`executor-chart.md`](./executor-chart.md) |
 | `table` | `table/<key>` | `templates/tables/<key>.svg` | [`executor-table.md`](./executor-table.md) |
 
 | Active profile | Resolve from |

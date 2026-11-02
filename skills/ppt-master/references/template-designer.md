@@ -8,8 +8,8 @@ Generate reusable structured page templates inside the workspace selected by Cre
 
 ## Usage
 
-- **Workspace root**: `library` → `skills/ppt-master/templates/<kind_dir>/<template_name>/`; `project` → the confirmed `<target_project>/`; template source is `<template_workspace>/templates/` in both; the Design Spec is the parent-resolved `<design_spec_path>` (library `templates/design_spec.md`, project `templates/design_spec.<kind>.<id>.md`).
-- **Input**: the finalized brief (scope, target project, template ID, display name, kind, structural use cases or Deck application context, tone, theme mode, canvas, optional reference assets, accepted norms) plus, for a PPTX reference, the import workspace described in [`template-tools.md`](../scripts/docs/template-tools.md).
+- **Workspace root**: `library` → `skills/ppt-master/assets/templates/<kind_dir>/<template_name>/`; `project` → the confirmed `<target_project>/`; template source is `<template_workspace>/templates/` in both; the Design Spec is the parent-resolved `<design_spec_path>` (library `templates/design_spec.md`, project `templates/design_spec.<kind>.<id>.md`).
+- **Input**: the finalized brief (scope, target project, template ID, display name, kind, structural use cases or Deck application context, tone, theme mode, canvas, optional reference assets, accepted norms) plus, for a PPTX reference, the import workspace described in [`template-tools.md`](commands/template-tools.md).
 
 **Hard rule — scope is execution metadata**: route files by `output_scope` / `target_project` but never write them into frontmatter. Deck/layout output always declares `native_structure_mode: structured`; never invent another structure mode.
 
@@ -27,7 +27,7 @@ Generate reusable structured page templates inside the workspace selected by Cre
 | Mode | Authoritative inputs | Model-facing inputs |
 |---|---|---|
 | `standard` / `fidelity` | The brief for the newly designed output; `analysis/manifest.json` for canvas/theme/resources | `authoring_summary.json`, every layered source Master/Layout as structural and visual evidence, layered Slides, optional flat spot checks, exported resources — never `authoring_manifest.json`. `standard` authors a compact result, `fidelity` broader source-aligned coverage; neither copies source identities merely because they exist |
-| `mirror` | Unchanged Type-A import workspace, consumed by the [publication tools](../scripts/docs/template-tools.md#mirror-publication) | Source summaries and asset evidence needed for reuse/Design Spec judgment, plus the publication receipt |
+| `mirror` | Unchanged Type-A import workspace, consumed by the [publication tools](commands/template-tools.md#mirror-publication) | Source summaries and asset evidence needed for reuse/Design Spec judgment, plus the publication receipt |
 
 **Mandatory — authored construction bundle**: as soon as `replication_mode` resolves to `standard` or `fidelity`, and before selecting any contour, read [`native-shape-authoring.md`](./native-shape-authoring.md) and [`preset-shape-vocabulary.md`](./preset-shape-vocabulary.md) completely; never load them for `mirror`.
 
@@ -43,13 +43,13 @@ Generate reusable structured page templates inside the workspace selected by Cre
 | Mode | Output structure contract |
 |---|---|
 | `standard` / `fidelity` | Review the complete source Master/Layout inventory, then author complete Slide SVG prototypes and an intentional new Master/Layout/slot system; every retained Layout has at least one prototype; `standard` stays compact, `fidelity` retains broader useful families; source identities never define output topology. Choose page-fit contours from the full native vocabulary before their authoring forms: exact native atoms independent, a Boolean result only where one contour requires it, freeform last |
-| `mirror` | Publishes unchanged Type-A importer output through the [tool chain](../scripts/docs/template-tools.md#mirror-publication), then completes Design Spec judgment and reports source limitations |
+| `mirror` | Publishes unchanged Type-A importer output through the [tool chain](commands/template-tools.md#mirror-publication), then completes Design Spec judgment and reports source limitations |
 
 Every output is a complete standalone Slide preview resolving Master + Layout + Slide context with explicit layer markers; standalone Master/Layout definition SVGs are not template artifacts.
 
 **Authored preset rule**: in `standard` / `fidelity`, when one registered preset exactly expresses one complete object, use `preset_shape_svg.py` per [`native-shape-authoring.md`](./native-shape-authoring.md). Its compact canonical `<g>` is one semantic atom after validation — Slide-local, the one carrier of an `object` slot, or a Master/Layout fixed layer — and the only `<g>` exception to fixed-layer atomicity. Paint comes from the brief and spec color scheme. Never copy an expanded import carrier/preview/fingerprint bundle into an authored template; `mirror` publishes importer output through the tool path. When one preset is insufficient, apply the same reference's compound-page gate. Syntax and validation are owned by `shared-standards-core.md` and the native-shape reference.
 
-**Mirror scope**: source Slides and their reachable structure define the published roster; [the publisher](../scripts/docs/template-tools.md#mirror-publication) validates that closure. Re-author other useful identities through `standard` / `fidelity`.
+**Mirror scope**: source Slides and their reachable structure define the published roster; [the publisher](commands/template-tools.md#mirror-publication) validates that closure. Re-author other useful identities through `standard` / `fidelity`.
 
 **Hard rule — no duplicate authored Layout contracts**: distinct authored keys differ in fixed atoms or slot topology/type/index/bounds/binding; topic, sample wording, or Slide-local content never justifies another key. Mirror keeps distinct reachable source identities even when visibly equivalent.
 
@@ -86,7 +86,7 @@ Design a broader roster close to the source's visual language with an independen
 
 ### Mirror mode
 
-Use the Type-A [mirror publication tools](../scripts/docs/template-tools.md#mirror-publication) without editing importer output. Create Layout mirror is legal only when the source contract is already brand-neutral and application-neutral; otherwise return to dispatch (author a Layout through `standard` / `fidelity`, or retain a Deck) — removing, repainting, retyping, or discarding rules is never mirror.
+Use the Type-A [mirror publication tools](commands/template-tools.md#mirror-publication) without editing importer output. Create Layout mirror is legal only when the source contract is already brand-neutral and application-neutral; otherwise return to dispatch (author a Layout through `standard` / `fidelity`, or retain a Deck) — removing, repainting, retyping, or discarding rules is never mirror.
 
 **Model-facing evidence**: source summaries, selected assets and the publication receipt support reuse and Design Spec decisions; tools consume and validate the complete importer workspace.
 
@@ -157,7 +157,7 @@ page_count: <N>
 - Motifs that ARE this template; source-derived grammar — grid/column rhythm, chrome, image zones, crop/clip, scrim/overlay or baked alpha, density rhythm; optional XML for a unique reusable component
 
 ## V. Page Roster
-One row per Slide SVG: background, anchors, rhythm, image behavior, density, role, slot bounds/typography/wrapping, and Layout key/picker name (mirror: preserved keys); consult the advisory [capacity report](../scripts/docs/template-tools.md#advisory-slot-capacity) before review. No required/optional/repeatable status or fixed/replaceable/example-only policy. Entries match every SVG on disk. Mirror retains the tool-generated `### Source Preservation Map` and its omitted-identity scope; add judgment only where source limitations require it.
+One row per Slide SVG: background, anchors, rhythm, image behavior, density, role, slot bounds/typography/wrapping, and Layout key/picker name (mirror: preserved keys); consult the advisory [capacity report](commands/template-tools.md#advisory-slot-capacity) before review. No required/optional/repeatable status or fixed/replaceable/example-only policy. Entries match every SVG on disk. Mirror retains the tool-generated `### Source Preservation Map` and its omitted-identity scope; add judgment only where source limitations require it.
 
 ## VI. Assets (omit when none)
 ## VII. Placeholder Overrides (omit when none)
@@ -183,7 +183,7 @@ Templates strictly follow the brief and `<design_spec_path>`: root `viewBox` equ
 |---|---|
 | `standard` | The complete lightweight Master/Layout inventory plus enough page IR to understand direction and assets |
 | `fidelity` | Every Master/Layout and page |
-| `mirror` | Run the [publication chain](../scripts/docs/template-tools.md#mirror-publication), retain its factual roster, and report source limitations |
+| `mirror` | Run the [publication chain](commands/template-tools.md#mirror-publication), retain its factual roster, and report source limitations |
 
 #### 2.1 PPTX Import Mode Rule
 
@@ -193,7 +193,7 @@ Templates strictly follow the brief and `<design_spec_path>`: root `viewBox` equ
 | `fidelity` | Authors a broader source-aligned roster matching the visual language without one-to-one identity retention |
 | `mirror` | Publishes unchanged importer output through the tool path; the model completes reuse judgment, asset adoption and the Design Spec |
 
-**Mirror publication**: [template-tools.md](../scripts/docs/template-tools.md#mirror-publication) owns validation, normalization and publication.
+**Mirror publication**: [template-tools.md](commands/template-tools.md#mirror-publication) owns validation, normalization and publication.
 
 #### 2.2 Native Shape Payload and Authoring IR
 
@@ -202,9 +202,9 @@ Templates strictly follow the brief and `<design_spec_path>`: root `viewBox` equ
 | Lossless import SVG | Immutable evidence | Retains complete metadata, native boundaries, hidden carriers, scope identity for validation and non-visible recovery; its visible subtree is never copied into templates |
 | Authoring IR bundle | Editable source | Compact SVG from parsed evidence without opaque payload or duplicate carriers; retains visible intent and document-local source refs; models read the summary, tools the manifest |
 | `standard` / `fidelity` output | Newly authored contract | Editable primitives, compact canonical preset groups for exact matches, `shape_boolean_svg.py` only where one compound contour must become an object, necessary freeform last; paint from the brief/spec; exported assets reused, never opaque payload or source topology |
-| `mirror` output | Tool-published preservation contract | [Publication behavior](../scripts/docs/template-tools.md#mirror-publication) |
+| `mirror` output | Tool-published preservation contract | [Publication behavior](commands/template-tools.md#mirror-publication) |
 
-Materialization and source-limitation reporting follow [template-tools.md](../scripts/docs/template-tools.md#mirror-publication). `data-pptx-replace-with` stays reserved for Chart/Table replacement markers.
+Materialization and source-limitation reporting follow [template-tools.md](commands/template-tools.md#mirror-publication). `data-pptx-replace-with` stays reserved for Chart/Table replacement markers.
 
 Every template SVG satisfies the structured metadata contract of [`pptx-structure-interface.md`](./pptx-structure-interface.md) §2, and a legacy contract (its §3) never enters a package. Template-side additions:
 
@@ -267,12 +267,12 @@ Both scopes share one workspace shape; only the root differs:
 |---|---|
 | Spec, SVGs, non-bitmap template-source assets | `templates/` |
 | Every bitmap | `images/` |
-| Each imported vector | Once in `icons/imported/`, referenced as `data-icon="imported/<name>"`; never `templates/icons/` |
+| Each imported vector | Once in `icons/imported/`, referenced as `data-icon="imported/<name>"`; never `assets/templates/icons/` |
 | Review deck | `exports/` on request and always for multi-Master |
 
 No optional directory is created merely to exist; no asset placement branches by scope.
 
-**Template Preview**: on request or for multiple Masters, run `template_preview_pptx.py <template_workspace>` after validation ([`template-tools.md`](../scripts/docs/template-tools.md#template_preview_pptxpy)); include the path in the completion summary and omit `exports/` only for an unrequested one-Master package. For import-based templates, note which extracted assets were reused, which references influenced the authored roster, what mirror could not preserve, and any page-type mapping that needed judgment.
+**Template Preview**: on request or for multiple Masters, run `template_preview_pptx.py <template_workspace>` after validation ([`template-tools.md`](commands/template-tools.md#template_preview_pptxpy)); include the path in the completion summary and omit `exports/` only for an unrequested one-Master package. For import-based templates, note which extracted assets were reused, which references influenced the authored roster, what mirror could not preserve, and any page-type mapping that needed judgment.
 
 **Using an existing library workspace** (downstream reuse, not this role's authoring): copy or stage `templates/` plus `images/` / `icons/` (never `exports/`), adjust colors to the project spec, then customize; query the matching kind index (`brands_index.json`, `styles_index.json`, `layouts_index.json`, `decks_index.json`).
 

@@ -35,9 +35,9 @@ REQUIRED_BY_SKILL = {
                    'scripts/reviewed_export.py', 'scripts/reference_review.py',
                    'references/academic-chat-design.md',
                    'references/page-reference-generation.md',
-                   'references/entry-contract.md', 'workflows/routing.md',
-                   'templates/styles/academic-research/templates/design_spec.md',
-                   'templates/icons/THIRD_PARTY_NOTICES.md'),
+                   'references/entry-contract.md', 'references/workflows/routing.md',
+                   'assets/templates/styles/academic-research/templates/design_spec.md',
+                   'assets/templates/icons/THIRD_PARTY_NOTICES.md'),
 }
 
 

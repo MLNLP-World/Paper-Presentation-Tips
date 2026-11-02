@@ -9,7 +9,7 @@ Usage:
 
 Examples:
     python3 scripts/template_preview_pptx.py projects/my_template
-    python3 scripts/template_preview_pptx.py templates/decks/my_template -o review.pptx
+    python3 scripts/template_preview_pptx.py assets/templates/decks/my_template -o review.pptx
 
 Dependencies:
     python-pptx

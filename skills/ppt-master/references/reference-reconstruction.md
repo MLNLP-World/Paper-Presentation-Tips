@@ -16,7 +16,7 @@
 | 来源 | 复用方式与边界 |
 |---|---|
 | 用户提供的 PPTX | 检查具体幻灯片、对象及组合。优先保留文本 run、原生形状、连接关系、分组、图片裁剪，以及表格单元格或图表数据；仅按参考调整必要属性。复制后的主题继承、字体、组合缩放和资源关系必须在目标文件中复核。 |
-| 技能内置素材 | 从 [资源入口](../templates/README.md) 定向定位图标、[图表索引](../templates/charts/charts_index.json)、[表格索引](../templates/tables/tables_index.json)、[正面教材](positive-examples.md)或原型中的局部组件，并实际查看候选。按参考适配尺寸、颜色、线条与标签；引用组件不等于安装 Brand/Style/Layout/Deck，也不改变当前路线。 |
+| 技能内置素材 | 从 [资源入口](../assets/templates/README.md) 定向定位图标、[图表索引](../assets/templates/charts/charts_index.json)、[表格索引](../assets/templates/tables/tables_index.json)、[正面教材](positive-examples.md)或原型中的局部组件，并实际查看候选。按参考适配尺寸、颜色、线条与标签；引用组件不等于安装 Brand/Style/Layout/Deck，也不改变当前路线。 |
 | 无合适实现 | 用当前原生后端按参考重建。可编辑组件不得为省事改成截图；复杂原图按下一节的图片例外处理。 |
 
 在既有页级映射或资源记录中保留：目标页/区域、来源文件、源页与对象标识或素材路径、实际复用方式、目标对象类型，以及必要的适配。区分“看过作为参考”“已复用原生对象”“保留独立图片”；有映射或复制成功不等于视觉与可编辑性已验收。保留已有素材的来源和署名。

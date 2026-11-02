@@ -1718,7 +1718,7 @@ def _print_structure_contract_error(
         print(
             "  A legacy lock without pptx_structure.mode defaults only to flat. "
             "Mirror/layout reuse must first create a current template workspace "
-            "through skills/ppt-master/workflows/create-template.md, then generate "
+            "through skills/ppt-master/references/workflows/create-template.md, then generate "
             "new structured SVG pages.",
             file=sys.stderr,
         )
@@ -1733,7 +1733,7 @@ def _print_structure_contract_error(
         "  A legacy lock with no pptx_structure.mode defaults to flat. "
         "Explicit legacy or unknown values are not inferred. Mirror/layout reuse "
         "must first create a current template workspace "
-        "through skills/ppt-master/workflows/create-template.md, then generate "
+        "through skills/ppt-master/references/workflows/create-template.md, then generate "
         "new structured SVG pages.",
         file=sys.stderr,
     )

@@ -29,7 +29,7 @@ Project icon namespaces (subdirectories of <project>/icons/):
     imported/          - extracted vector illustrations with data-icon-style="preserve-color"; preserve source colors and natural viewBox aspect ratio
 
 Bundled icons must first be copied into the project with icon_sync.py. This
-tool never reads templates/icons directly and never accepts a bare icon name.
+tool never reads assets/templates/icons directly and never accepts a bare icon name.
 
 Usage:
     python3 scripts/svg_finalize/embed_icons.py <svg_file> [svg_file2] ...

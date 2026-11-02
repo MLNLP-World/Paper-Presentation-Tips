@@ -1,7 +1,7 @@
 # Executor Flat and Shared Core
 
 
-Always-loaded Executor authority for flat SVG page authoring, shared by Default and Quick. Executor builds the finished pages on the plan's structure: it receives the blueprint (§2), owns every decision judged on the canvas — carrier mix, geometry, composition, hierarchy, treatment — and draws from the expression vocabulary in the Page Expression Core. Items marked `Default only` bind to the persisted Design Spec / `spec_lock.md`. Quick applies the same craft to the transient anchors from [`quick-generate.md`](../workflows/profiles/quick-generate.md) §2; its own pacing, single final checker, and export replace the Default gates and §6.
+Always-loaded Executor authority for flat SVG page authoring, shared by Default and Quick. Executor builds the finished pages on the plan's structure: it receives the blueprint (§2), owns every decision judged on the canvas — carrier mix, geometry, composition, hierarchy, treatment — and draws from the expression vocabulary in the Page Expression Core. Items marked `Default only` bind to the persisted Design Spec / `spec_lock.md`. Quick applies the same craft to the transient anchors from [`quick-generate.md`](workflows/profiles/quick-generate.md) §2; its own pacing, single final checker, and export replace the Default gates and §6.
 
 **Conditional branch routing**: evaluate every trigger once over the whole roster before P01 (Default: §IX; Quick: the frozen transient roster). Read the triggered modules then, in one batch, so that reading stays out of the page loop. A page that reaches a capability the sweep did not foresee reads its module at that moment, before that page's first SVG line.
 
@@ -171,7 +171,7 @@ Repeating symmetric card grids without a page job is the failure mode these stru
 
 ## 2. Blueprint Intake
 
-Executor receives the plan and builds on it: Default reads the retained `design_spec.md` and `spec_lock.md`; Quick holds the same decisions as transient §2 anchors. The plan owns what must be true about every page — content, `Relationships`, roster, rhythm, resources, identity; Executor owns how it looks. Pipeline mechanics of the Default run — context validity and rereads, roster invariance, the five-page lock re-read, recovery from a missing artifact, the pre-P01 parameter confirmation, and the gate cadence — are [`generate-pptx.md`](../workflows/generate-pptx.md) Step 6.
+Executor receives the plan and builds on it: Default reads the retained `design_spec.md` and `spec_lock.md`; Quick holds the same decisions as transient §2 anchors. The plan owns what must be true about every page — content, `Relationships`, roster, rhythm, resources, identity; Executor owns how it looks. Pipeline mechanics of the Default run — context validity and rereads, roster invariance, the five-page lock re-read, recovery from a missing artifact, the pre-P01 parameter confirmation, and the gate cadence — are [`generate-pptx.md`](workflows/generate-pptx.md) Step 6.
 
 ### 2.1 Execution context and binding
 
@@ -281,8 +281,8 @@ Mechanical repetition comes from reusing one carrier and topology without a page
 **Checkpoints**:
 
 - **Phased generation** (recommended):
-  1. **Visual Construction Phase**: generate all pages sequentially, applying every triggered branch while drawing. **MUST embed one object-scoped plot-area marker** per §IX-named or Quick-promoted value-driven chart object ([`executor-chart.md`](./executor-chart.md) §2); calibration follows in [`verify-charts`](../workflows/stages/verify-charts.md). Write every `<object-key>=yes` native marker plus JSON metadata atomically ([`native-data-interface.md`](./native-data-interface.md) §2) and stamp its baseline before the page's gate — `python3 ${SKILL_DIR}/scripts/stamp_native_fallbacks.py <project_path>/svg_output/<page>.svg --write`, rerun after any visible edit inside the marker group, a `compact_svg_styles.py --inplace` rewrite included. **Reach for native presets** per §3.0 as you draw, decided by the object's intent, never by scanning finished paths; several presets for one page go through one `preset_shape_svg.py render-batch --input -` round (gradient/pattern paint stays ordinary SVG; a justified §6.4 shadow/glow stays on the helper-authored shape).
-  2. **Quality gates**: the gate points and their commands are the route's — [`generate-pptx.md`](../workflows/generate-pptx.md) Step 6 or [`quick-generate.md`](../workflows/profiles/quick-generate.md) §3–4. The repair discipline at every gate is the same: run the checker unfiltered, review the complete issue set, fix every error plus the selected warnings in one consolidated pass, verify once. Never check between individual fixes, never `cat` a passing report, never defer errors past `finalize_svg.py` (it rewrites SVG and masks violations). Every `warning` is advisory.
+  1. **Visual Construction Phase**: generate all pages sequentially, applying every triggered branch while drawing. **MUST embed one object-scoped plot-area marker** per §IX-named or Quick-promoted value-driven chart object ([`executor-chart.md`](./executor-chart.md) §2); calibration follows in [`verify-charts`](workflows/stages/verify-charts.md). Write every `<object-key>=yes` native marker plus JSON metadata atomically ([`native-data-interface.md`](./native-data-interface.md) §2) and stamp its baseline before the page's gate — `python3 ${SKILL_DIR}/scripts/stamp_native_fallbacks.py <project_path>/svg_output/<page>.svg --write`, rerun after any visible edit inside the marker group, a `compact_svg_styles.py --inplace` rewrite included. **Reach for native presets** per §3.0 as you draw, decided by the object's intent, never by scanning finished paths; several presets for one page go through one `preset_shape_svg.py render-batch --input -` round (gradient/pattern paint stays ordinary SVG; a justified §6.4 shadow/glow stays on the helper-authored shape).
+  2. **Quality gates**: the gate points and their commands are the route's — [`generate-pptx.md`](workflows/generate-pptx.md) Step 6 or [`quick-generate.md`](workflows/profiles/quick-generate.md) §3–4. The repair discipline at every gate is the same: run the checker unfiltered, review the complete issue set, fix every error plus the selected warnings in one consolidated pass, verify once. Never check between individual fixes, never `cat` a passing report, never defer errors past `finalize_svg.py` (it rewrites SVG and masks violations). Every `warning` is advisory.
   3. **Logic Construction Phase (conditional)**: after the gates pass, generate speaker notes for narrative continuity only when the effective Speaker Notes outcome is enabled.
 
 - **Mandatory — final carrier-receipt review**: after the final checker passes, compare its `[CARRIERS]` summary (per-page detail under `files[].info.carrier_receipt`) with the retained page jobs, resource roles, and geometry signatures. Counts are not quotas. Repair only where a fact contradicts an active decision, then rerun the final checker once:
@@ -335,7 +335,7 @@ A directional solid object is a `shape` preset such as `rightArrow` or `chevron`
 
 ## 4. Icon Usage
 
-Executor draws from the complete prepared project-local pool; library rules are the [icon README](../templates/icons/README.md). Any SVG under `<project_path>/icons/<lib>/` is prepared material. Authoring, preview, finalization, and export resolve only complete case-sensitive `library/name` references there (`tabler-outline/award`, never `Award`; custom files keep their exact case), with no global or template-source fallback.
+Executor draws from the complete prepared project-local pool; library rules are the [icon README](../assets/templates/icons/README.md). Any SVG under `<project_path>/icons/<lib>/` is prepared material. Authoring, preview, finalization, and export resolve only complete case-sensitive `library/name` references there (`tabler-outline/award`, never `Award`; custom files keep their exact case), with no global or template-source fallback.
 
 ```xml
 <use data-icon="chunk-filled/home" x="100" y="200" width="48" height="48" fill="#005587"/>
@@ -362,7 +362,7 @@ Default reads typography from `spec_lock.md` (Quick: its transient §2 anchor): 
 
 ## 6. Completion and Export (Default only)
 
-After every page passes the final quality check, load [`executor-notes.md`](./executor-notes.md) only when the effective Speaker Notes outcome in `design_spec.md §I` is enabled, then proceed to the route's conditional motion handling and [`generate-pptx.md`](../workflows/generate-pptx.md) Step 7, which owns post-processing and export.
+After every page passes the final quality check, load [`executor-notes.md`](./executor-notes.md) only when the effective Speaker Notes outcome in `design_spec.md §I` is enabled, then proceed to the route's conditional motion handling and [`generate-pptx.md`](workflows/generate-pptx.md) Step 7, which owns post-processing and export.
 
 ## Approved-reference fidelity
 

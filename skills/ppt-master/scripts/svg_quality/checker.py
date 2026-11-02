@@ -6771,7 +6771,7 @@ class SVGQualityChecker:
 
         # Font families: default `font_family` plus any per-role `*_family`
         # override (title_family / body_family / emphasis_family / code_family,
-        # per templates/schemas/spec_lock.schema.json). Any of these is a legitimate declared
+        # per assets/templates/schemas/spec_lock.schema.json). Any of these is a legitimate declared
         # value; an SVG that uses any one of them is not drifting.
         allowed_fonts = set()
         if typo:
@@ -7658,7 +7658,7 @@ class SVGQualityChecker:
                 'release SVG projects require spec_lock.md pptx_structure.mode: '
                 'flat (free design / brand-only) or structured (deck/layout '
                 f'template); found {declared_mode!r}. Create a template '
-                'workspace through skills/ppt-master/workflows/create-template.md '
+                'workspace through skills/ppt-master/references/workflows/create-template.md '
                 'before generating structured SVG pages. Existing PPTX/SVG files '
                 'are not upgraded in place.',
             ))
@@ -9264,7 +9264,7 @@ class SVGQualityChecker:
                     "source-analysis native_structure/source.pptx contracts "
                     "must not be packaged as reusable template inputs; rebuild "
                     "through "
-                    "skills/ppt-master/workflows/create-template.md",
+                    "skills/ppt-master/references/workflows/create-template.md",
                 ))
 
             if declared_structure_mode != 'structured':
@@ -9281,7 +9281,7 @@ class SVGQualityChecker:
                     'error',
                     'legacy_structure_contract',
                     "legacy template structure detected; create a new current "
-                    "workspace through skills/ppt-master/workflows/"
+                    "workspace through skills/ppt-master/references/workflows/"
                     "create-template.md before Step 3 consumption",
                 ))
         spec_pages = self._extract_spec_roster(spec_text) if spec_text else []

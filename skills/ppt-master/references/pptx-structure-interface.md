@@ -4,7 +4,7 @@
 
 Conditional interface for PowerPoint Master, Layout, fixed-layer, and placeholder authoring. In Generate, load only for Default `spec_lock.md pptx_structure.mode: structured` or Quick structured Slide authoring from an installed Layout/Deck owner.
 
-**Cross-reference map**: unqualified §1.5 and §4.2 references point to [`shared-standards-core.md`](./shared-standards-core.md); this file's own sections are §1–§3. Exporter and read-back mechanics live in [`svg-pipeline.md`](../scripts/docs/svg-pipeline.md#structured-export-mechanics).
+**Cross-reference map**: unqualified §1.5 and §4.2 references point to [`shared-standards-core.md`](./shared-standards-core.md); this file's own sections are §1–§3. Exporter and read-back mechanics live in [`svg-pipeline.md`](commands/svg-pipeline.md#structured-export-mechanics).
 
 ## 1. PPTX Structure Routing
 
@@ -17,7 +17,7 @@ Every new SVG project declares one deterministic route:
 
 **Quick exception**: Lock-row/Strategist statements in this file are Default-only. Quick keeps free/Brand/Style-only flat; an installed Layout/Deck owner is structured unless visual-only, with identities on SVG roots and title/body anchors inferred from slot carriers.
 
-**Hard rule — no structure inference**: Flat export promotes and deduplicates nothing. Structured export compiles only declared root identities, atomic fixed layers, and slot groups; it never assigns Layout families, clusters pages, infers placeholders, repairs missing metadata, or migrates legacy contracts. Create a current workspace through [`create-template`](../workflows/create-template.md) before generating structured pages.
+**Hard rule — no structure inference**: Flat export promotes and deduplicates nothing. Structured export compiles only declared root identities, atomic fixed layers, and slot groups; it never assigns Layout families, clusters pages, infers placeholders, repairs missing metadata, or migrates legacy contracts. Create a current workspace through [`create-template`](workflows/create-template.md) before generating structured pages.
 
 **Layout reuse**: Reuse one Layout key only when its ordered fixed Layout atoms and slot ids/types/effective indices/default bounds/binding modes are identical. Different wording, data, imagery, crop, or Slide-local carrier geometry does not create a new Layout; a genuinely different reusable contract gets a new key even when both pages are semantically `content`. A Layout may have zero slots and zero fixed atoms — valid for a cover, poster, or full-visual page; do not manufacture an empty `utility` kind or a full-page fake `object` slot.
 
@@ -29,7 +29,7 @@ Every new SVG project declares one deterministic route:
 
 **Project lock rows**: Master `<master_key>: <PowerPoint picker name>`; unique Layout `<layout_key>: <master_key> | <PowerPoint picker name> | <prototype source>` where the source is a generated `P<NN>` or installed `template:<basename>`; page assignment `P<NN>: <layout_key>` under `page_pptx_layouts`. SVG root values MUST match the assigned definition. A Layout key belongs to exactly one Master and is globally unique; an unused Layout is compiled only when explicitly listed in `pptx_layouts` with a template SVG source; it has no published carrier slide. Every structured route requires numeric `spec_lock.md` typography `title` / `body` rows — they become the Master text styles.
 
-**Template behavior**: Strict preserves the selected prototype's Master/Layout/slot contract. Adaptive realizes only a Layout allowed by §1 and never mutates a reused key. Mirror-created prototypes preserve validated source identity, parentage, slots, meaning, and similar presentation in compact new SVG; paint/geometry nodes need not be isomorphic. `standard` / `fidelity` never make source topology authoritative; mirror does not synthesize replacement topology or fill missing facts. Imported inherited-shape visibility is an analysis fact carried by the two optional root booleans below; authored `standard` / `fidelity` templates normally omit both (see [`conversion.md`](../scripts/docs/conversion.md#import-compatibility-and-recovery-boundary)).
+**Template behavior**: Strict preserves the selected prototype's Master/Layout/slot contract. Adaptive realizes only a Layout allowed by §1 and never mutates a reused key. Mirror-created prototypes preserve validated source identity, parentage, slots, meaning, and similar presentation in compact new SVG; paint/geometry nodes need not be isomorphic. `standard` / `fidelity` never make source topology authoritative; mirror does not synthesize replacement topology or fill missing facts. Imported inherited-shape visibility is an analysis fact carried by the two optional root booleans below; authored `standard` / `fidelity` templates normally omit both (see [`conversion.md`](commands/conversion.md#import-compatibility-and-recovery-boundary)).
 
 | Metadata | Placement | Behavior |
 |---|---|---|
@@ -72,7 +72,7 @@ Every new SVG project declares one deterministic route:
 
 ## 3. Legacy Template Input Boundary
 
-Projects or analysis packages carrying `analysis/native_structure.json` / `sources/source.pptx`, `pptx_structure.mode: baseline|template|preserve`, `layout_strategy`, `data-pptx-layout-kind`, `distilled` / `utility`, direct atomic placeholders, or an incomplete root Master identity are not generation/export inputs and are never upgraded in place; create a separate current workspace through [`create-template`](../workflows/create-template.md). A project explicitly declaring `mode: flat` is the current free-design/brand-only route and needs no conversion.
+Projects or analysis packages carrying `analysis/native_structure.json` / `sources/source.pptx`, `pptx_structure.mode: baseline|template|preserve`, `layout_strategy`, `data-pptx-layout-kind`, `distilled` / `utility`, direct atomic placeholders, or an incomplete root Master identity are not generation/export inputs and are never upgraded in place; create a separate current workspace through [`create-template`](workflows/create-template.md). A project explicitly declaring `mode: flat` is the current free-design/brand-only route and needs no conversion.
 
 | Available source | Allowed create-template behavior |
 |---|---|

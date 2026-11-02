@@ -35,8 +35,8 @@ PROJECT_ROOT = Path(__file__).parent.parent
 # Core directories
 SCRIPTS_DIR = PROJECT_ROOT / 'scripts'
 REFERENCES_DIR = PROJECT_ROOT / 'references'
-TEMPLATES_DIR = PROJECT_ROOT / 'templates'
-WORKFLOWS_DIR = PROJECT_ROOT / 'workflows'
+TEMPLATES_DIR = PROJECT_ROOT / 'assets' / 'templates'
+WORKFLOWS_DIR = PROJECT_ROOT / 'references' / 'workflows'
 
 # Repository root directory
 REPO_ROOT = PROJECT_ROOT.parent.parent

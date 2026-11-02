@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Install selected Brand / Style / Layout / Deck workspaces into a project.
 
-Runs the install half of ``workflows/stages/apply-template-workspace.md`` §4
+Runs the install half of ``references/workflows/stages/apply-template-workspace.md`` §4
 as one command: validate every root, map each spec to its kind-qualified
 project name, resolve the structural owner (Layout over Deck), copy the owner's
 roster and every root's ``images/`` / ``icons/`` once, refuse destination
@@ -93,7 +93,7 @@ class RootRecord:
         if self.source == "library":
             kind = self.specs[0].kind
             kind_dir = KIND_CONFIG[kind]["dir"].name
-            return f"skills/ppt-master/templates/{kind_dir}/{self.specs[0].template_id}/"
+            return f"skills/ppt-master/assets/templates/{kind_dir}/{self.specs[0].template_id}/"
         return f"{self.root}/"
 
 

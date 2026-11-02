@@ -2,14 +2,14 @@
 """Register a brand / style / layout / deck template in the global index.
 
 Four kinds, four workspace roots, four index files. The shared model lives
-in ``templates/README.md``; each kind's schema lives in its directory README:
+in ``assets/templates/README.md``; each kind's schema lives in its directory README:
 
 | --kind  | Workspace roots         | Index file                    |
 |---------|-------------------------|-------------------------------|
-| brand   | ``templates/brands/``   | ``brands_index.json``         |
-| style   | ``templates/styles/``   | ``styles_index.json``         |
-| layout  | ``templates/layouts/``  | ``layouts_index.json``        |
-| deck    | ``templates/decks/``    | ``decks_index.json``          |
+| brand   | ``assets/templates/brands/``   | ``brands_index.json``         |
+| style   | ``assets/templates/styles/``   | ``styles_index.json``         |
+| layout  | ``assets/templates/layouts/``  | ``layouts_index.json``        |
+| deck    | ``assets/templates/decks/``    | ``decks_index.json``          |
 
 Current workspaces keep ``design_spec.md`` and any SVG roster under
 ``<workspace>/templates/``. Assets live in optional ``images/`` / ``icons/``
@@ -69,7 +69,7 @@ configure_utf8_stdio()
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_DIR = SCRIPT_DIR.parent
-TEMPLATES_DIR = SKILL_DIR / "templates"
+TEMPLATES_DIR = SKILL_DIR / "assets" / "templates"
 
 KIND_CONFIG = {
     "brand": {

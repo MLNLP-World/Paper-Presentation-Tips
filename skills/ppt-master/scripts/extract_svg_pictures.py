@@ -27,7 +27,7 @@ Dependencies:
     Standard library. Playwright is optional for targets without an explicit
     ``--bounds`` value or imported ``data-pptx-frame`` metadata.
 
-See workflows/create-template.md and scripts/docs/svg-pipeline.md.
+See references/workflows/create-template.md and references/commands/svg-pipeline.md.
 """
 
 from __future__ import annotations

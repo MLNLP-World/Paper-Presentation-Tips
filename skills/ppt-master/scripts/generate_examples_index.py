@@ -213,7 +213,7 @@ def generate_examples_index(examples_dir: str = 'examples') -> str:
     content.append(
         f"- [Role Definitions]({skill_link(skill_dir / 'references')})")
     content.append(
-        f"- [Visualization Templates]({skill_link(skill_dir / 'templates' / 'README.md')})\n")
+        f"- [Visualization Templates]({skill_link(skill_dir / 'assets' / 'templates' / 'README.md')})\n")
 
     # Footer
     content.append("---\n")

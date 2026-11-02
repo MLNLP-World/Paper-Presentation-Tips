@@ -62,7 +62,7 @@ Every coordinated Stage-2 direction carries one complete `rendering: custom` can
 |---|---|
 | Length | One paragraph, 2-5 sentences |
 | Axes covered | line / texture / depth / material / mood (same as preset files) |
-| Catalog basis | Only the ids actually used, each owning a distinct contribution (selection per [`strategist.md`](../strategist.md) §d or [`quick-generate.md`](../../workflows/profiles/quick-generate.md) §2) |
+| Catalog basis | Only the ids actually used, each owning a distinct contribution (selection per [`strategist.md`](../strategist.md) §d or [`quick-generate.md`](../workflows/profiles/quick-generate.md) §2) |
 
 ```yaml
 - image_rendering: custom

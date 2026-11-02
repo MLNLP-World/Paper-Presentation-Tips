@@ -16,7 +16,7 @@ Conditional Executor authority for image status handling, placement, crop behavi
 | `Needs-Manual` | Default uses a placeholder until Step 7; Quick blocks every required row, file presence notwithstanding |
 | `Placeholder` | Dashed `<rect stroke-dasharray="8,4" …/>` plus description text |
 
-**Template-bundled images**: [`apply-template-workspace.md`](../workflows/stages/apply-template-workspace.md) copies them into project `images/`; every page, including `mirror`, rebases the same bytes to exact `../images/<name>` (a transport rewrite, not a visual edit). Never keep a bare or source-template href.
+**Template-bundled images**: [`apply-template-workspace.md`](workflows/stages/apply-template-workspace.md) copies them into project `images/`; every page, including `mirror`, rebases the same bytes to exact `../images/<name>` (a transport rewrite, not a visual edit). Never keep a bare or source-template href.
 
 **Contract — crop policy**: read the §VIII row and its lock projection (`source`, `crop`). On every slide that uses a `crop=no-crop` source (or legacy `| no-crop`), keep one visible complete instance with one of the nine legal `meet` anchors — never `none`, `clip-path`, `mask`, overflow clipping, or a nested crop viewport; an auxiliary same-slide detail or lens may crop the source only while that instance stays visible. `crop=adaptive` permits cropping without requiring it: choose `meet` or a focal-safe `slice` from purpose, ratio, focus, and container. A missing or conflicting projection returns upstream; the §VIII `Image pattern` is a Reference — a starting sketch adjusted freely unless labeled `(binding)`.
 

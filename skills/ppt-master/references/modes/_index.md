@@ -49,7 +49,7 @@ selecting one for the current deck:
 
 ## 3. How to use
 
-**Resolution scope**: deck-wide (one mode per deck). The five are the catalog you select from; if the structure is genuinely mixed, pick the mode of the body pages and let pages vary within it, or use a warranted `custom` blend (§4). Default recommends and confirms under [`strategist.md`](../strategist.md) §d; Quick decides directly under [`quick-generate.md`](../../workflows/profiles/quick-generate.md) §2; Executor reads the confirmed preset file or exact custom references.
+**Resolution scope**: deck-wide (one mode per deck). The five are the catalog you select from; if the structure is genuinely mixed, pick the mode of the body pages and let pages vary within it, or use a warranted `custom` blend (§4). Default recommends and confirms under [`strategist.md`](../strategist.md) §d; Quick decides directly under [`quick-generate.md`](../workflows/profiles/quick-generate.md) §2; Executor reads the confirmed preset file or exact custom references.
 
 ---
 

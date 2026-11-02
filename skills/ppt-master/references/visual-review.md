@@ -1,6 +1,6 @@
 # Visual Review Rubric
 
-> Per-page visual self-check rubric for slide SVGs, read by the subagents spawned during the [`visual-review` stage](../workflows/stages/visual-review.md). The renderer contract lives in [`svg-pipeline.md`](../scripts/docs/svg-pipeline.md#visual_reviewpy).
+> Per-page visual self-check rubric for slide SVGs, read by the subagents spawned during the [`visual-review` stage](workflows/stages/visual-review.md). The renderer contract lives in [`svg-pipeline.md`](commands/svg-pipeline.md#visual_reviewpy).
 
 ## §0 Prerequisites
 
@@ -118,4 +118,4 @@ Rendering is serialized by `visual_review.py`'s lock at `<project>/.preview/.ren
 
 ## §7 Renderer expectations
 
-`visual_review.py` is a pure render-and-validate tool: it never edits SVGs and reads no rule from this rubric. Its output, canvas, lock, and exit-code contract is documented in [`svg-pipeline.md`](../scripts/docs/svg-pipeline.md#visual_reviewpy).
+`visual_review.py` is a pure render-and-validate tool: it never edits SVGs and reads no rule from this rubric. Its output, canvas, lock, and exit-code contract is documented in [`svg-pipeline.md`](commands/svg-pipeline.md#visual_reviewpy).

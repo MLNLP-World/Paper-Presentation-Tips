@@ -1,6 +1,6 @@
 # Shared SVG Core Standards
 
-Mandatory reference for every route that authors or regenerates slide visuals through SVG. It owns XML validity, the closed generated-authoring surface, page closure, semantic grouping, shared visual-quality defaults, and fidelity vocabulary. The complete closed grammar that the checker and exporter enforce — mapping tables, accepted-but-warned spellings, rejection boundaries, import-side metadata — lives in [`svg-contract.md`](../scripts/docs/svg-contract.md); this file keeps the form the model writes.
+Mandatory reference for every route that authors or regenerates slide visuals through SVG. It owns XML validity, the closed generated-authoring surface, page closure, semantic grouping, shared visual-quality defaults, and fidelity vocabulary. The complete closed grammar that the checker and exporter enforce — mapping tables, accepted-but-warned spellings, rejection boundaries, import-side metadata — lives in [`svg-contract.md`](commands/svg-contract.md); this file keeps the form the model writes.
 
 **Conditional module routing**: Default and Quick Generate load every module through [`executor-base.md`](./executor-base.md)'s routing table. Other SVG-authoring routes (Create Template, Edit Native PPTX) load:
 
@@ -72,19 +72,19 @@ One offending character invalidates the file and aborts export.
 
 ### 1.1 Line-end Markers (Conditional Contract)
 
-`marker-start` / `marker-end` on `<line>` and `<path>` reference one local `<marker>` in `<defs>` with `orient="auto"` (or `auto-start-reverse`) whose single child is one of the five DrawingML line ends: a 3-vertex closed polygon (triangle), a simple concave 4-vertex closed polygon (stealth), an open 3-vertex path (arrow), a simple convex 4-vertex closed polygon (diamond), or one `<circle>` / `<ellipse>` (oval). Closed shapes take a fill matching the parent stroke; the open arrow takes `fill="none"` and a matching stroke. Any other marker shape blocks export. Grammar detail and import behavior: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.1.
+`marker-start` / `marker-end` on `<line>` and `<path>` reference one local `<marker>` in `<defs>` with `orient="auto"` (or `auto-start-reverse`) whose single child is one of the five DrawingML line ends: a 3-vertex closed polygon (triangle), a simple concave 4-vertex closed polygon (stealth), an open 3-vertex path (arrow), a simple convex 4-vertex closed polygon (diamond), or one `<circle>` / `<ellipse>` (oval). Closed shapes take a fill matching the parent stroke; the open arrow takes `fill="none"` and a matching stroke. Any other marker shape blocks export. Grammar detail and import behavior: [`svg-contract.md`](commands/svg-contract.md) §1.1.
 
 ---
 
 ### 1.2 Image Clipping (Conditional Contract)
 
-`clip-path` maps natively only on `<image>`: one local `<clipPath>` in `<defs>` containing exactly one `<circle>`, `<ellipse>`, `<rect>` (optional `rx`/`ry`), `<path>`, or `<polygon>`, with no `clip-rule` / `fill-rule`. Circle, ellipse, and rect clips must exactly cover the image frame and become preset picture geometry; a path or polygon becomes custom geometry inside the frame, so use it whenever the contour does not cover the full frame. `clip-path` on shapes, groups, or text is forbidden — author the target geometry directly. Mapping table: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.2.
+`clip-path` maps natively only on `<image>`: one local `<clipPath>` in `<defs>` containing exactly one `<circle>`, `<ellipse>`, `<rect>` (optional `rx`/`ry`), `<path>`, or `<polygon>`, with no `clip-rule` / `fill-rule`. Circle, ellipse, and rect clips must exactly cover the image frame and become preset picture geometry; a path or polygon becomes custom geometry inside the frame, so use it whenever the contour does not cover the full frame. `clip-path` on shapes, groups, or text is forbidden — author the target geometry directly. Mapping table: [`svg-contract.md`](commands/svg-contract.md) §1.2.
 
 ---
 
 ### 1.3 Static Same-Document `<use>` (Conditional Contract)
 
-Author `href="#id"` to a `<symbol>` (finite positive `viewBox`, artwork inside it, instance `width` / `height` positive unitless) or to a primitive, `<g>`, `<text>`, or `<image>`. This pipeline departs from browser SVG in two ways: finalization and native export clone the referenced primitives into each instance (PowerPoint keeps no symbol graph, and PPTX import never reconstructs `<use>`), and the reused subtree may carry no layer, placeholder, or chart/table replacement metadata. Limits and forbidden forms: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.3.
+Author `href="#id"` to a `<symbol>` (finite positive `viewBox`, artwork inside it, instance `width` / `height` positive unitless) or to a primitive, `<g>`, `<text>`, or `<image>`. This pipeline departs from browser SVG in two ways: finalization and native export clone the referenced primitives into each instance (PowerPoint keeps no symbol graph, and PPTX import never reconstructs `<use>`), and the reused subtree may carry no layer, placeholder, or chart/table replacement metadata. Limits and forbidden forms: [`svg-contract.md`](commands/svg-contract.md) §1.3.
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@ Author `href="#id"` to a `<symbol>` (finite positive `viewBox`, artwork inside i
 
 ### 1.4 Imported Native PowerPoint Shapes (Conditional Contract)
 
-`pptx_to_svg.py` emits rendering-neutral metadata (`data-pptx-object`, `data-pptx-shape-id`, `data-pptx-frame`, `data-pptx-prst`, `data-pptx-av-*`, `data-pptx-part`, payload and effect diagnostics) for objects that originate from `p:sp`, `p:cxnSp`, or `p:grpSp`. It applies only to lossless import SVGs and unchanged imported objects on import, mirror, and round-trip routes; ordinary authored SVG never writes these attributes, and export never downgrades an unknown preset or unsupported effect silently. The complete metadata, representation split, precision, proxy, and registry contract: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.4.
+`pptx_to_svg.py` emits rendering-neutral metadata (`data-pptx-object`, `data-pptx-shape-id`, `data-pptx-frame`, `data-pptx-prst`, `data-pptx-av-*`, `data-pptx-part`, payload and effect diagnostics) for objects that originate from `p:sp`, `p:cxnSp`, or `p:grpSp`. It applies only to lossless import SVGs and unchanged imported objects on import, mirror, and round-trip routes; ordinary authored SVG never writes these attributes, and export never downgrades an unknown preset or unsupported effect silently. The complete metadata, representation split, precision, proxy, and registry contract: [`svg-contract.md`](commands/svg-contract.md) §1.4.
 
 ---
 
@@ -125,7 +125,7 @@ python3 ${SKILL_DIR}/scripts/preset_shape_svg.py render rightArrow \
 
 Append `--filter-id softShadow` only when that id already names one direct page-level [`svg-effects.md`](./svg-effects.md) §6.4 filter definition.
 
-**Hard rule — helper-only metadata**: never add or edit authored preset metadata or registry paths by hand; regenerate the whole fragment when preset, frame, adjustment, fill, stroke, stroke width, or the filter reference changes, and replace it with ordinary SVG when free contour editing is required. The helper accepts `none` or six-digit solid HEX paint, optional channel opacity, stroke width, cap, join, and one shape-only filter; gradients, patterns, and other treatments stay ordinary SVG. Text stays outside the atomic fragment. Checker and exporter rerender every fragment from its metadata and fail closed on any drift; machine contract, template-ownership rules, and fidelity boundary: [`svg-contract.md`](../scripts/docs/svg-contract.md) §1.5.
+**Hard rule — helper-only metadata**: never add or edit authored preset metadata or registry paths by hand; regenerate the whole fragment when preset, frame, adjustment, fill, stroke, stroke width, or the filter reference changes, and replace it with ordinary SVG when free contour editing is required. The helper accepts `none` or six-digit solid HEX paint, optional channel opacity, stroke width, cap, join, and one shape-only filter; gradients, patterns, and other treatments stay ordinary SVG. Text stays outside the atomic fragment. Checker and exporter rerender every fragment from its metadata and fail closed on any drift; machine contract, template-ownership rules, and fidelity boundary: [`svg-contract.md`](commands/svg-contract.md) §1.5.
 
 ---
 
@@ -133,7 +133,7 @@ Append `--filter-id softShadow` only when that id already names one direct page-
 
 ### 2.1 Literal Geometry Lengths and Inline Geometry
 
-**Hard rule — direct geometry length grammar**: write `x`, `y`, `width`, `height`, `rx`, `ry`, `cx`, `cy`, `r`, `x1`…`y2`, `dx`, `dy`, and `stroke-width` as finite unitless ordinary decimals in the page `viewBox` space (`x="120"`, `stroke-width="2"`); sizes and radii are non-negative. `px` is read-compatible and warns; every other unit, percentage, expression, or exotic numeric spelling is an error, and an invalid explicit value never falls back to a default. The same geometry properties may instead appear in the element's own `style` as `px` literals (`style="x:120px"`); zero may be unitless, and the pipeline materializes them as XML attributes. Line endpoints, text positions, path data, and points remain XML attributes. Complete grammar: [`svg-contract.md`](../scripts/docs/svg-contract.md) §2.1.
+**Hard rule — direct geometry length grammar**: write `x`, `y`, `width`, `height`, `rx`, `ry`, `cx`, `cy`, `r`, `x1`…`y2`, `dx`, `dy`, and `stroke-width` as finite unitless ordinary decimals in the page `viewBox` space (`x="120"`, `stroke-width="2"`); sizes and radii are non-negative. `px` is read-compatible and warns; every other unit, percentage, expression, or exotic numeric spelling is an error, and an invalid explicit value never falls back to a default. The same geometry properties may instead appear in the element's own `style` as `px` literals (`style="x:120px"`); zero may be unitless, and the pipeline materializes them as XML attributes. Line endpoints, text positions, path data, and points remain XML attributes. Complete grammar: [`svg-contract.md`](commands/svg-contract.md) §2.1.
 
 ### 2.2 Group Opacity Compatibility
 
@@ -143,7 +143,7 @@ Append `--filter-id softShadow` only when that id already names one direct page-
 
 ## 3. Canvas Format Quick Reference
 
-Use the already locked canvas id and exact viewBox. [`canvas-formats.md`](canvas-formats.md) owns format selection; this core owns only SVG conformance on that canvas. The lockless [`quick-generate`](../workflows/profiles/quick-generate.md) profile uses its first SVG to establish the canvas; every remaining page must use the identical viewBox.
+Use the already locked canvas id and exact viewBox. [`canvas-formats.md`](canvas-formats.md) owns format selection; this core owns only SVG conformance on that canvas. The lockless [`quick-generate`](workflows/profiles/quick-generate.md) profile uses its first SVG to establish the canvas; every remaining page must use the identical viewBox.
 
 ---
 
@@ -166,7 +166,7 @@ Semantic markers are minimal compiler hints. Flat pages declare one root `data-p
 
 - **Canvas authority**: new authoring writes `viewBox="0 0 W H"` with positive integer pixels from the lock, or from the first SVG under `quick-generate`; all pages and Layout prototypes in one build share it, optional root `width`/`height` never override it, and a root `<svg>` transform is forbidden. Export quantizes once at `1 SVG px = 9,525 EMU`.
 - **Font portability**: resolve an explicit user/template delivery target first; otherwise default to Windows Microsoft PowerPoint with locale following the deck's primary language. Exported Latin/EA faces must be installed or approved on that target. The authoring host's fonts affect SVG preview and measurement only and MUST NOT select PPTX faces; a local counterpart may appear only as a preview tail that preserves the same export resolution. `@font-face` remains forbidden; the family choice belongs to the planning role ([`plan-core.md`](plan-core.md) §6.2, shared by Default and Quick).
-- **Icon placeholders**: `<use data-icon="library/name">` is a pipeline-specific form, distinct from local SVG reuse. Follow the contract in [`../templates/icons/README.md`](../templates/icons/README.md).
+- **Icon placeholders**: `<use data-icon="library/name">` is a pipeline-specific form, distinct from local SVG reuse. Follow the contract in [`../templates/icons/README.md`](../assets/templates/icons/README.md).
 - **Local reuse**: ordinary same-document `<use>` follows §1.3.
 
 ### 4.2 Editability, Package Promotion, and Text Leading
@@ -187,7 +187,7 @@ These forms are needed only when the stated PPT behavior matters:
 
 ### 4.3 Element Grouping (Mandatory)
 
-**Hard rule — root groups protect body-text layout**: every visible direct root `<g>` except a compact helper-authored preset atom declares positive root-coordinate `data-pptx-bounds="x y width height"` sized as the intended module zone. On flat pages, maximize ordinary zones within canvas/sibling space without overlap; the checker fails root-group overlap beyond `1px`, warns on module text overflow through `5%` and fails above it, and fails any larger root-`viewBox` text overflow. Bounds do not clip or reflow. A native plate, caption, or label laid over a picture belongs inside that picture's root group, so it takes no separate zone and creates no root-group overlap, and a clipped picture's zone is its visible region; shrinking the picture to free a text zone is not the repair. Structured slots, structural-role groups, and a wholly off-canvas Morph endpoint marked `data-pptx-morph-staging="true"` are overlap-exempt only; thresholds and estimator: [`svg-contract.md`](../scripts/docs/svg-contract.md) §4.
+**Hard rule — root groups protect body-text layout**: every visible direct root `<g>` except a compact helper-authored preset atom declares positive root-coordinate `data-pptx-bounds="x y width height"` sized as the intended module zone. On flat pages, maximize ordinary zones within canvas/sibling space without overlap; the checker fails root-group overlap beyond `1px`, warns on module text overflow through `5%` and fails above it, and fails any larger root-`viewBox` text overflow. Bounds do not clip or reflow. A native plate, caption, or label laid over a picture belongs inside that picture's root group, so it takes no separate zone and creates no root-group overlap, and a clipped picture's zone is its visible region; shrinking the picture to free a text zone is not the repair. Structured slots, structural-role groups, and a wholly off-canvas Morph endpoint marked `data-pptx-morph-staging="true"` are overlap-exempt only; thresholds and estimator: [`svg-contract.md`](commands/svg-contract.md) §4.
 
 Wrap each logical Slide-local body unit in one descriptive top-level `<g id>`; group count follows the page's semantic units, and each group becomes one stable animation target when animation is enabled. Nested implementation groups may remain anonymous, need no bounds, and create no animation step; use them only when internal subunits (icon + title, value + label, repeated rows) are useful to edit — there is no default nesting pattern, depth, or quota. The page title is one top-level `<g id>` of its own (an animation and Morph target like any unit); direct atomic Master/Layout elements and canvas-level static framing — background images and full-canvas scrim/decoration rectangles — may remain root primitives; on flat pages give such framing a stable `id` plus `data-pptx-role="background"` / `"decoration"` and never add a `<g>` solely to silence an ungrouped-element advisory; a `<g>` that carries the role is still a root group and declares `data-pptx-bounds` — only a root primitive is exempt.
 
@@ -231,7 +231,7 @@ An authored native preset fragment (§1.5) is already an atomic `<g id>` and cou
 
 ## 5. Workflow Authority
 
-Serial post-processing and export belong to [`generate-pptx.md`](../workflows/generate-pptx.md) Step 7 and, for the direct-generation exception, [`quick-generate.md`](../workflows/profiles/quick-generate.md). This file defines SVG authoring boundaries only; project structure, commands, quality-gate order, and export products are intentionally outside it.
+Serial post-processing and export belong to [`generate-pptx.md`](workflows/generate-pptx.md) Step 7 and, for the direct-generation exception, [`quick-generate.md`](workflows/profiles/quick-generate.md). This file defines SVG authoring boundaries only; project structure, commands, quality-gate order, and export products are intentionally outside it.
 
 ---
 

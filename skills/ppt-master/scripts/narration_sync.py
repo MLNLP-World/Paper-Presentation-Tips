@@ -5,7 +5,7 @@ PPT Master - Narration Sync Tool
 Derive click-free narration timing from the canonical animation config and
 page-local SRT cues, then merge those subtitles against timing values read
 from the final narrated PPTX.
-See workflows/stages/generate-audio.md for the owning stage.
+See references/workflows/stages/generate-audio.md for the owning stage.
 
 Usage:
     python3 scripts/narration_sync.py fingerprint <project_path>

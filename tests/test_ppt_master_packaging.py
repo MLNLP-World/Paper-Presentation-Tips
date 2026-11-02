@@ -57,7 +57,7 @@ class PptMasterPackaging(unittest.TestCase):
         self.assertEqual(source_paths, paths(self.target) - {'local-marker.txt'})
         for relative in ['SKILL.md', 'LICENSE', 'scripts/reviewed_export.py',
                          'scripts/svg_to_pptx.py', 'references/academic-chat-design.md',
-                         'templates/charts/column_chart.svg']:
+                         'assets/templates/charts/column_chart.svg']:
             source, target = SOURCE / relative, self.target / relative
             self.assertEqual(hashlib.sha256(source.read_bytes()).digest(),
                              hashlib.sha256(target.read_bytes()).digest(), str(source))

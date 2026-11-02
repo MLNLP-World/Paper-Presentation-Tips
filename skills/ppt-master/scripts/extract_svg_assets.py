@@ -28,7 +28,7 @@ Examples:
 Dependencies:
     None (standard library only).
 
-See workflows/create-template.md and svg_finalize/embed_icons.py.
+See references/workflows/create-template.md and svg_finalize/embed_icons.py.
 """
 
 from __future__ import annotations

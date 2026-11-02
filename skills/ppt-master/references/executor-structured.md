@@ -14,7 +14,7 @@ Conditional Executor authority for `template_reuse_scope: mirror|layout` with `p
 
 | Context | Load policy |
 |---|---|
-| Installed `templates/design_spec.<kind>.<id>.md` files | Every installed spec, segments owned per [`apply-template-workspace.md`](../workflows/stages/apply-template-workspace.md) §5; reuse in a valid context and after invalidation read them once with the planning artifacts |
+| Installed `templates/design_spec.<kind>.<id>.md` files | Every installed spec, segments owned per [`apply-template-workspace.md`](workflows/stages/apply-template-workspace.md) §5; reuse in a valid context and after invalidation read them once with the planning artifacts |
 | Current page mapping | The retained `spec_lock.md page_layouts` row; a page change needs no file load |
 | Selected prototype SVG | Read the complete `<project_path>/templates/<basename>.svg` (the installed project-local copy, never the source workspace) once per valid context and reuse it until a known change |
 
@@ -36,7 +36,7 @@ When the lock records `template_reuse_scope: mirror` (the workspace's `replicati
 6. **Visible text**: mirror SVGs may carry literal source text rather than `{{...}}` markers; edit in place, retaining imported `data-pptx-placeholder` identity and exact topology.
 7. **Output filename**: standard `<index>_<page_name>.svg` with the project page index; the mirror filename is the reference, not the output.
 
-Chart, Table, and qualitative topology inside a mirror SVG are already authored: replace only permitted text and never redraw from a catalog or grammar; a JSON-first object may refresh its approximate preview from unchanged JSON without metadata, bounds, marker, slot, or visual drift; a mirror template normally omits `page_visualizations`, and legacy `page_charts` never overrides fidelity. **Legacy template boundary**: a legacy contract ([`pptx-structure-interface.md`](./pptx-structure-interface.md) §3) is never a fallback input — stop; a new workspace comes from [`create-template`](../workflows/create-template.md).
+Chart, Table, and qualitative topology inside a mirror SVG are already authored: replace only permitted text and never redraw from a catalog or grammar; a JSON-first object may refresh its approximate preview from unchanged JSON without metadata, bounds, marker, slot, or visual drift; a mirror template normally omits `page_visualizations`, and legacy `page_charts` never overrides fidelity. **Legacy template boundary**: a legacy contract ([`pptx-structure-interface.md`](./pptx-structure-interface.md) §3) is never a fallback input — stop; a new workspace comes from [`create-template`](workflows/create-template.md).
 
 **Required output before each page**:
 

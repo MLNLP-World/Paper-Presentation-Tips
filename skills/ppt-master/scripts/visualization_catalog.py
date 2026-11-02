@@ -29,7 +29,7 @@ from typing import Iterable
 
 
 _SCRIPTS_DIR = Path(__file__).resolve().parent
-_TEMPLATES_DIR = _SCRIPTS_DIR.parent / "templates"
+_TEMPLATES_DIR = _SCRIPTS_DIR.parent / "assets" / "templates"
 _KEY_RE = re.compile(r"^[a-z0-9]+(?:_[a-z0-9]+)*$")
 _FAMILY_SPECS = {
     "chart": ("charts", "charts_index.json", "charts"),

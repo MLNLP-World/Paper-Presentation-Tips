@@ -2,7 +2,7 @@
 
 # SVG Image Embedding Guide
 
-Status names, resource lifecycle, and the embedding workflow for images in SVG pages. [`svg-effects.md`](./svg-effects.md) §6.5 owns the native carrier, crop transport, and filter/clip contracts; Base64 embedding, preview serving, and image-optimization flags are tool behavior in [`svg-pipeline.md`](../scripts/docs/svg-pipeline.md).
+Status names, resource lifecycle, and the embedding workflow for images in SVG pages. [`svg-effects.md`](./svg-effects.md) §6.5 owns the native carrier, crop transport, and filter/clip contracts; Base64 embedding, preview serving, and image-optimization flags are tool behavior in [`svg-pipeline.md`](commands/svg-pipeline.md).
 
 ---
 
@@ -36,7 +36,7 @@ Each image carries an `Acquire Via` field plus a status. Default Generate's auth
 1. Resolve image needs — Default: Strategist resource list + lock projection; Quick: the main agent in active context.
 2. Prepare project-local resources before SVG authoring: `user` → materialize under `images/` → `Existing`; a Pending prepared derivative → [`image-base.md`](./image-base.md) §1 before ordinary dispatch; `ai` → Image_Generator → `Generated`, a Default recovery decision, or the Quick no-AI replan; `web` with vision → Image_Searcher saves at most 8 ranked previews → `Needs-Selection` → promote or next page → `Sourced` / `Needs-Manual`; `web` without vision → strict metadata-ranked best-only candidate with the method recorded → `Sourced` / `Needs-Manual`; `slice` → after the parent sheet is `Generated`, `slice_images.py` → `Generated`.
 3. Authoring consumes only prepared resources: `Existing` / `Generated` → `<image href="../images/xxx.png" …/>`; `Sourced` → `<image>` plus a credit `<text>` only for `attribution-required` (`no-attribution` and `manual` place the image alone); `Placeholder` / `Needs-Manual` → dashed border plus description text until a supplied file is validated and reconciled.
-4. Export — Default: [`generate-pptx.md`](../workflows/generate-pptx.md) Step 7; Quick: after every required resource has a validated file/provenance and usable status, its final checker then `--quick-generate` export.
+4. Export — Default: [`generate-pptx.md`](workflows/generate-pptx.md) Step 7; Quick: after every required resource has a validated file/provenance and usable status, its final checker then `--quick-generate` export.
 
 Keep external references in `svg_output/` during generation; Default's `finalize_svg.py` embeds images into the `svg_final/` preview, Quick omits it, and both native exports read `svg_output/` directly. **Hard rule — export boundary**: `svg_final/` is a self-contained preview that may be inserted into PowerPoint as an SVG picture (EMF/WMF keep the external-reference exception for lossless passthrough); the only supported generated-PPTX route is `svg_output/` through the project converter; PowerPoint's manual Convert-to-Shape is unsupported.
 
@@ -50,4 +50,4 @@ Keep external references in `svg_output/` during generation; Default's `finalize
 
 `href` is the relative project path; `x`, `y`, `width`, `height` the display frame; `preserveAspectRatio` `xMidYMid slice` (center crop, like CSS `cover`), `xMidYMid meet` (complete display, like `contain`), or `none` (stretch — never for a `no-crop` source). A Base64 `data:` href is the `svg_final/` preview form produced by finalization, not an authoring form. `clipPath` on `<image>` is conditionally allowed under [`shared-standards-core.md`](./shared-standards-core.md) §1.2; when it does not fit, bake rounded corners into an alpha PNG before embedding.
 
-Project layout: `images/` (assets), `sources/` (source files and their `*_files/` images), `svg_output/` (external references), `svg_final/` (Default-only embedded preview). Preview `svg_output/` through `python3 -m http.server -d <project_path> 8000` (browsers block cross-directory images on directly opened files). Image sizing and optimization flags at export: [`svg-pipeline.md`](../scripts/docs/svg-pipeline.md).
+Project layout: `images/` (assets), `sources/` (source files and their `*_files/` images), `svg_output/` (external references), `svg_final/` (Default-only embedded preview). Preview `svg_output/` through `python3 -m http.server -d <project_path> 8000` (browsers block cross-directory images on directly opened files). Image sizing and optimization flags at export: [`svg-pipeline.md`](commands/svg-pipeline.md).

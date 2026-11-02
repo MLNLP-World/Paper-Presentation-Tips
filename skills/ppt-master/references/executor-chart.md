@@ -2,7 +2,7 @@
 
 # Executor Chart Branch
 
-Conditional Executor authority for value-driven SVG geometry, plot-area markers, and the [`verify-charts`](../workflows/stages/verify-charts.md) handoff.
+Conditional Executor authority for value-driven SVG geometry, plot-area markers, and the [`verify-charts`](workflows/stages/verify-charts.md) handoff.
 
 **Trigger**: source values determine visible geometry — bar length/height, point position, arc angle, polygon vertex, connector or flow width/path, bubble center/radius, duration position, area, or another quantitative visual variable. Mini charts, sparklines, insets, and small multiples count even without a catalog reference.
 
@@ -59,7 +59,7 @@ Construct in this order: (1) resolve data domain, categories, units, baseline, s
 | `cx, cy` | Absolute center after containing translate transforms |
 | `r`, `r1`, `r2` | Visible outer/inner radii of the authored radial geometry |
 
-Calculator-supported SVGs in `templates/charts/` carry the same comment. A qualitative structure or cell-grid table gains no marker merely because it contains numbers. A missing marker invokes the verify stage's declared fallback and adds avoidable derivation work.
+Calculator-supported SVGs in `assets/templates/charts/` carry the same comment. A qualitative structure or cell-grid table gains no marker merely because it contains numbers. A missing marker invokes the verify stage's declared fallback and adds avoidable derivation work.
 
 ### 2.2 Authoring-time Check
 
@@ -73,4 +73,4 @@ After each page containing verified charts: `rg -n "chart-plot-area" <project_pa
 
 ## 3. Verification Handoff
 
-Coordinate calibration is a conditional post-generation stage. After all SVG pages exist, run [`verify-charts`](../workflows/stages/verify-charts.md) whenever the active profile declares at least one page with value-driven chart geometry: Default enumerates Design Spec §IX (with the stage's legacy §VII fallback); Quick cross-checks still-active page decisions one-for-one against plot-area markers. Do not run `svg_position_calculator.py` during the initial draft; the stage calibrates completed geometry against the declared plot area, repairs genuine mismatches, and returns to the profile's checker order.
+Coordinate calibration is a conditional post-generation stage. After all SVG pages exist, run [`verify-charts`](workflows/stages/verify-charts.md) whenever the active profile declares at least one page with value-driven chart geometry: Default enumerates Design Spec §IX (with the stage's legacy §VII fallback); Quick cross-checks still-active page decisions one-for-one against plot-area markers. Do not run `svg_position_calculator.py` during the initial draft; the stage calibrates completed geometry against the declared plot area, repairs genuine mismatches, and returns to the profile's checker order.

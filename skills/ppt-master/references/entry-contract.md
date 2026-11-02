@@ -60,7 +60,7 @@ ends after export and actual-PPTX verification. Step numbers stay as written.
 3. **No cross-phase bundling** — Do not combine work across an unclosed gate. Once the route's final user gate closes, later non-blocking steps may continue automatically.
 4. **Gate before entry** — Verify every listed prerequisite before entering a step.
 5. **No speculative execution** — Do not prepare later-phase artifacts before their owning step.
-6. **Deterministic routing** — Do not add a route-choice question when [`routing.md`](../workflows/routing.md) resolves the request. If a route prerequisite is missing, state it and stop that route.
+6. **Deterministic routing** — Do not add a route-choice question when [`routing.md`](workflows/routing.md) resolves the request. If a route prerequisite is missing, state it and stop that route.
 7. **Act at the owning layer** — On failure, repair at the shallowest layer that owns the fault: the page for a page-local issue, the Plan artifact for a roster/spec/resource fault, the owning source artifact for a tool failure; then resume from the route's declared pointer. Do not silently downgrade a required artifact.
 
 ## Global Communication Rules

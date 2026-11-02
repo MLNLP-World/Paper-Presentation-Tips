@@ -107,7 +107,7 @@ an exact authoring preset here.
 
 ## 3. Editable `custom` projection
 
-Each Default Stage-2 direction authors one visible, non-empty `custom` aesthetic under [`strategist.md`](../strategist.md) §d — its executable shape language, composition geometry, decoration density, whitespace, typography character, and texture — naming only the catalog bases it actually uses. Quick resolves one preset or custom behavior under [`quick-generate.md`](../../workflows/profiles/quick-generate.md) §2 and persists nothing.
+Each Default Stage-2 direction authors one visible, non-empty `custom` aesthetic under [`strategist.md`](../strategist.md) §d — its executable shape language, composition geometry, decoration density, whitespace, typography character, and texture — naming only the catalog bases it actually uses. Quick resolves one preset or custom behavior under [`quick-generate.md`](../workflows/profiles/quick-generate.md) §2 and persists nothing.
 
 ---
 

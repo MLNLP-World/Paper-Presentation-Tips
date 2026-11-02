@@ -5,7 +5,7 @@ PPT Master - Video Sound Mix
 Recover transition and object-animation sound cues from the final narrated
 PPTX, calibrate them to a PowerPoint-exported video, render an independent SFX
 stem, and mix that stem with the video's narration track.
-See workflows/stages/generate-audio.md for the owning delivery stage.
+See references/workflows/stages/generate-audio.md for the owning delivery stage.
 
 Usage:
     python3 scripts/video_sound_mix.py <project_path> --pptx <pptx> \

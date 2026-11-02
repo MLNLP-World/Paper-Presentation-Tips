@@ -20,7 +20,7 @@ Examples:
 Dependencies:
     None (standard library only).
 
-See references/executor-base.md §4 and templates/icons/README.md.
+See references/executor-base.md §4 and assets/templates/icons/README.md.
 """
 
 from __future__ import annotations
@@ -42,7 +42,7 @@ _STYLISTIC_LIBRARIES = {
     "tabler-outline",
 }
 _SYNC_LIBRARIES = _STYLISTIC_LIBRARIES | {"simple-icons"}
-_GLOBAL_ICONS_DIR = Path(__file__).resolve().parent.parent / "templates" / "icons"
+_GLOBAL_ICONS_DIR = Path(__file__).resolve().parent.parent / "assets" / "templates" / "icons"
 
 
 def _split_name(icon_name: str) -> tuple[str, str]:

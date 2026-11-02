@@ -3245,7 +3245,7 @@ def materialize_mirror_template(
             _source_geometry_is_unchanged(documents),
         )
     )
-    library_root = Path(__file__).resolve().parent.parent / "templates"
+    library_root = Path(__file__).resolve().parent.parent / "assets" / "templates"
     resolved_workspace = template_workspace.resolve()
     library_scope = any(
         (library_root / directory).resolve() in resolved_workspace.parents

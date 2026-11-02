@@ -6,7 +6,7 @@ Provide one strict PowerPoint-native transition registry, a compatibility input
 map, and shared OOXML read/write helpers for generated and source-preserving
 round-trip PPTX files.
 See references/animations.md for the public workflow and
-scripts/docs/pptx-transitions.md for the OOXML contract.
+references/commands/pptx-transitions.md for the OOXML contract.
 
 Usage:
     Import from PPT Master PPTX builders and direct-package workflows.

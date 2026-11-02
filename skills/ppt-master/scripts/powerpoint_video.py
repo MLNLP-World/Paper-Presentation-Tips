@@ -5,7 +5,7 @@ PPT Master - PowerPoint Video Export
 Export a narrated PPTX through the installed Windows PowerPoint application and
 wait until its native video encoder finishes.
 
-See workflows/stages/generate-audio.md for the narration handoff.
+See references/workflows/stages/generate-audio.md for the narration handoff.
 
 Usage:
     python3 scripts/powerpoint_video.py <pptx> [-o <video>]

@@ -73,7 +73,7 @@ class TemplateFlowBatch4Tests(unittest.TestCase):
                                            '-o', str(imported), '--inheritance-mode', 'both']):
                 self.assertEqual(pptx_template_import.main(), 0)
         fake_script = self.root / 'skill/scripts/mirror_template_materialize.py'
-        library = self.root / 'skill/templates/decks'
+        library = self.root / 'skill/assets/templates/decks'
         library.mkdir(parents=True)
         outside = self.root / 'outside'
         outside.mkdir()

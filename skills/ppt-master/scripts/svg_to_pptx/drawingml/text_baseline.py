@@ -3,7 +3,7 @@
 PPT Master - DrawingML Text Baseline
 
 Estimate the first baseline of ordinary top-anchored DrawingML text from
-bundled font metrics. See scripts/docs/svg-pipeline.md for the rendering scope.
+bundled font metrics. See references/commands/svg-pipeline.md for the rendering scope.
 
 Usage:
     Import drawingml_text_baseline_offset from the DrawingML converter.

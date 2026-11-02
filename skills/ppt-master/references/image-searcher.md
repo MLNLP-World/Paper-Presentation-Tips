@@ -75,7 +75,7 @@ python3 scripts/image_search.py "<query>" --filename <name>.jpg --slide <slide_i
   --orientation landscape --purpose background -o <project_path>/images
 ```
 
-Every flag, its default, and its exact behavior: [`image.md`](../scripts/docs/image.md) § `image_search.py`.
+Every flag, its default, and its exact behavior: [`image.md`](commands/image.md) § `image_search.py`.
 
 **Batch mode (≥2 web rows) — preferred**: write every row into `image_queries.json` and run one concurrent batch (the web sister of `image_gen.py --manifest`); add `--save-candidates` whenever the agent can inspect images:
 
@@ -94,14 +94,14 @@ python3 scripts/image_search.py --batch <project_path>/images/image_queries.json
 } ] }
 ```
 
-Required per item: `filename`, `query`, `status`; optional: `query_variants`, `candidate_page`, `slide`, `purpose`, `orientation`, `provider`, `strict_no_attribution`, `min_width`, `min_height`, `required_terms`. The runner revalidates `Sourced` rows, searches every `Pending` / `Failed` row concurrently, writes `Needs-Selection` with paging fields in thumbnail mode, and saves status after each completion; ranking orders provider metadata, never pixels, and is not a taste engine — exact runner and ranking behavior: [`image.md`](../scripts/docs/image.md).
+Required per item: `filename`, `query`, `status`; optional: `query_variants`, `candidate_page`, `slide`, `purpose`, `orientation`, `provider`, `strict_no_attribution`, `min_width`, `min_height`, `required_terms`. The runner revalidates `Sourced` rows, searches every `Pending` / `Failed` row concurrently, writes `Needs-Selection` with paging fields in thumbnail mode, and saves status after each completion; ranking orders provider metadata, never pixels, and is not a taste engine — exact runner and ranking behavior: [`image.md`](commands/image.md).
 
 **Suitability review** — a top hit is downloadable and token-relevant, not visually suitable (the reviewer receives only the locked row intent plus candidate sidecars/sheets, never the full planning or acquisition context):
 
-- **With vision**: `--save-candidates` saves at most the first 8 ranked previews under `candidates/<stem>/review/` and the sheet; run [`web-image-review.md`](../workflows/stages/web-image-review.md) — one isolated reviewer for the batch when available, otherwise local review — then only the image owner promotes the returned filename. Never promote the least-bad candidate; if none passes and `has_more_candidates` is true, fetch `--candidate-page 2` before changing the query. For exact entities, `required_terms` gates metadata and the review image confirms the pixels show the subject and satisfy the focal/crop intent; a generic `required_terms` pass is not acceptance (matching `Ground Fissure` can return an unrelated station named Yunlong).
+- **With vision**: `--save-candidates` saves at most the first 8 ranked previews under `candidates/<stem>/review/` and the sheet; run [`web-image-review.md`](workflows/stages/web-image-review.md) — one isolated reviewer for the batch when available, otherwise local review — then only the image owner promotes the returned filename. Never promote the least-bad candidate; if none passes and `has_more_candidates` is true, fetch `--candidate-page 2` before changing the query. For exact entities, `required_terms` gates metadata and the review image confirms the pixels show the subject and satisfy the focal/crop intent; a generic `required_terms` pass is not acceptance (matching `Ground Fissure` can return an unrelated station named Yunlong).
 - **Without vision**: omit `--save-candidates`; the tool excludes near matches, downloads only the first candidate passing every strict metadata, license, and dimension gate, and records `selection_method: metadata-ranked` — never described as visual confirmation. With no strict candidate, or an intent that needs a viewpoint, crop, expression, or fine identity metadata cannot establish, mark `Needs-Manual`; Quick opens no interaction.
 
-**Replacement ladder**: (1) with vision, promote the one passing thumbnail; (2) with `has_more_candidates`, fetch the next page (numbering continues globally — page 2 starts at `candidate_09`); (3) after the pool is exhausted, add materially different identity/translation/alias/viewpoint/disambiguation variants and generate a fresh pool; (4) with vision only, after normal search is exhausted, fetch one adopted `source_url` as a Markdown + companion-image package under [`topic-research`](../workflows/stages/topic-research.md) § Hand-off, copy one passing image into `images/`, and reconcile the row and `image_sources.json` from its `image_manifest.json` entry with `license_tier: manual` (never auto-expand facts URLs or promote the whole package); (5) manual URL replace — `python3 scripts/image_search.py --from-url <image-url> --filename <name>.jpg -o <project_path>/images` — recorded `manual`, only with a URL already supplied in Quick; it updates the image and `image_sources.json` but not `image_queries.json`, so validate the file and reconcile the query row and roster to `Sourced` before export ([`executor-web-image.md`](./executor-web-image.md) §1); (6) when variants, pages, providers, license stages, and the package fallback are exhausted, mark `Needs-Manual`. This review never opens an acquisition-time interaction ([`image-base.md`](./image-base.md) §3): Default may continue to Step 6 with a placeholder; Quick blocks direct export when the image is required.
+**Replacement ladder**: (1) with vision, promote the one passing thumbnail; (2) with `has_more_candidates`, fetch the next page (numbering continues globally — page 2 starts at `candidate_09`); (3) after the pool is exhausted, add materially different identity/translation/alias/viewpoint/disambiguation variants and generate a fresh pool; (4) with vision only, after normal search is exhausted, fetch one adopted `source_url` as a Markdown + companion-image package under [`topic-research`](workflows/stages/topic-research.md) § Hand-off, copy one passing image into `images/`, and reconcile the row and `image_sources.json` from its `image_manifest.json` entry with `license_tier: manual` (never auto-expand facts URLs or promote the whole package); (5) manual URL replace — `python3 scripts/image_search.py --from-url <image-url> --filename <name>.jpg -o <project_path>/images` — recorded `manual`, only with a URL already supplied in Quick; it updates the image and `image_sources.json` but not `image_queries.json`, so validate the file and reconcile the query row and roster to `Sourced` before export ([`executor-web-image.md`](./executor-web-image.md) §1); (6) when variants, pages, providers, license stages, and the package fallback are exhausted, mark `Needs-Manual`. This review never opens an acquisition-time interaction ([`image-base.md`](./image-base.md) §3): Default may continue to Step 6 with a placeholder; Quick blocks direct export when the image is required.
 
 **Standalone thumbnail selection** (opt-in outside Generate):
 
@@ -118,7 +118,7 @@ Previews land in `images/candidates/<stem>/review/` with a thumbnail-only `candi
 
 ## 6. Manifest (`image_sources.json`)
 
-Each successful download appends or replaces one entry keyed on `filename` (written atomically; an unreadable existing manifest blocks the write). `license_tier` drives Executor's attribution, `attribution_text` is the canonical credit source, `width` / `height` are measured from the saved file, and `selection_method` records `visual-thumbnail` or `metadata-ranked`. Complete field list and example: [`image.md`](../scripts/docs/image.md).
+Each successful download appends or replaces one entry keyed on `filename` (written atomically; an unreadable existing manifest blocks the write). `license_tier` drives Executor's attribution, `attribution_text` is the canonical credit source, `width` / `height` are measured from the saved file, and `selection_method` records `visual-thumbnail` or `metadata-ranked`. Complete field list and example: [`image.md`](commands/image.md).
 
 ---
 
@@ -130,7 +130,7 @@ For `license_tier: attribution-required`, every slide using the asset carries a 
 
 ## 8. Failure Handling (web-specific)
 
-Extends [`image-base.md`](./image-base.md) §3 through the replacement ladder in §5: exhausted candidates and variants end in `Needs-Manual` with a reason, provider or network failures stay retryable `Failed`, and a promoted original that fails its gate stays `Needs-Selection`. Exit codes and per-case runner behavior: [`image.md`](../scripts/docs/image.md).
+Extends [`image-base.md`](./image-base.md) §3 through the replacement ladder in §5: exhausted candidates and variants end in `Needs-Manual` with a reason, provider or network failures stay retryable `Failed`, and a promoted original that fails its gate stays `Needs-Selection`. Exit codes and per-case runner behavior: [`image.md`](commands/image.md).
 
 ---
 

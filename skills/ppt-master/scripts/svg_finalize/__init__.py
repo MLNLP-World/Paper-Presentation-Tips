@@ -7,6 +7,6 @@ Used by two consumers:
      in memory during native pptx conversion
 
 Deleting any module here is likely to break native pptx output, not just
-svg_final/. See scripts/docs/svg-pipeline.md for the full per-module consumer
+svg_final/. See references/commands/svg-pipeline.md for the full per-module consumer
 table.
 """

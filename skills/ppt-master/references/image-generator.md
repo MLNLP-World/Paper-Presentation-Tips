@@ -76,7 +76,7 @@ Rendering decides how the image is drawn. Color begins from the deck roles — b
 | Default | `spec_lock.md colors` already carries `image_rendering` and the role HEX (`image_rendering: vector-illustration`, `background: #F8F9FA`, `primary: #1E3A5F`, `accent: #D4AF37`) — identity anchors, not a second user-facing choice |
 | Quick | The agent resolves one rendering/color set in context and writes it to `image_prompts.json` |
 | `custom` | Read every `image_rendering_references` file when the row exists — apply one basis under `image_rendering_behavior`, or synthesize several by their stated line, texture, depth, material, and mood contributions; with no references use the behavior alone; never infer adjacent references |
-| Missing `image_rendering` key in an existing lock ([`failure-recovery.md`](../workflows/governance/failure-recovery.md) §2) | Infer the rendering from `design_spec.md d. Style` plus the intended image jobs against the complete catalog; keep the existing color rows as anchors; sanity-check against `icons.library`; choose the strongest fit without presenting a choice; print "spec_lock.md has no `image_rendering`—inferring `<X>` from design_spec; image colors still use the locked deck roles." Stop for lock repair if the inference lands on `custom` or the value is empty/invalid |
+| Missing `image_rendering` key in an existing lock ([`failure-recovery.md`](workflows/governance/failure-recovery.md) §2) | Infer the rendering from `design_spec.md d. Style` plus the intended image jobs against the complete catalog; keep the existing color rows as anchors; sanity-check against `icons.library`; choose the strongest fit without presenting a choice; print "spec_lock.md has no `image_rendering`—inferring `<X>` from design_spec; image colors still use the locked deck roles." Stop for lock repair if the inference lands on `custom` or the value is empty/invalid |
 | Absent lock outside Quick | Stops at Generate Step 5 |
 
 **Per-image resolution** (explicit row values bind; Quick resolves omissions):
@@ -332,7 +332,7 @@ Write `project/images/image_prompts.json`:
 | `items[].slice_grid`, `items[].slice_names` | for a placeable-element sheet | Exact `RxC` and the comma-separated basenames (`rows*cols` unique outputs) for `slice_images.py`; slice basenames are unique across the manifest, so re-cutting part of a sheet rewrites the parent's `slice_names` (and grid) rather than adding a second item with the same names |
 | `items[].status` | yes | `Pending` initially; the CLI writes `Generated` / `Failed` / `Needs-Manual` |
 
-Legacy manifest spellings and their current readings: [`image.md`](../scripts/docs/image.md).
+Legacy manifest spellings and their current readings: [`image.md`](commands/image.md).
 
 ---
 

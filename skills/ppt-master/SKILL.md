@@ -31,16 +31,16 @@ metadata:
 1. 将本文件所在绝对目录保留为 `SKILL_DIR`，所有包内路径相对它解析；仓库发现入口应先解析到本文件。
 2. 运行 `python3 "${SKILL_DIR}/scripts/attribution_guard.py"`；Windows 使用实际可用的 `python` 执行同一命令。返回 0 才继续。执行工具不可用与校验失败分别报告，不反复盲试或跳过检查。
 3. 阅读 [学术设计与交付规则](references/academic-chat-design.md) 和 [共享术语与执行约定](references/entry-contract.md)。
-4. 阅读 [路由规则](workflows/routing.md)，只加载选中路线及按条件需要的支持文件：
+4. 阅读 [路由规则](references/workflows/routing.md)，只加载选中路线及按条件需要的支持文件：
 
 | 任务 | 执行文件 |
 | --- | --- |
-| 从论文/材料生成；普通 Default | [generate-pptx.md](workflows/generate-pptx.md) |
-| 明确要求 Quick | [quick-generate.md](workflows/profiles/quick-generate.md) |
-| 美化与重设计已有 PPTX | [beautify-pptx.md](workflows/profiles/beautify-pptx.md) |
-| 复刻用户给定的页面图片 | [image-to-pptx.md](workflows/profiles/image-to-pptx.md)，按其宿主支持边界执行 |
-| 原生编辑、套用已有 PPTX | [edit-native-pptx.md](workflows/edit-native-pptx.md) |
-| 创建可复用模板 | [create-template.md](workflows/create-template.md) |
+| 从论文/材料生成；普通 Default | [generate-pptx.md](references/workflows/generate-pptx.md) |
+| 明确要求 Quick | [quick-generate.md](references/workflows/profiles/quick-generate.md) |
+| 美化与重设计已有 PPTX | [beautify-pptx.md](references/workflows/profiles/beautify-pptx.md) |
+| 复刻用户给定的页面图片 | [image-to-pptx.md](references/workflows/profiles/image-to-pptx.md)，按其宿主支持边界执行 |
+| 原生编辑、套用已有 PPTX | [edit-native-pptx.md](references/workflows/edit-native-pptx.md) |
+| 创建可复用模板 | [create-template.md](references/workflows/create-template.md) |
 
 按学术设计规则执行，确认与反馈在聊天内完成。默认使用宿主内置生图；外部 API 由用户选择并配置后显式调用。
 
