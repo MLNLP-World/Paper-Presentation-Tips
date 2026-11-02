@@ -8,9 +8,9 @@ import sys
 import tempfile
 import unittest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / 'skills/ppt-master'
-INSTALLER = ROOT / 'tools/install_skill.py'
+INSTALLER = ROOT / 'skills/ppt-master/scripts/install_skill.py'
 
 
 class PptMasterPackaging(unittest.TestCase):
@@ -52,7 +52,8 @@ class PptMasterPackaging(unittest.TestCase):
         def paths(root):
             return {p.relative_to(root).as_posix() for p in root.rglob('*')
                     if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc', '.pyo')
-                    and p.relative_to(root).parts[:2] != ('scripts', 'tests')}
+                    and p.relative_to(root).parts[:2] != ('scripts', 'tests')
+                    and p.relative_to(root).parts[0] != 'tests'}
         source_paths = paths(SOURCE)
         self.assertEqual(source_paths, paths(self.target) - {'local-marker.txt'})
         for relative in ['SKILL.md', 'LICENSE', 'scripts/reviewed_export.py',
@@ -64,6 +65,7 @@ class PptMasterPackaging(unittest.TestCase):
         self.assertGreater(len(source_paths), 12000)
         self.assertFalse((ROOT / 'tools/PPT-Master-local/skill').exists())
         self.assertFalse((self.target / 'scripts/tests').exists())
+        self.assertFalse((self.target / 'tests').exists())
         self.assertFalse((self.target / 'SPONSORS.md').exists())
 
     def test_existing_install_is_not_silently_replaced(self):

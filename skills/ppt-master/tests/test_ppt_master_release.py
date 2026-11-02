@@ -13,7 +13,7 @@ import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 SKILL = ROOT / 'skills/ppt-master'
 SCRIPTS = SKILL / 'scripts'
 sys.path.insert(0, str(SCRIPTS))

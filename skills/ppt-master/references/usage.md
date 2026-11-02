@@ -51,10 +51,10 @@ $ppt-master 请根据 D:/papers/paper.pdf 制作一份中文组会 PPT，汇报�
 
 ```powershell
 # 安装到 Codex 项目
-python tools/install_skill.py --skill ppt-master --agent codex --project "PROJECT"
+python skills/ppt-master/scripts/install_skill.py --skill ppt-master --agent codex --project "PROJECT"
 
 # 安装到 Claude Code 项目
-python tools/install_skill.py --skill ppt-master --agent claude --project "PROJECT"
+python skills/ppt-master/scripts/install_skill.py --skill ppt-master --agent claude --project "PROJECT"
 ```
 
 这会复制整份 Skill。安装后在目标项目中重新打开 Agent 对话。
@@ -62,7 +62,7 @@ python tools/install_skill.py --skill ppt-master --agent claude --project "PROJE
 其他支持 Agent Skills 的工具，可以复制完整的 `skills/ppt-master/` 文件夹，或指定安装目录：
 
 ```powershell
-python tools/install_skill.py --skill ppt-master --destination "SKILLS_DIR/ppt-master"
+python skills/ppt-master/scripts/install_skill.py --skill ppt-master --destination "SKILLS_DIR/ppt-master"
 ```
 
 将 `SKILLS_DIR` 换成该工具存放 Skill 的目录。目标已有同名安装时，加上 `--overwrite` 才会更新；旧目录会自动保留备份。
@@ -100,7 +100,7 @@ python tools/install_skill.py --skill ppt-master --destination "SKILLS_DIR/ppt-m
 
 确认修改建议后，还会继续展示参考图。某页的内容或设计发生变化时，只需重新查看受影响的页面。
 
-规划时会查看适合的模板、图表和图标，并说明准备借鉴什么。包内还带有 [11 页示例及组件索引](../skills/ppt-master/references/positive-examples.md)，可用于参考案例、公式讲解和实验展示。
+规划时会查看适合的模板、图表和图标，并说明准备借鉴什么。包内还带有 [11 页示例及组件索引](positive-examples.md)，可用于参考案例、公式讲解和实验展示。
 
 ## 生图方式
 
@@ -198,4 +198,4 @@ python -m pip install -r skills/ppt-master/requirements.txt
 
 安装到其他项目的副本需要再次运行安装命令，并加 `--overwrite`。仓库内的入口会直接读取 `skills/ppt-master/`。
 
-成品对照和来源说明见 [仓库首页](../README.md#academic-ppt-skill)。
+成品对照和来源说明见 [仓库首页](../../../README.md#academic-ppt-skill)。

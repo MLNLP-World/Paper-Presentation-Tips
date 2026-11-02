@@ -5,12 +5,12 @@ Pull the latest Git checkout and sync Python dependencies when the effective
 requirements include tree changes.
 
 Usage:
-    python3 tools/update_repository.py
-    python3 tools/update_repository.py --skip-pip
+    python3 skills/ppt-master/scripts/update_repository.py
+    python3 skills/ppt-master/scripts/update_repository.py --skip-pip
 
 Examples:
-    python3 tools/update_repository.py
-    python3 tools/update_repository.py --skip-pip
+    python3 skills/ppt-master/scripts/update_repository.py
+    python3 skills/ppt-master/scripts/update_repository.py --skip-pip
 
 Dependencies:
     None (standard library only)
@@ -26,7 +26,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[3]
 SKILL_DIR = REPO_ROOT / "skills" / "ppt-master"
 sys.path.insert(0, str(SKILL_DIR / "scripts"))
 

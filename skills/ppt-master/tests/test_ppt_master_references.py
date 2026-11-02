@@ -7,14 +7,14 @@ import unittest
 import uuid
 from pathlib import Path
 
-SCRIPTS = Path(__file__).resolve().parents[1] / 'skills' / 'ppt-master' / 'scripts'
+SCRIPTS = Path(__file__).resolve().parents[3] / 'skills' / 'ppt-master' / 'scripts'
 sys.path.insert(0, str(SCRIPTS))
 from reference_review import ReviewError, prepare, record_decision, check
 
 
 class ReferenceReviewTests(unittest.TestCase):
     def setUp(self):
-        self.runtime = Path(__file__).resolve().parents[1] / '.local' / 'test-runtime'
+        self.runtime = Path(__file__).resolve().parents[3] / '.local' / 'test-runtime'
         self.root = self.runtime / ('case-' + uuid.uuid4().hex)
         self.root.mkdir(parents=True)
         (self.root / 'reference_review').mkdir()

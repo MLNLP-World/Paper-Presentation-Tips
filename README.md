@@ -466,13 +466,13 @@
 
 原稿 11 页，润色稿 20 页。下图左侧为原稿，右侧为对应的润色页。
 
-[![原第 1 页与润色后第 1 页：用输入输出案例说明任务](docs/images/fanli-01-before-after.png)](docs/images/fanli-01-before-after.png)
+[![原第 1 页与润色后第 1 页：用输入输出案例说明任务](figures/ppt-master/fanli-01-before-after.png)](figures/ppt-master/fanli-01-before-after.png)
 
-[![原第 4 页与润色后第 7 页：减少颜色种类，统一同类标签](docs/images/fanli-04-before-after.png)](docs/images/fanli-04-before-after.png)
+[![原第 4 页与润色后第 7 页：减少颜色种类，统一同类标签](figures/ppt-master/fanli-04-before-after.png)](figures/ppt-master/fanli-04-before-after.png)
 
-[![原第 5 页与润色后第 6 页：对齐图文，统一字号](docs/images/fanli-05-before-after.png)](docs/images/fanli-05-before-after.png)
+[![原第 5 页与润色后第 6 页：对齐图文，统一字号](figures/ppt-master/fanli-05-before-after.png)](figures/ppt-master/fanli-05-before-after.png)
 
-[![原第 10 页与润色后第 14 页：用散点图比较两项实验指标](docs/images/fanli-10-before-after.png)](docs/images/fanli-10-before-after.png)
+[![原第 10 页与润色后第 14 页：用散点图比较两项实验指标](figures/ppt-master/fanli-10-before-after.png)](figures/ppt-master/fanli-10-before-after.png)
 
 | 原稿页 → 润色页 | 修改内容 |
 | --- | --- |
@@ -481,7 +481,7 @@
 | 5 → 6 | **Tip 5 · 注意排版细节**：对齐两栏图文，统一标题和正文的字号。 |
 | 10 → 14 | **Tip 10 · 实验部分多用图，少用表格**：按模型分别画散点图，比较准确率和相对长度。 |
 
-完整文件在 [examples/](examples/)。文字、形状、表格和数据图表可在 PPT 中继续编辑；照片和复杂原图保留为图片。
+完整文件在 [examples/](skills/ppt-master/assets/examples)。文字、形状、表格和数据图表可在 PPT 中继续编辑；照片和复杂原图保留为图片。
 
 ### 开始使用
 
@@ -510,7 +510,7 @@ python -m pip install -r skills/ppt-master/requirements.txt
 
 > 请润色这份 PPT。先指出内容安排、布局、字号和图表中的具体问题，并说明怎么改。保留已经清楚的页面；修改方案和参考图确认后再制作。
 
-在其他项目中使用的安装方法见 [使用说明](docs/usage.md#安装到其他项目)。
+在其他项目中使用的安装方法见 [使用说明](skills/ppt-master/references/usage.md#安装到其他项目)。
 
 ### 制作流程
 
@@ -521,21 +521,21 @@ python -m pip install -r skills/ppt-master/requirements.txt
 5. **制作 PPTX**：按确认的图片制作文字、形状、表格、图表和公式。
 6. **检查成品**：用 PPT 软件打开生成文件，导出页面图片，检查错字、小字、遮挡和排版，再修正。
 
-默认使用 Agent 自带的绘图工具。没有绘图工具时，可以使用已配置的在线绘图服务，也可以提供参考图，或选择直接制作可编辑草稿供预览。具体方法见 [生图方式](docs/usage.md#生图方式)。
+默认使用 Agent 自带的绘图工具。没有绘图工具时，可以使用已配置的在线绘图服务，也可以提供参考图，或选择直接制作可编辑草稿供预览。具体方法见 [生图方式](skills/ppt-master/references/usage.md#生图方式)。
 
 ### 📚 文档与资源
 
 | | 文档与资源 | 用途 |
 |:---:|---|---|
-| 📘 | [使用说明](docs/usage.md) | **第一次使用从这里开始**：安装、准备材料、调用与按页反馈 |
+| 📘 | [使用说明](skills/ppt-master/references/usage.md) | **第一次使用从这里开始**：安装、准备材料、调用与按页反馈 |
 | 📖 | [Skill 入口](skills/ppt-master/SKILL.md) | Agent 制作 PPT 时读取的核心步骤和规则 |
 | 🧭 | [制作流程](skills/ppt-master/references/workflows/) | 从论文生成、润色已有 PPT、复刻参考页等流程 |
 | 🎨 | [模板与素材](skills/ppt-master/assets/templates/README.md) | 查看风格、版式、图表、表格和图标 |
 | 🖼️ | [页面参考示例](skills/ppt-master/references/positive-examples.md) | 查看 11 页示例及可复用的组件 |
 | 🛠️ | [脚本工具](skills/ppt-master/scripts/README.md) | 查看读取、制作、渲染和导出工具的用法 |
-| 🧩 | [成品示例](examples/) | 查看润色前后的完整 PPTX |
+| 🧩 | [成品示例](skills/ppt-master/assets/examples) | 查看润色前后的完整 PPTX |
 | ⚙️ | [在线绘图配置](skills/ppt-master/.env.example) | 为没有内置绘图工具的 Agent 配置绘图服务 |
-| ❓ | [常见问题](docs/usage.md#常见问题) | 处理找不到 Skill、加载旧版本、字体错位等情况 |
+| ❓ | [常见问题](skills/ppt-master/references/usage.md#常见问题) | 处理找不到 Skill、加载旧版本、字体错位等情况 |
 
 <sub>完整文件 → <a href="skills/ppt-master/">Skill 目录</a></sub>
 
